@@ -1,4 +1,0 @@
-C:\Users\HVF-E308\Documents\GitHub\FDFSITE\Mac\testNet\testNet\bin\testNet.dll
-C:\Users\HVF-E308\Documents\GitHub\FDFSITE\Mac\testNet\testNet\bin\testNet.pdb
-C:\Users\HVF-E308\Documents\GitHub\FDFSITE\Mac\testNet\testNet\obj\Debug\testNet.dll
-C:\Users\HVF-E308\Documents\GitHub\FDFSITE\Mac\testNet\testNet\obj\Debug\testNet.pdb
