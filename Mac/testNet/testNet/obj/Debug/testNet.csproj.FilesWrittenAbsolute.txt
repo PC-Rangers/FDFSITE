@@ -1,0 +1,5 @@
+/Users/DVS/Projects/testNet/testNet/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/DVS/Projects/testNet/testNet/bin/testNet.dll.mdb
+/Users/DVS/Projects/testNet/testNet/bin/testNet.dll
+/Users/DVS/Projects/testNet/testNet/obj/Debug/testNet.dll
+/Users/DVS/Projects/testNet/testNet/obj/Debug/testNet.dll.mdb
