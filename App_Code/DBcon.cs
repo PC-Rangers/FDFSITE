@@ -8,12 +8,23 @@ using System.Data.SqlClient;
 
 public class DBcon
 {
+    private SqlConnection DBConnection;
+    private string _SQLcmd;
+    public string SQLcmd
+        {
+            get { return _SQLcmd; }
+            set { _SQLcmd = value; }
+        }
+   public DBcon()
+        {
+            DBConnection = new SqlConnection("Data Source=mssql3.unoeuro.com;Initial Catalog=fdfk7_dk_db;Persist Security Info=True;User ID=fdfk7_dk;Password=4Xbc8tun");
+
+        }
     public SqlConnection ConnectionOpen()
     {
-        SqlConnection DBConnection = new SqlConnection("Provider=SQLOLEDB.1;Persist Security Info=False;User ID=fdfk7_dk;Data Source=mssql3.unoeuro.com");
-        //SqlCommand SQLcmd;
+        SqlCommand SQLCmd = new SqlCommand(SQLcmd);
         DBConnection.Open();
-
+        SqlDataReader DB_Reader = SQLCmd.ExecuteReader();
         return DBConnection;
     }
 }
