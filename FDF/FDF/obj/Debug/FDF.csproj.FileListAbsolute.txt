@@ -1,0 +1,4 @@
+C:\Users\HVF-E308\Documents\GitHub\FDFSITE\FDF\FDF\bin\FDF.dll
+C:\Users\HVF-E308\Documents\GitHub\FDFSITE\FDF\FDF\bin\FDF.pdb
+C:\Users\HVF-E308\Documents\GitHub\FDFSITE\FDF\FDF\obj\Debug\FDF.dll
+C:\Users\HVF-E308\Documents\GitHub\FDFSITE\FDF\FDF\obj\Debug\FDF.pdb
