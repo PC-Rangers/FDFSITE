@@ -8,15 +8,12 @@ using System.Data.SqlClient;
 
 public class DBcon
 {
-    public SqlConnection sqlcon = new SqlConnection("Provider=SQLOLEDB.1;Persist Security Info=False;User ID=fdfk7_dk;Data Source=mssql3.unoeuro.com");
-    public SqlCommand Sqlcmd;
+    public SqlConnection ConnectionOpen()
+    {
+        SqlConnection DBConnection = new SqlConnection("Provider=SQLOLEDB.1;Persist Security Info=False;User ID=fdfk7_dk;Data Source=mssql3.unoeuro.com");
+        //SqlCommand SQLcmd;
+        DBConnection.Open();
 
-    public SqlConnection dbmetode()
-	{
-        
-
-
-
-
-	}
+        return DBConnection;
+    }
 }
