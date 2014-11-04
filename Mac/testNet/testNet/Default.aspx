@@ -3,6 +3,7 @@
 <html>
 <head runat="server">
 	<title>Default</title>
+	<meta charset="utf-8">
 </head>
 <body>
 	<form id="form1" runat="server">
