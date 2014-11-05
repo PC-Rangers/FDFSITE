@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>FDF Kreds 7</title>
+    <title>FDF K7 Frihavn</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -22,11 +22,8 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-
-
   </head>
 <body>
-
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -51,7 +48,7 @@
             <button id="LoginKnap" type="submit" class="btn btn-success" runat="server" onclick="LoginKnap_Clicked">Log ind</button>
           </form>
         </div><!--/.navbar-collapse -->
-      </div>
+    <</div>
     </nav>
 
 
