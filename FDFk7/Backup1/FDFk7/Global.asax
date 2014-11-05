@@ -1,1 +1,0 @@
-﻿<%@ Application Inherits="FDFk7.Global" %>

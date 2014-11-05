@@ -14,9 +14,6 @@ Global
 		{8C573396-A645-46C9-A469-10B817F8723E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C573396-A645-46C9-A469-10B817F8723E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = FDFk7\FDFk7.csproj
 	EndGlobalSection
