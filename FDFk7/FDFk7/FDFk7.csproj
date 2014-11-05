@@ -34,7 +34,6 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Data" />
-    <Reference Include="Mono.WebBrowser" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
