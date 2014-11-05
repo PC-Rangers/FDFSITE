@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Data.SqlClient;
 
+//Dette er en klasse som bruges til at oprette forbindelse til en database
+
 namespace FDF
 {
     public class DBcon

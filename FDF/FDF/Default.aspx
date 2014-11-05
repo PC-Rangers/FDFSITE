@@ -41,12 +41,12 @@
         <div id="navbar" class="navbar-collapse collapse">
           <form class="navbar-form navbar-right" role="form">
             <div class="form-group">
-              <input type="text" placeholder="Brugernavn" class="form-control">
+              <input id="username" type="text" placeholder="Brugernavn" class="form-control" runat="server">
             </div>
             <div class="form-group">
-              <input type="password" placeholder="Adgangskode" class="form-control">
+              <input id="password" type="password" placeholder="Adgangskode" class="form-control" runat="server">
             </div>
-            <button type="submit" class="btn btn-success">Log ind</button>
+            <button id="LoginKnap" type="submit" class="btn btn-success" runat="server">Log ind</button>
           </form>
         </div><!--/.navbar-collapse -->
       </div>
