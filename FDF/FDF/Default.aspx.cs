@@ -9,9 +9,8 @@ namespace FDF
         public void LoginKnap_Click( object sender, EventArgs args ) 
         {
             //DBcon DBLogIn = new DBcon();
-            //if (username != "" & password.Text != "")
+            //if(FindControl("username") != "" && FindControl("password") != "")
             //{
-
             //    DBLogIn.SQLcmd = ("select * from users where username = '" + username.Text + "' and password = '" + password.Text + "' ");
             //    DBLogIn.ConnectionOpen();
             //}

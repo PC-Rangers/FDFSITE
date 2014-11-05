@@ -39,14 +39,16 @@
           <a class="navbar-brand" href="#">FDFK7</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right" role="form">
-            <div class="form-group">
-              <input id="username" type="text" placeholder="Brugernavn" class="form-control" runat="server">
+          <form class="navbar-form navbar-right" role="form" runat="server">
+            <div class="form-group" runat="server">
+              <%--<asp:TextBox ID="username" runat="server" Text="" placeholder="Brugernavn " ToolTip="Indtast venligst dit brugernavn"></asp:TextBox>>--%>
+                 <input id="username" type="text" placeholder="Brugernavn" class="form-control" runat="server">
             </div>
-            <div class="form-group">
-              <input id="password" type="password" placeholder="Adgangskode" class="form-control" runat="server">
+            <div class="form-group" runat="server">
+              <%--<asp:TextBox ID="password" runat="server" Text="" placeholder="Adgangskode" TextMode="Password" ToolTip="Indtast venligst din adgangskode"></asp:TextBox>--%>
+                <input id="password" type="password" placeholder="Adgangskode" class="form-control" runat="server">
             </div>
-            <button id="LoginKnap" type="submit" class="btn btn-success" runat="server">Log ind</button>
+            <button id="LoginKnap" type="submit" class="btn btn-success" runat="server" onclick="LoginKnap_Clicked">Log ind</button>
           </form>
         </div><!--/.navbar-collapse -->
       </div>
