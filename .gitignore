@@ -2,3 +2,11 @@
 *.userprefs
 
 FDF/FDF.userprefs
+
+FDF/FDF/bin/FDF.dll.mdb
+
+FDF/FDF/bin/FDF.dll
+
+FDF/FDF/obj/Debug/FDF.dll
+
+FDF/FDF/obj/Debug/FDF.dll.mdb
