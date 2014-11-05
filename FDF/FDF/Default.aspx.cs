@@ -2,9 +2,8 @@
 using System.Web;
 using System.Web.UI;
 
-namespace FDF {
-	
-//<<<<<<< HEAD
+namespace FDF 
+{	
     public partial class Default : System.Web.UI.Page 
     {
         public void LoginKnap_Click( object sender, EventArgs args ) 

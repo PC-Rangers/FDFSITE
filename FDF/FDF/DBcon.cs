@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Data.SqlClient;
 
-//Dette er en klasse som bruges til at oprette forbindelse til en database
+//Dette er en klasse som bruges til at oprette forbindelse til en databaser
 
 namespace FDF
 {
