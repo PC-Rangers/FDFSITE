@@ -1,12 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="FDF/DBcon.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FDF/Default.aspx">
     <Files>
-      <File FileName="FDF/Default.aspx" Line="69" Column="69" />
+      <File FileName="FDF/Default.aspx" Line="63" Column="63" />
+      <File FileName="FDF/css/bootstrap.css" Line="1" Column="1" />
       <File FileName="FDF/Default.aspx.cs" Line="1" Column="1" />
-      <File FileName="FDF/DBcon.cs" Line="2" Column="2" />
-      <File FileName="FDF/Global.asax" Line="1" Column="1" />
-      <File FileName="FDF/Global.asax.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

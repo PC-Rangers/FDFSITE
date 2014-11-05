@@ -1,5 +1,5 @@
-/Users/DVS/Projects/GitHub/FDFSITE/FDF/FDF/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
-/Users/DVS/Projects/GitHub/FDFSITE/FDF/FDF/bin/FDF.dll.mdb
-/Users/DVS/Projects/GitHub/FDFSITE/FDF/FDF/bin/FDF.dll
-/Users/DVS/Projects/GitHub/FDFSITE/FDF/FDF/obj/Debug/FDF.dll
-/Users/DVS/Projects/GitHub/FDFSITE/FDF/FDF/obj/Debug/FDF.dll.mdb
+/Users/kdsn/Projects/PC-Rangers/FDFSITE.git/FDF/FDF/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/kdsn/Projects/PC-Rangers/FDFSITE.git/FDF/FDF/bin/FDF.dll.mdb
+/Users/kdsn/Projects/PC-Rangers/FDFSITE.git/FDF/FDF/bin/FDF.dll
+/Users/kdsn/Projects/PC-Rangers/FDFSITE.git/FDF/FDF/obj/Debug/FDF.dll
+/Users/kdsn/Projects/PC-Rangers/FDFSITE.git/FDF/FDF/obj/Debug/FDF.dll.mdb
