@@ -1,8 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="FDF/Default.aspx">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FDF/css/bootstrap.css">
     <Files>
-      <File FileName="FDF/Default.aspx" Line="17" Column="17" />
+      <File FileName="FDF/Default.aspx" Line="8" Column="8" />
+      <File FileName="FDF/css/bootstrap.css" Line="24" Column="24" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
