@@ -34,7 +34,7 @@
 	        <div class="form-group">
 	          <asp:TextBox type="password" placeholder="Adgangskode" CssClass="form-control" runat="server" id="txtAdgang" TextMode="Password" />
 	        </div>
-	        <asp:Button type="submit" CssClass="btn btn-success" id="button1" Text="Log ind" runat="server" OnClick="LoginKnap_Click" />
+	        <asp:Button type="submit" CssClass="btn btn-success" id="btnLogin" Text="Log ind" runat="server" OnClick="LoginKnap_Click" />
 	      </div>
 	    </div><!--/.navbar-collapse -->
 	  </div>

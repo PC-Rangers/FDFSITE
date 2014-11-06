@@ -21,6 +21,6 @@ namespace FDFk7 {
 		
 		protected System.Web.UI.WebControls.TextBox txtAdgang;
 		
-		protected System.Web.UI.WebControls.Button button1;
+		protected System.Web.UI.WebControls.Button btnLogin;
 	}
 }
