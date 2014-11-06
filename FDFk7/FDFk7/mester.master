@@ -1,0 +1,14 @@
+﻿<%@ Master Language="C#" Inherits="FDFk7.mester" %>
+<!DOCTYPE html>
+<html>
+<head runat="server">
+	<title>mester</title>
+</head>
+<body>
+<div id="container">
+<form runat="server">
+    <asp:contentplaceholder id="contentPlaceHolder" runat="server" /> 
+</form>
+</div>
+</body>
+</html>

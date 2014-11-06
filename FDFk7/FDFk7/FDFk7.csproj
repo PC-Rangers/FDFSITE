@@ -62,6 +62,8 @@
     <Content Include="css\bootstrap-theme.min.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
+    <Content Include="mester.master" />
+    <Content Include="OmOs.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -75,6 +77,19 @@
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="DBcon.cs" />
+    <Compile Include="mester.master.cs">
+      <DependentUpon>mester.master</DependentUpon>
+    </Compile>
+    <Compile Include="mester.master.designer.cs">
+      <DependentUpon>mester.master</DependentUpon>
+    </Compile>
+    <Compile Include="OmOs.aspx.cs">
+      <DependentUpon>OmOs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OmOs.aspx.designer.cs">
+      <DependentUpon>OmOs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="basis.cs" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
