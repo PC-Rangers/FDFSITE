@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>FDF K7 Frihavn</title>
+	<title>FDF K7 Frihavn - Forside</title>
 
 	<!-- Bootstrap -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
@@ -46,7 +46,7 @@
 	        <div class="btn-group pull-right">
 	          <button type="button" class="btn btn-default">Forside</button>
 	          <button type="button" class="btn btn-default">Udlejning</button>
-	          <button type="button" class="btn btn-default">Om os</button>
+	          <asp:Button CssClass="btn btn-default" Text="Om os" id="btnOmOs" runat="server" OnClick="GotoOmOs" />
 	          <button type="button" class="btn btn-default">Kontakt</button>
 	        </div>
 	    </div>

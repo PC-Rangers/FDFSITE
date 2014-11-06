@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" Inherits="FDFk7.Default" %>
+﻿<%@ Page Language="C#" Inherits="FDFk7.OmOs" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,7 +44,7 @@
 	  <div class="row top-buffer-large right-buffer-small">
 	    <div class="navbar-right">
 	        <div class="btn-group pull-right">
-	          <button type="button" class="btn btn-default">Forside</button>
+	          <asp:Button CssClass="btn btn-default" Text="Forside" id="btnForside" runat="server" OnClick="GotoForside" />
 	          <button type="button" class="btn btn-default">Udlejning</button>
 	          <button type="button" class="btn btn-default">Om os</button>
 	          <button type="button" class="btn btn-default">Kontakt</button>

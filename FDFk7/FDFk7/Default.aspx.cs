@@ -14,5 +14,9 @@ namespace FDFk7 {
 			}
 		}
 
+		public void GotoOmOs( object sender, EventArgs args ) {
+			basis bob = new basis( sender, args, btnLogin, "GotoOmOs", Response );
+		}
+
 	}
 }

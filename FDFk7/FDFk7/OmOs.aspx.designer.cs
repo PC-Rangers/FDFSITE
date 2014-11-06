@@ -12,16 +12,17 @@ namespace FDFk7 {
 	
 	
 	public partial class OmOs {
-
+		
 		protected System.Web.UI.HtmlControls.HtmlForm body;
-
+		
 		protected System.Web.UI.HtmlControls.HtmlGenericControl navbar;
-
+		
 		protected System.Web.UI.WebControls.TextBox txtBruger;
-
+		
 		protected System.Web.UI.WebControls.TextBox txtAdgang;
-
+		
 		protected System.Web.UI.WebControls.Button btnLogin;
-
+		
+		protected System.Web.UI.WebControls.Button btnForside;
 	}
 }

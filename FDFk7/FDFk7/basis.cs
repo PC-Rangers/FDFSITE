@@ -1,5 +1,7 @@
 ﻿// /** Made By Daniel V. Sandholt **/
 using System;
+using System.Web;
+using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 
@@ -8,12 +10,22 @@ namespace FDFk7 {
 		Button knap;
 		TextBox txtBruger, txtAdgang;
 
-		public basis( object sender, EventArgs args, Button buton, string funk, object[] Objekter ) {
-			knap = buton;
-			if( funk == "LoginKnap_Click" ) {
+		public basis( object sender, EventArgs args, Button btn, string fnk, object[] Objekter ) {
+			knap = btn;
+			if( fnk == "LoginKnap_Click" ) {
 				txtBruger = ( TextBox )Objekter[ 0 ];
 				txtAdgang = ( TextBox )Objekter[ 1 ];
 				LoginKnap_Click( sender, args );
+			}
+		}
+
+		public basis( object sender, EventArgs args, Button btn, string fnk, HttpResponse rq ) {
+			string url = "http://127.0.0.1:8080/";
+			knap = btn;
+			if( fnk == "GotoOmOs" ) {
+				rq.Redirect( url + "OmOs.aspx" );
+			} else if( fnk == "GotoForside" ) {
+				rq.Redirect( url + "Default.aspx" );
 			}
 		}
 

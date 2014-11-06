@@ -11,5 +11,9 @@ namespace FDFk7 {
 			basis bob = new basis( sender, args, btnLogin, "LoginKnap_Click", brugerPass );
 		}
 
+		public void GotoForside( object sender, EventArgs args ) {
+			basis bob = new basis( sender, args, btnForside, "GotoForside", Response );
+		}
+
 	}
 }
