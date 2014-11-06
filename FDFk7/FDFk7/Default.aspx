@@ -34,7 +34,7 @@
 	        </div>
 	        <div class="form-group">
 	          <!--- <input type="password" placeholder="Adgangskode" class="form-control"> -->
-	          <asp:TextBox type="password" placeholder="Adgangskode" CssClass="form-control" runat="server" id="txtAdgang" />
+	          <asp:TextBox type="password" placeholder="Adgangskode" CssClass="form-control" runat="server" id="txtAdgang" TextMode="Password" />
 	        </div>
 	        <asp:Button type="submit" CssClass="btn btn-success" id="button1" Text="Log ind" runat="server" OnClick="button1Clicked" />
 	      </form>
