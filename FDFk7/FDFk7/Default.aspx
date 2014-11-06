@@ -42,12 +42,6 @@
 	  </div>
 	</nav>
 
-	<!-- ignorer dette
-	<form id="form1" runat="server">
-		<asp:Button id="button2" runat="server" Text="Click me!" OnClick="button1Clicked" />
-	</form>
-	-->
-
 	<div class="container">
 	  <div class="row top-buffer-large right-buffer-small">
 	    <div class="navbar-right">
