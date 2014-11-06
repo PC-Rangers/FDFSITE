@@ -14,7 +14,7 @@
 	<link href="css/app.css" rel="stylesheet">
 </head>
 <body>
-
+<form class="container" id="body" runat="server" role="form">
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 	  <div class="container">
 	    <div class="navbar-header">
@@ -27,7 +27,7 @@
 	      <a class="navbar-brand" href="#">FDFK7</a>
 	    </div>
 	    <div id="navbar" class="navbar-collapse collapse" runat="server">
-	      <form class="navbar-form navbar-right" role="form" runat="server">
+	      <div class="navbar-form navbar-right" role="form">
 	        <div class="form-group">
 	          <!-- <input type="text" placeholder="Brugernavn" class="form-control"> -->
 	          <asp:TextBox type="text" placeholder="Brugernavn" CssClass="form-control" runat="server" id="txtBruger" />
@@ -37,7 +37,7 @@
 	          <asp:TextBox type="password" placeholder="Adgangskode" CssClass="form-control" runat="server" id="txtAdgang" TextMode="Password" />
 	        </div>
 	        <asp:Button type="submit" CssClass="btn btn-success" id="button1" Text="Log ind" runat="server" OnClick="button1Clicked" />
-	      </form>
+	      </div>
 	    </div><!--/.navbar-collapse -->
 	  </div>
 	</nav>
@@ -163,6 +163,6 @@
 	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 	<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 
-
+</form>
 </body>
 </html>

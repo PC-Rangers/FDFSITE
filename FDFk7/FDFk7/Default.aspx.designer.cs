@@ -13,6 +13,8 @@ namespace FDFk7 {
 	
 	public partial class Default {
 		
+		protected System.Web.UI.HtmlControls.HtmlForm body;
+		
 		protected System.Web.UI.HtmlControls.HtmlGenericControl navbar;
 		
 		protected System.Web.UI.WebControls.TextBox txtBruger;
