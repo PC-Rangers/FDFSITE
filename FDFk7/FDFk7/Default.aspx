@@ -29,12 +29,14 @@
 	    <div id="navbar" class="navbar-collapse collapse" runat="server">
 	      <form class="navbar-form navbar-right" role="form" runat="server">
 	        <div class="form-group">
-	          <input type="text" placeholder="Brugernavn" class="form-control">
+	          <!-- <input type="text" placeholder="Brugernavn" class="form-control"> -->
+	          <asp:TextBox type="text" placeholder="Brugernavn" CssClass="form-control" runat="server" id="txtBruger" />
 	        </div>
 	        <div class="form-group">
-	          <input type="password" placeholder="Adgangskode" class="form-control">
+	          <!--- <input type="password" placeholder="Adgangskode" class="form-control"> -->
+	          <asp:TextBox type="password" placeholder="Adgangskode" CssClass="form-control" runat="server" id="txtAdgang" />
 	        </div>
-	        <asp:Button type="submit" class="btn btn-success" id="button1" Text="Log ind" runat="server" OnClick="button1Clicked"></asp:Button>
+	        <asp:Button type="submit" CssClass="btn btn-success" id="button1" Text="Log ind" runat="server" OnClick="button1Clicked" />
 	      </form>
 	    </div><!--/.navbar-collapse -->
 	  </div>
