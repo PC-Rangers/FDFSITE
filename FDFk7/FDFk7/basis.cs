@@ -14,10 +14,6 @@ namespace FDFk7 {
 				txtBruger = ( TextBox )Objekter[ 0 ];
 				txtAdgang = ( TextBox )Objekter[ 1 ];
 				LoginKnap_Click( sender, args );
-			} else if( funk == "button1Clicked" ) {
-				txtBruger = ( TextBox )Objekter[ 0 ];
-				txtAdgang = ( TextBox )Objekter[ 1 ];
-				LoginKnap_Click( sender, args );
 			}
 		}
 
