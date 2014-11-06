@@ -11,6 +11,16 @@ namespace FDFk7 {
 			tmpTxt = txtBruger.Text;
 			txtBruger.Text = txtAdgang.Text;
 			txtAdgang.Text = tmpTxt;
+//			LoginKnap_Click( sender, args );
+		}
+
+
+		public void LoginKnap_Click( object sender, EventArgs args ) {
+			DBcon DBLogIn = new DBcon();
+			if( txtBruger.Text != "" && txtAdgang.Text != "" ) {
+				DBLogIn.SQLcmd = ( "select * from users where username = '" + txtBruger.Text + "' and password = '" + txtAdgang.Text + "' " );
+				DBLogIn.ConnectionOpen();
+			}
 		}
 	}
 }
