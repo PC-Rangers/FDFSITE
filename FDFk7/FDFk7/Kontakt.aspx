@@ -66,22 +66,83 @@
 				    <script>  
 				 
 				      function init_map() {
-				    	var var_location = new google.maps.LatLng(55.732028, 12.343371);
-				 
+				          var var_LocLokalerne = new google.maps.LatLng(55.6980784, 12.5840112);
+				          var var_LocTranehuset = new google.maps.LatLng(55.7526963, 12.3809071);
+				          var var_LocKirken = new google.maps.LatLng(55.6989846, 12.5887619);
+
 				        var var_mapoptions = {
-				          center: var_location,
-				          zoom: 14
+				            center: new google.maps.LatLng(55.73, 12.50),
+				          zoom: 11
 				        };
 				 
 					    var var_marker = new google.maps.Marker({
-					      position: var_location,
+					        position: var_LocLokalerne,
 					      map: var_map,
-					      title:"Venice"});
+					      title: "Lokalerne"
+					    });
+					    var var_marker2 = new google.maps.Marker({
+					        position: var_LocTranehuset,
+					        map: var_map,
+					        title: "Tranehuset"
+					    });
+					    var var_marker3 = new google.maps.Marker({
+					        position: var_LocKirken,
+					        map: var_map,
+					        title: "Frihavns Kirken"
+					    });
 					 
 				        var var_map = new google.maps.Map(document.getElementById("map-container"),
 				            var_mapoptions);
 					 
-					    var_marker.setMap(var_map); 
+				        var_marker.setMap(var_map);
+				        var_marker2.setMap(var_map);
+				        var_marker3.setMap(var_map);
+
+				        var infoString = '<div id="content">' +
+                                        '</div>' +
+                                        '<h4 id=>Lokalerne</h4>' +
+                                        '<div id="bodyContent">' +
+                                        '<p>Willemoesgade 42</p>' +
+                                        '<p>2100 København Ø</p>' +
+                                        '<p></p>' +
+                                        '</div>' +
+                                        '</div>';
+
+				        var infoString2 = '<div id="content2">' +
+                                      '</div>' +
+                                      '<h4 id=>Tranehuset</h4>' +
+                                      '<div id="bodyContent">' +
+                                      '<p>Tranemosevej 39-43</p>' +
+                                      '<p>2750 Ballerup</p>' +
+                                      '</div>' +
+                                      '</div>';
+				        var infoString3 = '<div id="content3">' +
+                                            '</div>' +
+                                            '<h4 id=>Frihavns Kirken</h4>' +
+                                            '<div id="bodyContent">' +
+                                            '<p>Willemoesgade 68,</p>' +
+                                            '<p>2100 København Ø</p>' +
+                                            '</div>' +
+                                            '</div>';
+
+				        var infowindow = new google.maps.InfoWindow({ content: '<div style="width:300px; height:1px"></div>' + infoString });
+
+				        var infowindow2 = new google.maps.InfoWindow({ content: '<div style="width:300px; height:1px"></div>' + infoString2});
+
+				        var infowindow3 = new google.maps.InfoWindow({ content: '<div style="width:300px; height:1px"></div>' + infoString3});
+
+				        google.maps.event.addListener(var_marker, 'click', function ()
+				        {
+				            infowindow.open(var_map, var_marker);
+				        });
+				        google.maps.event.addListener(var_marker2, 'click', function ()
+				        {
+				            infowindow2.open(var_map, var_marker2);
+				        });
+				        google.maps.event.addListener(var_marker3, 'click', function ()
+				        {
+				            infowindow3.open(var_map, var_marker3);
+				        });
 					 
 				      }
 				 
