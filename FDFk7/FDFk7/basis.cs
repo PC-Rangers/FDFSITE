@@ -22,10 +22,14 @@ namespace FDFk7 {
 		public basis( object sender, EventArgs args, Button btn, string fnk, HttpResponse rq ) {
 			string url = "http://127.0.0.1:8080/";
 			knap = btn;
-			if( fnk == "GotoOmOs" ) {
-				rq.Redirect( url + "OmOs.aspx" );
-			} else if( fnk == "GotoForside" ) {
+			if( fnk == "GotoForside" ) {
 				rq.Redirect( url + "Default.aspx" );
+			} else if( fnk == "GotoOmOs" ) {
+				rq.Redirect( url + "OmOs.aspx" );
+			} else if( fnk == "GotoUdlejning" ) {
+//				rq.Redirect( url + "Udlejning.aspx" );
+			} else if( fnk == "GotoKontakt" ) {
+				rq.Redirect( url + "Kontakt.aspx" );
 			}
 		}
 

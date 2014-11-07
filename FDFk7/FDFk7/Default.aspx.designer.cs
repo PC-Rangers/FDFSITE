@@ -23,6 +23,12 @@ namespace FDFk7 {
 		
 		protected System.Web.UI.WebControls.Button btnLogin;
 		
+		protected System.Web.UI.WebControls.Button btnForside;
+		
+		protected System.Web.UI.WebControls.Button btnUdlejning;
+		
 		protected System.Web.UI.WebControls.Button btnOmOs;
+		
+		protected System.Web.UI.WebControls.Button btnKontakt;
 	}
 }

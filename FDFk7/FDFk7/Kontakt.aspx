@@ -29,12 +29,12 @@
         <div id="navbar" class="navbar-collapse collapse">
           <div class="navbar-form navbar-right" role="form">
             <div class="form-group">
-              <input type="text" placeholder="Brugernavn" class="form-control">
+              <asp:TextBox type="text" placeholder="Brugernavn" CssClass="form-control" runat="server" id="txtBruger" />
             </div>
             <div class="form-group">
-              <input type="password" placeholder="Adgangskode" class="form-control">
+              <asp:TextBox type="password" placeholder="Adgangskode" CssClass="form-control" runat="server" id="txtAdgang" TextMode="Password" />
             </div>
-            <button type="submit" class="btn btn-success">Log ind</button>
+	        <asp:Button type="submit" CssClass="btn btn-success" id="btnLogin" Text="Log ind" runat="server" OnClick="LoginKnap_Click" />
           </div>
         </div><!--/.navbar-collapse -->
       </div>
@@ -45,10 +45,10 @@
       <div class="row top-buffer-large right-buffer-small">
         <div class="navbar-right">
             <div class="btn-group pull-right">
-              <button type="button" class="btn btn-default">Forside</button>
-              <button type="button" class="btn btn-default">Udlejning</button>
-              <button type="button" class="btn btn-default">Om os</button>
-              <button type="button" class="btn btn-default">Kontakt</button>
+            	<asp:Button type="button" CssClass="btn btn-default" Text="Forside" runat="server" id="btnForside" OnClick="GotoForside" />
+            	<asp:Button type="button" CssClass="btn btn-default" Text="Udlejning" runat="server" id="btnUdlejning" OnClick="GotoUdlejning" />
+            	<asp:Button type="button" CssClass="btn btn-default" Text="OmOs" runat="server" id="btnOmOs" OnClick="GotoOmOs" />
+            	<asp:Button type="button" CssClass="btn btn-default" Text="Kontakt" runat="server" id="btnKontakt" OnClick="GotoKontakt" />
             </div>
         </div>
       </div>

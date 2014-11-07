@@ -40,14 +40,15 @@
 	  </div>
 	</nav>
 
+    <!-- Nav menu -->
 	<div class="container">
 	  <div class="row top-buffer-large right-buffer-small">
 	    <div class="navbar-right">
 	        <div class="btn-group pull-right">
-	          <asp:Button CssClass="btn btn-default" Text="Forside" id="btnForside" runat="server" OnClick="GotoForside" />
-	          <button type="button" class="btn btn-default">Udlejning</button>
-	          <button type="button" class="btn btn-default">Om os</button>
-	          <button type="button" class="btn btn-default">Kontakt</button>
+            	<asp:Button type="button" CssClass="btn btn-default" Text="Forside" runat="server" id="btnForside" OnClick="GotoForside" />
+            	<asp:Button type="button" CssClass="btn btn-default" Text="Udlejning" runat="server" id="btnUdlejning" OnClick="GotoUdlejning" />
+            	<asp:Button type="button" CssClass="btn btn-default" Text="OmOs" runat="server" id="btnOmOs" OnClick="GotoOmOs" />
+            	<asp:Button type="button" CssClass="btn btn-default" Text="Kontakt" runat="server" id="btnKontakt" OnClick="GotoKontakt" />
 	        </div>
 	    </div>
 	  </div>
