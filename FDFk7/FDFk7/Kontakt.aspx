@@ -60,7 +60,7 @@
          
 
 			<div class="padding bottom-buffer-small">
-				<div id="map-container" class="col-md-12" style="width:500px;height:380px;">
+				<div id="map-container" class="col-md-12">
 				 <!-- Skal være i slutningen af dokumentet -->
 				    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
 				    <script>  
