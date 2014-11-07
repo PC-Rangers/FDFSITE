@@ -34,7 +34,7 @@
             <div class="form-group">
               <asp:TextBox type="password" placeholder="Adgangskode" CssClass="form-control" runat="server" id="txtAdgang" TextMode="Password" />
             </div>
-	        <asp:Button type="submit" CssClass="btn btn-success" id="btnLogin" Text="Log ind" runat="server" OnClick="LoginKnap_Click" />
+	        <asp:Button type="submit" CssClass="btn btn-success" id="btnLogin" Text="Log ind" runat="server" OnClick="LoginAttempt" />
           </div>
         </div><!--/.navbar-collapse -->
       </div>
@@ -47,7 +47,7 @@
             <div class="btn-group pull-right">
             	<asp:Button type="button" CssClass="btn btn-default" Text="Forside" runat="server" id="btnForside" OnClick="GotoForside" />
             	<asp:Button type="button" CssClass="btn btn-default" Text="Udlejning" runat="server" id="btnUdlejning" OnClick="GotoUdlejning" />
-            	<asp:Button type="button" CssClass="btn btn-default" Text="OmOs" runat="server" id="btnOmOs" OnClick="GotoOmOs" />
+            	<asp:Button type="button" CssClass="btn btn-default" Text="Om Os" runat="server" id="btnOmOs" OnClick="GotoOmOs" />
             	<asp:Button type="button" CssClass="btn btn-default" Text="Kontakt" runat="server" id="btnKontakt" OnClick="GotoKontakt" />
             </div>
         </div>

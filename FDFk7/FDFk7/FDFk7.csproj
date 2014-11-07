@@ -90,13 +90,13 @@
     <Compile Include="OmOs.aspx.designer.cs">
       <DependentUpon>OmOs.aspx</DependentUpon>
     </Compile>
-    <Compile Include="basis.cs" />
     <Compile Include="Kontakt.aspx.cs">
       <DependentUpon>Kontakt.aspx</DependentUpon>
     </Compile>
     <Compile Include="Kontakt.aspx.designer.cs">
       <DependentUpon>Kontakt.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Basis.cs" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
