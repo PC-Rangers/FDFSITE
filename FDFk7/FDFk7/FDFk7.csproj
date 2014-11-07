@@ -64,6 +64,7 @@
     <Content Include="css\bootstrap.min.css" />
     <Content Include="mester.master" />
     <Content Include="OmOs.aspx" />
+    <Content Include="Kontakt.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -90,6 +91,12 @@
       <DependentUpon>OmOs.aspx</DependentUpon>
     </Compile>
     <Compile Include="basis.cs" />
+    <Compile Include="Kontakt.aspx.cs">
+      <DependentUpon>Kontakt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Kontakt.aspx.designer.cs">
+      <DependentUpon>Kontakt.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
