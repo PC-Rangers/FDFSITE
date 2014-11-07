@@ -2,8 +2,6 @@
 h2{
     margin: 0;     
     color: #666;
-    padding-top: 90px;
-    font-size: 52px;
     font-family: "trebuchet ms", sans-serif;    
 }
 .item{
@@ -18,8 +16,17 @@ h2{
     margin: 20px;
 }
 
+.no-gutter {
+    padding-right:0;
+    padding-left:0;
+}
+
+.tbl-width-num{
+    width:120px;
+}
 
 /* ------- Custom paddign ------- */
+
 .top-buffer-small { 
     margin-top:25px; 
 }
@@ -30,4 +37,34 @@ h2{
 
 .right-buffer-small {
     margin-right:15px; 
+}
+.bottom-buffer-small {
+    margin-bottom:15px; 
+}
+
+.btn-margin{
+    margin: 20px 10px 10px 10px;
+}
+.tbl-margin{
+    margin-bottom: 20px;
+}
+.tbl-padding{
+    padding: 0 25px 3px 0;
+}
+
+.top-padding-small{
+    padding-right: 15px;
+}
+.right-padding-small{
+    padding-right: 15px;
+}
+.padding{
+    padding: 15px;
+}
+
+
+/* ------- Map ------- */
+
+#map-container { 
+    height: 375px;
 }
