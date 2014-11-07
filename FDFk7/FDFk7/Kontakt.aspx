@@ -60,38 +60,35 @@
          
 
 			<div class="padding bottom-buffer-small">
-				<div id="map-container" class="col-md-12"></div>
-			</div>
-
-			<div class="container">
-			 <!-- Skal være i slutningen af dokumentet -->
-			    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
-			    <script>  
-			 
-			      function init_map() {
-			    	var var_location = new google.maps.LatLng(55.732028, 12.343371);
-			 
-			        var var_mapoptions = {
-			          center: var_location,
-			          zoom: 14
-			        };
-			 
-				    var var_marker = new google.maps.Marker({
-				      position: var_location,
-				      map: var_map,
-				      title:"Venice"});
+				<div id="map-container" class="col-md-12" style="width:500px;height:380px;">
+				 <!-- Skal være i slutningen af dokumentet -->
+				    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+				    <script>  
 				 
-			        var var_map = new google.maps.Map(document.getElementById("map-container"),
-			            var_mapoptions);
+				      function init_map() {
+				    	var var_location = new google.maps.LatLng(55.732028, 12.343371);
 				 
-				    var_marker.setMap(var_map); 
+				        var var_mapoptions = {
+				          center: var_location,
+				          zoom: 14
+				        };
 				 
-			      }
-			 
-			      google.maps.event.addDomListener(window, 'load', init_map);
-			 
-			    </script>
-
+					    var var_marker = new google.maps.Marker({
+					      position: var_location,
+					      map: var_map,
+					      title:"Venice"});
+					 
+				        var var_map = new google.maps.Map(document.getElementById("map-container"),
+				            var_mapoptions);
+					 
+					    var_marker.setMap(var_map); 
+					 
+				      }
+				 
+				      google.maps.event.addDomListener(window, 'load', init_map);
+				 
+				    </script>
+				</div>
 		    </div>
 
 	        <div class="col-sm-6 top-buffer-small">
