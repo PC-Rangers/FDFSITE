@@ -146,6 +146,8 @@
 
 </form>
 
+	<div class="clearfix"></div>
+
 	<hr>
 	<div class="container">
 		<div class="row padding">

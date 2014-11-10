@@ -59,15 +59,28 @@
 		<div class="row top-buffer-small">
 
 		    
-			
 		</div> <!-- /row top-buffer-small -->
-		</div> <!-- /container -->
-		<hr>
+	</div> <!-- /container -->
 
-		<footer>
-			<p>© Company 2014</p>
-		</footer>
-	
+</form>
+
+	<div class="clearfix"></div>
+
+	<div class="footer-color">
+	<div class="container">
+		<div class="row padding">
+			<footer>
+				<p>© Company 2014</p>
+			</footer>
+		</div>
+</div>
+	</div>
+
+
+
+
+
+
 
 
 	<!-- Bootstrap core JavaScript
@@ -81,6 +94,5 @@
 	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 	<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 
-</form>
 </body>
 </html>

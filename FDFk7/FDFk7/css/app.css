@@ -25,6 +25,11 @@ h2{
     width:120px;
 }
 
+.footer-color{
+    background-color: #f5f5f5;
+    border-top: 1px solid #E8E8E8;
+}
+
 /* ------- Custom paddign ------- */
 
 .top-buffer-small { 
