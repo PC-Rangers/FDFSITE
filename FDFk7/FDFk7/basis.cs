@@ -8,9 +8,9 @@ using System.Web.UI.WebControls;
 namespace FDFk7 {
 	public class Basis {
 
-		private string mainURL = "http://fdfk7.dk.nt8.unoeuro-server.com/";
-//"http://127.0.0.1:8080/";
-		//51017
+		private string mainURL = "http://127.0.0.1:8080/";
+		//"http://fdfk7.dk.nt8.unoeuro-server.com/";
+		//http://127.0.0.1:51017/
 		private HttpResponse hR;
 		private HttpSessionState session;
 
