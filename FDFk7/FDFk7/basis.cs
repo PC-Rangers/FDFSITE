@@ -9,11 +9,17 @@ namespace FDFk7 {
 	public class Basis {
 
 		private string mainURL = "http://127.0.0.1:8080/";
+		//51017
+		//"http://localhost/";
 		private HttpResponse hR;
 
 		public Basis( string fnk, object[] obj ) {
 			switch( fnk ) {
 				case "Load":
+					HttpRequest rq = ( HttpRequest )obj[ 4 ];
+					if( rq.UserAgent == "Windows" ) {
+						mainURL = "http://127.0.0.1:51017/";
+					}
 					Load( obj );
 					break;
 				case "Login":
@@ -41,6 +47,7 @@ namespace FDFk7 {
 			Button btn = ( Button )obj[ 2 ];
 			HttpSessionState session = ( HttpSessionState )obj[ 3 ];
 			btn.Text = "Log ud " + session[ "UserAuthentication" ];
+
 		}
 
 		private void LogInUd( string fnk, object[] obj ) {

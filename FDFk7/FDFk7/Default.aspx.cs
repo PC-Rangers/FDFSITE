@@ -5,7 +5,7 @@ namespace FDFk7 {
 
 		protected void Page_Load( object sender, EventArgs args ) {
 			if( Session[ "UserAuthentication" ] != null ) {
-				Basis bob = new Basis( "Load", new object[]{ txtBruger, txtAdgang, btnLogin, Session } );
+				Basis bob = new Basis( "Load", new object[]{ txtBruger, txtAdgang, btnLogin, Session, Request } );
 			}
 		}
 
