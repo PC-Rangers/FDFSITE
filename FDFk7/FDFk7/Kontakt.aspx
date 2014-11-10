@@ -91,8 +91,7 @@
 					        title: "Frihavns Kirken"
 					    });
 					 
-				        var var_map = new google.maps.Map(document.getElementById("map-container"),
-				            var_mapoptions);
+				        var var_map = new google.maps.Map(document.getElementById("map-container"),var_mapoptions);
 					 
 				        var_marker.setMap(var_map);
 				        var_marker2.setMap(var_map);
@@ -125,12 +124,12 @@
                                             '</div>' +
                                             '</div>';
 
-				        var infowindow = new google.maps.InfoWindow({ content: '<div style="width:300px; height:1px"></div>' + infoString });
+				        var infowindow = new google.maps.InfoWindow({ content: '<div style="width:300px; height:1px"></div>' + infoString});
 
 				        var infowindow2 = new google.maps.InfoWindow({ content: '<div style="width:300px; height:1px"></div>' + infoString2});
 
 				        var infowindow3 = new google.maps.InfoWindow({ content: '<div style="width:300px; height:1px"></div>' + infoString3});
-
+                            
 				        google.maps.event.addListener(var_marker, 'click', function ()
 				        {
 				            infowindow.open(var_map, var_marker);
@@ -143,9 +142,7 @@
 				        {
 				            infowindow3.open(var_map, var_marker3);
 				        });
-					 
 				      }
-				 
 				      google.maps.event.addDomListener(window, 'load', init_map);
 				 
 				    </script>
