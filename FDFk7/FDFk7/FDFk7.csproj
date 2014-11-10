@@ -65,6 +65,7 @@
     <Content Include="mester.master" />
     <Content Include="OmOs.aspx" />
     <Content Include="Kontakt.aspx" />
+    <Content Include="Bruger.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -97,6 +98,12 @@
       <DependentUpon>Kontakt.aspx</DependentUpon>
     </Compile>
     <Compile Include="Basis.cs" />
+    <Compile Include="Bruger.aspx.cs">
+      <DependentUpon>Bruger.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bruger.aspx.designer.cs">
+      <DependentUpon>Bruger.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
