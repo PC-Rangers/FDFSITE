@@ -1,4 +1,3 @@
-var byen = new Array(9999);
 byen[0555] = "Scanning";
 byen[0800] = "Høje Taastrup";
 byen[0877] = "København C";
