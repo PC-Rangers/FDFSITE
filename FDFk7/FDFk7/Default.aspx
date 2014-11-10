@@ -142,14 +142,18 @@
 			</div> <!-- /container -->
 
 		</div> <!-- /row top-buffer-small -->
-
-		<hr>
-
-		<footer>
-			<p>© Company 2014</p>
-		</footer>
 	</div> <!-- /container -->
 
+</form>
+
+	<hr>
+	<div class="container">
+		<div class="row padding">
+			<footer>
+				<p>© Company 2014</p>
+			</footer>
+		</div>
+	</div>
 
 	<!-- Bootstrap core JavaScript
 	================================================== -->
@@ -162,6 +166,5 @@
 	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 	<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 
-</form>
 </body>
 </html>
