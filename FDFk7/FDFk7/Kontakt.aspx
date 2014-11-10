@@ -132,14 +132,32 @@
                             
 				        google.maps.event.addListener(var_marker, 'click', function ()
 				        {
+				            if (infowindow2.open) {
+				                infowindow2.close();
+				            }
+				            if (infowindow3.open) {
+				                infowindow3.close();
+				            }
 				            infowindow.open(var_map, var_marker);
 				        });
 				        google.maps.event.addListener(var_marker2, 'click', function ()
 				        {
+				            if (infowindow.open) {
+				                infowindow.close();
+				            }
+				            if (infowindow3.open) {
+				                infowindow3.close();
+				            }
 				            infowindow2.open(var_map, var_marker2);
 				        });
 				        google.maps.event.addListener(var_marker3, 'click', function ()
 				        {
+				            if (infowindow.open) {
+				                infowindow.close();
+				            }
+				            if (infowindow2.open) {
+				                infowindow2.close();
+				            }
 				            infowindow3.open(var_map, var_marker3);
 				        });
 				      }
