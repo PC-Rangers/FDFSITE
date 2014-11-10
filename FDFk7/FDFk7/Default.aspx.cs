@@ -4,9 +4,7 @@ namespace FDFk7 {
 	public partial class Default : System.Web.UI.Page {
 
 		protected void Page_Load( object sender, EventArgs args ) {
-			if( Session[ "UserAuthentication" ] != null ) {
-				Basis bob = new Basis( "Load", new object[]{ txtBruger, txtAdgang, btnLogin, Session, Request } );
-			}
+			Basis bob = new Basis( "Load", new object[]{ txtBruger, txtAdgang, btnLogin, Session, Request } );
 		}
 
 		public void LoginOut( object sender, EventArgs args ) {
@@ -26,7 +24,7 @@ namespace FDFk7 {
 		}
 
 		public void GotoUdlejning( object sender, EventArgs args ) {
-			Basis bob = new Basis( "Udlejning", new object[]{ sender, Response, Session } );
+			Basis bob = new Basis( "Udlejning", new object[]{ sender, Response, Session, Request } );
 		}
 
 		public void GotoKontakt( object sender, EventArgs args ) {
