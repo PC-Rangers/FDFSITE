@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Web;
-using System.Web.UI;
 
-namespace FDFk7
-{
-	
-	public partial class Udlejning : System.Web.UI.Page
-	{
+namespace FDFk7 {
+	public partial class Udlejning : System.Web.UI.Page {
 
 		protected void Page_Load( object sender, EventArgs args ) {
 			if( Session[ "UserAuthentication" ] != null ) {

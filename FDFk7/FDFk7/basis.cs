@@ -8,19 +8,16 @@ using System.Web.UI.WebControls;
 namespace FDFk7 {
 	public class Basis {
 
-		private string mainURL = "http://127.0.0.1:8080/";
-		//"http://fdfk7.dk.nt8.unoeuro-server.com/";
+		private string mainURL = "http://fdfk7.dk.nt8.unoeuro-server.com/";
+		//"http://12.0.0.1:8080/";
 		//http://127.0.0.1:51017/
 		private HttpResponse hR;
 		private HttpSessionState session;
 
 		public Basis( string fnk, object[] obj ) {
+			mainURL = "http://fdfk7.dk.nt8.unoeuro-server.com/";
 			switch( fnk ) {
 				case "Load":
-//					HttpRequest rq = ( HttpRequest )obj[ 4 ];
-//					if( rq.UserAgent.Contains( "Windows" ) ) {
-					//mainURL = "http://127.0.0.1:51017/";//http://fdfk7.dk.nt8.unoeuro-server.com/
-					//}
 					session = ( HttpSessionState )obj[ 3 ];
 					if( session[ "UserAuthentication" ] != null ) {
 						Load( obj );
