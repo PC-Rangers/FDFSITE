@@ -23,7 +23,7 @@ namespace FDFk7 {
 				case "Forside":
 					Sideskift( ( HttpResponse )obj[ 1 ], "Default" );
 					break;
-//					case "Udlejning":
+				case "Udlejning":
 				case "OmOs":
 				case "Kontakt":
 					Sideskift( ( HttpResponse )obj[ 1 ], ( ( Button )obj[ 0 ] ).Text.Replace( " ", string.Empty ) );
