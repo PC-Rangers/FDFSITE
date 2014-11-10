@@ -66,6 +66,7 @@
     <Content Include="OmOs.aspx" />
     <Content Include="Kontakt.aspx" />
     <Content Include="Bruger.aspx" />
+    <Content Include="Udlejning.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -103,6 +104,12 @@
     </Compile>
     <Compile Include="Bruger.aspx.designer.cs">
       <DependentUpon>Bruger.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Udlejning.aspx.cs">
+      <DependentUpon>Udlejning.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Udlejning.aspx.designer.cs">
+      <DependentUpon>Udlejning.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <PropertyGroup>
