@@ -60,9 +60,11 @@ namespace FDFk7 {
                 {
                     if (txtBruger.Text != "" && txtAdgang.Text != "")
                     {
-                        SqlConnection Con = new SqlConnection("Data Source=mssql3.unoeuro.com;Initial Catalog=fdfk7_dk_db;Persist Security Info=True;User ID=fdfk7_dk;Password=4Xbc8tun");
-                        SqlCommand cmd = new SqlCommand("select brugernavn, kodeord, retur from users where brugernavn = '" + txtBruger.Text + "' and kodeord = '" + txtAdgang.Text + "' ");
-                        Con.Open();
+						// Opretter forbindelse til databasen
+						SqlConnection Con = new SqlConnection( "Data Source=mssql3.unoeuro.com;Initial Catalog=fdfk7_dk_db;Persist Security Info=True;User ID=fdfk7_dk;Password=4Xbc8tun" );
+						// Valg af bruger
+						SqlCommand cmd = new SqlCommand( "SELECT BrugerNavn,Adgangskode,Salt,Rettighedder FROM USR_Brugere WHERE BrugerNavn = '" + txtBruger.Text + "' " );
+						Con.Open();
                         cmd.Connection = Con;
                         SqlDataReader DB_Reader = cmd.ExecuteReader();
                         while (DB_Reader.Read())
