@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" Inherits="FDFk7.userdata" %>
+﻿<%@ Page Language="C#" Inherits="FDFk7.Userdata" %>
 <!DOCTYPE html>
 <html>
 <head runat="server">
@@ -13,26 +13,9 @@
     <!-- Custom -->
     <link href="css/app.css" rel="stylesheet">
 </head>
+
 <body>
-	<form id="form1" runat="server">
-        <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>FDF K7 Frihavn</title>
-
-  <!-- Bootstrap -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom -->
-  <link href="css/app.css" rel="stylesheet">
-
-
-
-</head>
-<body>
+<form id="body" runat="server">
 
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 	  <div class="container">
@@ -59,163 +42,164 @@
 	  </div>
 	</nav>
 
-  <!-- Nav menu -->
-  <div class="container">
-    <div class="row top-buffer-large right-buffer-small">
-      <div class="navbar-right">
-        <div class="btn-group pull-right">
-          <button type="button" class="btn btn-default">Forside</button>
-          <button type="button" class="btn btn-default">Udlejning</button>
-          <button type="button" class="btn btn-default">Om os</button>
-          <button type="button" class="btn btn-default">Kontakt</button>
-        </div>
-      </div>
-    </div>
-  </div>
+    <!-- Nav menu -->
+	<div class="container">
+	  <div class="row top-buffer-large right-buffer-small">
+	    <div class="navbar-right">
+	        <div class="btn-group pull-right">
+            	<asp:Button type="button" CssClass="btn btn-default" Text="Forside" runat="server" id="btnForside" OnClick="GotoForside" />
+            	<asp:Button type="button" CssClass="btn btn-default" Text="Udlejning" runat="server" id="btnUdlejning" OnClick="GotoUdlejning" />
+            	<asp:Button type="button" CssClass="btn btn-default" Text="Om Os" runat="server" id="btnOmOs" OnClick="GotoOmOs" />
+            	<asp:Button type="button" CssClass="btn btn-default" Text="Kontakt" runat="server" id="btnKontakt" OnClick="GotoKontakt" />
+	        </div>
+	    </div>
+	  </div>
+	</div>
 
-  <!-- Side indhold -->
-  <div class="container">
-    <div class="row top-buffer-small">
-     <div class="container">
-      <div class="row top-buffer-small">
+	<!-- Side indhold -->
+	<div class="container">
+    	<div class="row top-buffer-small">
 
-        <form>
-          <div class="col-sm-6 top-buffer-small">
+			<div class="form">
+				<div class="col-sm-6 top-buffer-small">
 
-            <label for="exampleInputEmail1">Navn</label>
-            <input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
+		            <label for="exampleInputEmail1">Navn</label>
+		            <input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
 
-            <label for="exampleInputEmail1">Adresse</label>
-            <input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
+		            <label for="exampleInputEmail1">Adresse</label>
+		            <input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
 
-            <div class="col-sm-4 no-gutter right-padding-small bottom-buffer-medium">
-              <label for="exampleInputEmail1">Post nr.</label>
-              <input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
-            </div>
-            <div class="col-sm-8 no-gutter bottom-buffer-medium">
-              <label for="exampleInputEmail1">By</label>
-              <input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
-            </div>
+		            <div class="col-sm-4 no-gutter right-padding-small bottom-buffer-medium">
+		              <label for="exampleInputEmail1">Post nr.</label>
+		              <input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
+		            </div>
+		            <div class="col-sm-8 no-gutter bottom-buffer-medium">
+		              <label for="exampleInputEmail1">By</label>
+		              <input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
+		            </div>
 
-            <div class="col-sm-12 no-gutter bottom-buffer-medium">
+		            <div class="col-sm-12 no-gutter bottom-buffer-medium">
 
-              <label for="exampleInputEmail1">E-mail</label>
-              <input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
+		              <label for="exampleInputEmail1">E-mail</label>
+		              <input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
 
-              <label for="exampleInputEmail1">Telefon</label>
-              <input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
+		              <label for="exampleInputEmail1">Telefon</label>
+		              <input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
 
-              <label for="exampleInputEmail1">CPR nr.</label>
-              <input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
+		              <label for="exampleInputEmail1">CPR nr.</label>
+		              <input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
 
-            </div>
-            <div class="col-sm-12 no-gutter bottom-buffer-medium">
+		            </div>
+		            <div class="col-sm-12 no-gutter bottom-buffer-medium">
 
-              <label for="exampleInputEmail1">Skole</label>
-              <input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
+		              <label for="exampleInputEmail1">Skole</label>
+		              <input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
 
-              <label for="exampleInputEmail1">Klasse</label>
-              <input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
+		              <label for="exampleInputEmail1">Klasse</label>
+		              <input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
 
-            </div>
+		            </div>
 
-          </div>
+				</div>
 
 
-          <div class="col-sm-6 top-buffer-small">
+		        <div class="col-sm-6 top-buffer-small">
 
-            <label for="exampleInputEmail1">Relation</label>
-            <select class="form-control bottom-buffer-small">
-              <option></option>
-              <option>Mor</option>
-              <option>Far</option>
-              <option>Værge</option>
-            </select>
+					<label for="exampleInputEmail1">Relation</label>
+					<select class="form-control bottom-buffer-small">
+						<option></option>
+						<option>Mor</option>
+						<option>Far</option>
+						<option>Værge</option>
+					</select>
 
-            <label for="exampleInputEmail1">Navn</label>
-            <input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
+					<label for="exampleInputEmail1">Navn</label>
+					<input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
 
-            <div class="col-sm-12 no-gutter">
-              <label for="exampleInputEmail1">E-mail</label>
-              <input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
-            </div>
-            <div class="col-sm-12 no-gutter bottom-buffer-medium">
-              <label for="exampleInputEmail1">Telefon</label>
-              <input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
-            </div>
+					<div class="col-sm-12 no-gutter">
+						<label for="exampleInputEmail1">E-mail</label>
+						<input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
+					</div>
+					<div class="col-sm-12 no-gutter bottom-buffer-medium">
+						<label for="exampleInputEmail1">Telefon</label>
+						<input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
+					</div>
 
-            <label for="exampleInputEmail1">Relation</label>
-            <select class="form-control bottom-buffer-small">
-              <option></option>
-              <option>Mor</option>
-              <option>Far</option>
-              <option>Værge</option>
-            </select>
+					<label for="exampleInputEmail1">Relation</label>
+					<select class="form-control bottom-buffer-small">
+						<option></option>
+						<option>Mor</option>
+						<option>Far</option>
+						<option>Værge</option>
+					</select>
 
-            <label for="exampleInputEmail1">Navn</label>
-            <input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
+					<label for="exampleInputEmail1">Navn</label>
+					<input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
 
-            <div class="col-sm-12 no-gutter">
-              <label for="exampleInputEmail1">E-mail</label>
-              <input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
-            </div>
-            <div class="col-sm-12 no-gutter bottom-buffer-medium">
-              <label for="exampleInputEmail1">Telefon</label>
-              <input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
-            </div>
+					<div class="col-sm-12 no-gutter">
+						<label for="exampleInputEmail1">E-mail</label>
+						<input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
+					</div>
+					<div class="col-sm-12 no-gutter bottom-buffer-medium">
+						<label for="exampleInputEmail1">Telefon</label>
+						<input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
+					</div>
 
-          </div>
+    			</div>
 
 
-          <div class="col-sm-12">
+		        <div class="col-sm-12">
 
-            <div class="col-sm-12 no-gutter bottom-buffer-medium">
-              <div class="col-sm-4 no-gutter right-padding-small ">
-                
-                <label>Stivkrampe vaccine</label>
-                <input type="date" class="form-control">
-                
+		            <div class="col-sm-12 no-gutter bottom-buffer-medium">
+		            	<div class="col-sm-4 no-gutter right-padding-small ">
+		                
+			                <label>Stivkrampe vaccine</label>
+			                <input type="date" class="form-control">
+			                
 
-                <div class="checkbox">
-                  <label>
-                    <input type="checkbox" id="blankCheckbox" value="option1">
-                    Tåler pencilin
-                  </label>
-                </div>
-                <div class="checkbox">
-                  <label>
-                    <input type="checkbox" id="blankCheckbox" value="option1">
-                    Tillad billeder
-                  </label>
-                </div>
-              </div>
-              
-              <div class="col-sm-8 no-gutter">
-                <textarea class="form-control" id="besked" rows="5" placeholder="Allergier"></textarea>
-              </div>
-            </div>
-            <div class="col-sm-12 no-gutter bottom-buffer-medium">
+			                <div class="checkbox">
+			                	<label>
+			                    	<input type="checkbox" id="blankCheckbox" value="option1">
+			                    	Tåler pencilin
+			                	</label>
+			                </div>
+			                <div class="checkbox">
+			                	<label>
+			                    	<input type="checkbox" id="blankCheckbox" value="option1">
+			                    	Tillad billeder
+			                	</label>
+			                </div>
+		            	</div>
+		              
+			            <div class="col-sm-8 no-gutter">
+			                <textarea class="form-control" id="besked" rows="5" placeholder="Allergier"></textarea>
+			            </div>
+					</div>
+		            <div class="col-sm-12 no-gutter bottom-buffer-medium">
 
-              <textarea class="form-control" id="besked" rows="8" placeholder="Noter"></textarea>
-              
-            </div>
+		            	<textarea class="form-control" id="besked" rows="8" placeholder="Noter"></textarea>
+		              
+		            </div>
 
-          </div>
+				</div>
 
-        </form>
-      </div>
-    </div>
+			</div> <!-- /form -->
+
+    	</div>
+
+	</div> <!-- /container -->
+
+</form>
 
     <hr>
 
     <footer>
-      <div class="container">
-        <div class="row">
-          <p>© 2014 FDFK7 - Alle rettigheder forbeholdes</p>
-        </div>
-      </div>
+    	<div class="container">
+        	<div class="row">
+        	<p>© 2014 FDFK7 - Alle rettigheder forbeholdes</p>
+        	</div>
+    	</div>
     </footer>
-  </div> <!-- /container -->
 
 
     <!-- Bootstrap core JavaScript
@@ -228,9 +212,5 @@
     <script src="../../dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-  </body>
-  </html>
-	</form>
 </body>
 </html>
-
