@@ -67,7 +67,7 @@
     <Content Include="Kontakt.aspx" />
     <Content Include="Bruger.aspx" />
     <Content Include="Udlejning.aspx" />
-    <Content Include="userdata.aspx" />
+    <Content Include="Userdata.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -112,11 +112,11 @@
     <Compile Include="Udlejning.aspx.designer.cs">
       <DependentUpon>Udlejning.aspx</DependentUpon>
     </Compile>
-    <Compile Include="userdata.aspx.cs">
-      <DependentUpon>userdata.aspx</DependentUpon>
+    <Compile Include="Userdata.aspx.cs">
+      <DependentUpon>Userdata.aspx</DependentUpon>
     </Compile>
-    <Compile Include="userdata.aspx.designer.cs">
-      <DependentUpon>userdata.aspx</DependentUpon>
+    <Compile Include="Userdata.aspx.designer.cs">
+      <DependentUpon>Userdata.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <PropertyGroup>
