@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Web;
-using System.Web.UI;
 
 namespace FDFk7 {
 	
-	public partial class userdata : System.Web.UI.Page {
+	public partial class Userdata : System.Web.UI.Page {
 		protected void Page_Load( object sender, EventArgs args ) {
 			if( Session[ "UserAuthentication" ] != null ) {
 				Basis bob = new Basis( "Load", new object[] { txtBruger, txtAdgang, btnLogin, Session } );
@@ -36,4 +34,3 @@ namespace FDFk7 {
 		}
 	}
 }
-
