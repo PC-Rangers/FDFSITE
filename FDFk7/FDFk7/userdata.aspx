@@ -137,12 +137,12 @@
 					<input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
 
 					<div class="col-sm-12 no-gutter">
-						<label for="exampleInputEmail1">E-mail</label>
+						<label for="exampleInputEmail1">E-ma2il</label>
 						<input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
 					</div>
 					<div class="col-sm-12 no-gutter bottom-buffer-medium">
-						<label for="exampleInputEmail1">Telefon</label>
-						<input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
+						<label for="exampleInputEmail1">Tel2efon</label>
+						<input type="email" class="form-control bottom-buffer-small" id="Telefon">
 					</div>
 
     			</div>
@@ -159,25 +159,25 @@
 
 			                <div class="checkbox">
 			                	<label>
-			                    	<input type="checkbox" id="blankCheckbox" value="option1">
+			                    	<input type="checkbox" id="Penicilin" value="option1">
 			                    	Tåler pencilin
 			                	</label>
 			                </div>
 			                <div class="checkbox">
 			                	<label>
-			                    	<input type="checkbox" id="blankCheckbox" value="option1">
+			                    	<input type="checkbox" id="TilladBillede" value="option1">
 			                    	Tillad billeder
 			                	</label>
 			                </div>
 		            	</div>
 		              
 			            <div class="col-sm-8 no-gutter">
-			                <textarea class="form-control" id="besked" rows="5" placeholder="Allergier"></textarea>
+			                <textarea class="form-control" id="Allergi" rows="5" placeholder="Allergier"></textarea>
 			            </div>
 					</div>
 		            <div class="col-sm-12 no-gutter bottom-buffer-medium">
 
-		            	<textarea class="form-control" id="besked" rows="8" placeholder="Noter"></textarea>
+		            	<textarea class="form-control" id="Note" rows="8" placeholder="Noter"></textarea>
 		              
 		            </div>
 
