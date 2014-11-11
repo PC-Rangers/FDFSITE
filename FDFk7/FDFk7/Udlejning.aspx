@@ -60,7 +60,7 @@
 
 		    <img src="http://fdftaarnby.com/wp-content/themes/taarnby/images/frontpagephotos/traditioner.png" width="100%" class="bottom-buffer-medium">
     	
-    	</div>
+		</div>
 
     	<div class="col-sm-6 top-buffer-small">
 
@@ -87,24 +87,23 @@
 		</div>
 
 		<div class="col-sm-6 top-buffer-small">
-      <div class="thumbnail">
+    		<div class="thumbnail">
 
-        <div class="caption">
-         <h2>Periode valg</h2>
+	        	<div class="caption">
+	         		<h2>Periode valg</h2>
 
-         <form role="form">
+		        	<div role="form">
 
 
-          <div class="pull-right btn-margin"><button type="submit" class="btn btn-default">Tilmeld</button></div>
-          <!-- Usage as a class -->
-          <div class="clearfix"></div>
-        </form>
+			        	<div class="pull-right btn-margin"><button type="submit" class="btn btn-default">Tilmeld</button></div>
+			        	<!-- Usage as a class -->
+			        	<div class="clearfix"></div>
 
-      </div>
-    </div>
-  </div>
+	    			</div>
+	    		</div>
+			</div>
+		</div>
 
-		</div> <!-- /row top-buffer-small -->
 	</div> <!-- /container -->
 
 </form>
