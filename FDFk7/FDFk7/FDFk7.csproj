@@ -110,15 +110,7 @@
     <Compile Include="Udlejning.aspx.designer.cs">
       <DependentUpon>Udlejning.aspx</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-=======
-    <Compile Include="Userdata.aspx.cs">
-      <DependentUpon>Userdata.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Userdata.aspx.designer.cs">
-      <DependentUpon>Userdata.aspx</DependentUpon>
-    </Compile>
->>>>>>> FETCH_HEAD
+
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
