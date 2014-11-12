@@ -48,7 +48,9 @@ namespace FDFk7
                 case "btnOmOs":
                 case "btnKontakt":
                     ((HttpResponse)obj[1]).Redirect( mainURL + ((Button)obj[0]).ID.Substring( 3 ) + ".aspx" );
-                    break; //Sideskift
+                    break; // Sideskift ( adresse + knapnavn + .aspx)
+            //fx = http://fdfk7.dk.nt8.unoeuro-server.com/ + Default + .aspx
+
             /*
                 case "btnLogin":
                 case "btnLogout":
