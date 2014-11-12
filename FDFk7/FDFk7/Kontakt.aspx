@@ -45,10 +45,10 @@
       <div class="row top-buffer-large right-buffer-small">
         <div class="navbar-right">
             <div class="btn-group pull-right">
-            	<asp:Button type="button" CssClass="btn btn-default" Text="Forside" runat="server" id="btnForside" OnClick="GotoForside" />
-            	<asp:Button type="button" CssClass="btn btn-default" Text="Udlejning" runat="server" id="btnUdlejning" OnClick="GotoUdlejning" />
-            	<asp:Button type="button" CssClass="btn btn-default" Text="Om Os" runat="server" id="btnOmOs" OnClick="GotoOmOs" />
-            	<asp:Button type="button" CssClass="btn btn-default" Text="Kontakt" runat="server" id="btnKontakt" OnClick="GotoKontakt" />
+            	<asp:Button type="button" CssClass="btn btn-default" Text="Forside" runat="server" id="btnDefault" OnClick="GaaTil" />
+            	<asp:Button type="button" CssClass="btn btn-default" Text="Udlejning" runat="server" id="btnUdlejning" OnClick="GaaTil" />
+            	<asp:Button type="button" CssClass="btn btn-default" Text="Om Os" runat="server" id="btnOmOs" OnClick="GaaTil" />
+            	<asp:Button type="button" CssClass="btn btn-default" Text="Kontakt" runat="server" id="btnKontakt" OnClick="GaaTil" />
             </div>
         </div>
       </div>
