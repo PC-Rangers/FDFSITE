@@ -181,7 +181,8 @@
 		            </div>
 
 					<div class="btn-group pull-right">
-						<asp:Button type="button" CssClass="btn btn-default" Text="Send" runat="server" id="btnSend" OnClick="IndSend" />
+						<asp:Button type="button" CssClass="btn btn-default" Text="Ny bruger" runat="server" id="btnNySend" OnClick="IndSendNy" />
+                        <asp:Button type="button" CssClass="btn btn-default" Text="Updater bruger" runat="server" id="btnUpdateSend" OnClick="IndSendUpdate" />
 					</div>
 
 				</div>

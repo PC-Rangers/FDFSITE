@@ -72,7 +72,7 @@
 
 				        var var_mapoptions = {
 				            center: new google.maps.LatLng(55.73, 12.50),
-				          zoom: 11
+				          zoom: 10
 				        };
 				 
 					    var var_marker = new google.maps.Marker({
