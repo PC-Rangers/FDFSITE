@@ -1,6 +1,7 @@
 ﻿using System;
 
-namespace FDFk7 {
+namespace FDFk7
+{
 
     public partial class Userdata : System.Web.UI.Page
     {
@@ -44,6 +45,11 @@ namespace FDFk7 {
             Basis bob = new Basis("Kontakt", new object[] { sender, Response, Session });
         }
 
+        public void IndSend(object sender, EventArgs EventArgs)
+        {
+            //Asger skal lave noget
+        }
+
         private void Send(string fnk, object[] obj)
         {
             string s_navn;
@@ -56,9 +62,6 @@ namespace FDFk7 {
             int int_cpr;
             string s_skole;
             string s_klasse;
-
-            
-
         }
     }
 }

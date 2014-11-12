@@ -67,7 +67,7 @@
     <Content Include="Kontakt.aspx" />
     <Content Include="Bruger.aspx" />
     <Content Include="Udlejning.aspx" />
-    <Content Include="userdata.aspx" />
+    <Content Include="Userdata.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -112,11 +112,11 @@
     <Compile Include="Udlejning.aspx.designer.cs">
       <DependentUpon>Udlejning.aspx</DependentUpon>
     </Compile>
-    <Compile Include="userdata.aspx.cs">
-      <DependentUpon>userdata.aspx</DependentUpon>
+    <Compile Include="Userdata.aspx.cs">
+      <DependentUpon>Userdata.aspx</DependentUpon>
     </Compile>
-    <Compile Include="userdata.aspx.designer.cs">
-      <DependentUpon>userdata.aspx</DependentUpon>
+    <Compile Include="Userdata.aspx.designer.cs">
+      <DependentUpon>Userdata.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <PropertyGroup>
@@ -127,6 +127,10 @@
   <ProjectExtensions>
     <MonoDevelop>
       <Properties>
+        <Policies>
+          <TextStylePolicy inheritsSet="VisualStudio" inheritsScope="text/plain" scope="text/x-csharp" />
+          <CSharpFormattingPolicy IndentSwitchBody="True" IndentBlocksInsideExpressions="True" AnonymousMethodBraceStyle="NextLine" PropertyBraceStyle="NextLine" PropertyGetBraceStyle="NextLine" PropertySetBraceStyle="NextLine" EventBraceStyle="NextLine" EventAddBraceStyle="NextLine" EventRemoveBraceStyle="NextLine" StatementBraceStyle="NextLine" ElseNewLinePlacement="NewLine" CatchNewLinePlacement="NewLine" FinallyNewLinePlacement="NewLine" WhileNewLinePlacement="DoNotCare" ArrayInitializerWrapping="DoNotChange" ArrayInitializerBraceStyle="NextLine" BeforeMethodDeclarationParentheses="False" BeforeMethodCallParentheses="False" BeforeConstructorDeclarationParentheses="False" NewLineBeforeConstructorInitializerColon="NewLine" NewLineAfterConstructorInitializerColon="SameLine" BeforeDelegateDeclarationParentheses="False" NewParentheses="False" SpacesBeforeBrackets="False" inheritsSet="Mono" inheritsScope="text/x-csharp" scope="text/x-csharp" />
+        </Policies>
         <XspParameters Port="8080" Address="127.0.0.1" SslMode="None" SslProtocol="Default" KeyType="None" CertFile="" KeyFile="" PasswordOptions="None" Password="" Verbose="True" />
       </Properties>
     </MonoDevelop>
