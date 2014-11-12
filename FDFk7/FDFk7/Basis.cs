@@ -65,11 +65,14 @@ namespace FDFk7 {
 						cmd.Connection = Con;
 						SqlDataReader DB_Reader = cmd.ExecuteReader();
 						while( DB_Reader.Read() ) {
+                            //Variabler til at modtage det som kommer fra databasen
 							string DB_UserName = DB_Reader[ "brugernavn" ].ToString();
 							string DB_PassWord = DB_Reader[ "kodeord" ].ToString();
 							string DB_rights = DB_Reader[ "retur" ].ToString();
 
-							if( txtBruger.Text == DB_UserName && txtAdgang.Text == DB_PassWord ) {
+							if( txtBruger.Text == DB_UserName && txtAdgang.Text == DB_PassWord ) 
+                            {
+                                //Her kommer vi ind hvis brugernavn og adgangskode matcher det som er i databasen
 								if( ( DB_rights == "1" ) || ( DB_rights == "2" ) ) {
 									txtBruger.Text = "Velkommen " + DB_UserName;
 									btnLogin.Text = "Log ud fra rettighedsniveau " + DB_rights;

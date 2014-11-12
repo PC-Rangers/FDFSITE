@@ -64,39 +64,39 @@
 				<div class="col-sm-6 top-buffer-small">
 
 		            <label for="exampleInputEmail1">Navn</label>
-		            <input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
+		            <input type="text" class="form-control bottom-buffer-small" id="Navn">
 
 		            <label for="exampleInputEmail1">Adresse</label>
-		            <input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
+		            <input type="text" class="form-control bottom-buffer-small" id="Adresse">
 
 		            <div class="col-sm-4 no-gutter right-padding-small bottom-buffer-medium">
 		              <label for="exampleInputEmail1">Post nr.</label>
-		              <input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
+		              <input type="text" class="form-control bottom-buffer-small" id="Postnr">
 		            </div>
 		            <div class="col-sm-8 no-gutter bottom-buffer-medium">
 		              <label for="exampleInputEmail1">By</label>
-		              <input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
+		              <input type="text" class="form-control bottom-buffer-small" id="Bynavn">
 		            </div>
 
 		            <div class="col-sm-12 no-gutter bottom-buffer-medium">
 
 		              <label for="exampleInputEmail1">E-mail</label>
-		              <input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
+		              <input type="email" class="form-control bottom-buffer-small" id="Email">
 
 		              <label for="exampleInputEmail1">Telefon</label>
-		              <input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
+		              <input type="tel" class="form-control bottom-buffer-small" id="Telefon">
 
-		              <label for="exampleInputEmail1">CPR nr.</label>
-		              <input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
+		              <label for="exampleInputEmail1">CPR nr. (I en smøre uden -)</label>
+		              <input type="text" class="form-control bottom-buffer-small" id="CPR">
 
 		            </div>
 		            <div class="col-sm-12 no-gutter bottom-buffer-medium">
 
 		              <label for="exampleInputEmail1">Skole</label>
-		              <input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
+		              <input type="text" class="form-control bottom-buffer-small" id="Skole">
 
 		              <label for="exampleInputEmail1">Klasse</label>
-		              <input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
+		              <input type="text" class="form-control bottom-buffer-small" id="Klasse">
 
 		            </div>
 
@@ -114,15 +114,15 @@
 					</select>
 
 					<label for="exampleInputEmail1">Navn</label>
-					<input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
+					<input type="text" class="form-control bottom-buffer-small" id="NavnV1">
 
 					<div class="col-sm-12 no-gutter">
 						<label for="exampleInputEmail1">E-mail</label>
-						<input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
+						<input type="email" class="form-control bottom-buffer-small" id="EmailV1">
 					</div>
 					<div class="col-sm-12 no-gutter bottom-buffer-medium">
 						<label for="exampleInputEmail1">Telefon</label>
-						<input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
+						<input type="tel" class="form-control bottom-buffer-small" id="TelefonV1">
 					</div>
 
 					<label for="exampleInputEmail1">Relation</label>
@@ -134,15 +134,15 @@
 					</select>
 
 					<label for="exampleInputEmail1">Navn</label>
-					<input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
+					<input type=" text" class="form-control bottom-buffer-small" id="NavnV2">
 
 					<div class="col-sm-12 no-gutter">
-						<label for="exampleInputEmail1">E-ma2il</label>
-						<input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
+						<label for="exampleInputEmail1">E-mail</label>
+						<input type="email" class="form-control bottom-buffer-small" id="EmailV2">
 					</div>
 					<div class="col-sm-12 no-gutter bottom-buffer-medium">
-						<label for="exampleInputEmail1">Tel2efon</label>
-						<input type="email" class="form-control bottom-buffer-small" id="Telefon">
+						<label for="exampleInputEmail1">Telefon</label>
+						<input type="tel" class="form-control bottom-buffer-small" id="TelefonV2">
 					</div>
 
     			</div>
