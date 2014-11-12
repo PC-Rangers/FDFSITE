@@ -175,11 +175,14 @@
 			                <textarea class="form-control" id="Allergi" rows="5" placeholder="Allergier"></textarea>
 			            </div>
 					</div>
-		            <div class="col-sm-12 no-gutter bottom-buffer-medium">
 
+		            <div class="col-sm-12 no-gutter bottom-buffer-medium">
 		            	<textarea class="form-control" id="Note" rows="8" placeholder="Noter"></textarea>
-		              
 		            </div>
+
+					<div class="btn-group pull-right">
+						<asp:Button type="button" CssClass="btn btn-default" Text="Send" runat="server" id="btnSend" OnClick="IndSend" />
+					</div>
 
 				</div>
 
