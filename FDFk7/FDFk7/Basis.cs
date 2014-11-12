@@ -111,10 +111,10 @@ namespace FDFk7
 
                             while( DB_Reader.Read() )
                             {
-//                                string DB_UserName = DB_Reader["BrugerNavn"].ToString();
-//                                string DB_PassWord = DB_Reader["Adgangskode"].ToString();
+                                string DB_UserName = DB_Reader["BrugerNavn"].ToString();
+                                string DB_PassWord = DB_Reader["Adgangskode"].ToString();
                                 string DB_Salt = DB_Reader["Salt"].ToString();
-//                                string DB_rights = DB_Reader["Rettighedder"].ToString();
+                                string DB_rights = DB_Reader["Rettighedder"].ToString();
 
                                 string txtPass = txtAdgang.Text;
 
@@ -132,7 +132,7 @@ namespace FDFk7
                                 // Samler password 
                                 string toHash = firstHalf + DB_Salt + secondHalf;
                                 //string hashPass = System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(toHash, "sha1");
-//
+
                                 SHA512 sha = new SHA512Managed();
                                 byte[] hash = sha.ComputeHash( Encoding.ASCII.GetBytes( toHash ) );
 
@@ -149,21 +149,21 @@ namespace FDFk7
 
                                     switch (DB_rights)
                                     {
-                                        case 0:
+                                        case "0":
                                             // superadmin   = 39d87404
                                             session["Authentication"] = "39d87404";
                                             session["UserRights"] = "Super admin";
                                             break;
-                                        case 1:
+                                        case "1":
                                             // admin        = 880e0d76
                                             session["Authentication"] = "880e0d76"; 
                                             session["UserRights"] = "Admin";                                           
                                             break;
-                                        case 2:
+                                        case "2":
                                             // bruger       = c014bea4
                                             session["Authentication"] = "c014bea4";
                                             session["UserRights"] = "Bruger";
-                                            break
+                                            break;
                                         default:
                                             // none         = 7f9000cf
                                             session["Authentication"] = "7f9000cf";
