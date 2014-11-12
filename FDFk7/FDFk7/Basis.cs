@@ -176,13 +176,13 @@ namespace FDFk7
                                     txtBruger.Visible = false;
                                     txtAdgang.Visible = false;
                                 }
-
-                                //FIXME Noget med sission - DVS til KDSN
+                                else
+                                {
+                                    txtBruger.Text = "Brugernavn / adgangskode er ikke korrekt";
+                                }
                             }
 
 
-                            // if hashpass = dbpass{session["Authentication"] = crc32(user + rettighed);}
-                            // else {string msg = "Brugernavn / adgangskode er ikke korrekt";}
 
                         }
                         else
