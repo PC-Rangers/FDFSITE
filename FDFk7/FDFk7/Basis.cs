@@ -4,8 +4,9 @@ using System.Data.SqlClient;
 using System.Web;
 using System.Web.SessionState;
 using System.Web.UI.WebControls;
-
-using System.Web.Security;
+using System.Text;
+//using System.Web.Security;
+using System.Security.Cryptography;
 
 namespace FDFk7 {
 	public class Basis {
@@ -70,8 +71,6 @@ namespace FDFk7 {
 						// querry der tæller brugere med det brugernavn i databasen
 						SqlCommand cmd_count = new SqlCommand("SELECT count(BrugerNavn) FROM USR_Brugere WHERE BrugerNavn = '" + txtBruger.Text + "' ", Con);
 
-						try
-						{
 							Con.Open();
 							// Tæller brugere med det brugernavn i databasen
 							int total = (Int32)cmd_count.ExecuteScalar();
@@ -105,14 +104,24 @@ namespace FDFk7 {
 									*/
 
 									// Samler password 
-									string toHash =  firstHalf + DB_Salt + secondHalf;
-									txtBruger.Text = toHash;
+								string toHash =  firstHalf + DB_Salt + secondHalf;
+								//string hashPass = System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(toHash, "sha1");
+//
+								SHA512 sha = new SHA512Managed();
+								byte[] hash = sha.ComputeHash(Encoding.ASCII.GetBytes(toHash));
+
+								StringBuilder stringBuilder = new StringBuilder();
+								foreach (byte b in hash) {
+									stringBuilder.AppendFormat("{0:x2}", b);
+								}
+								string hashPass = stringBuilder.ToString();
+
+								txtBruger.Text = hashPass;
+
+
 
 								}
 
-
-
-								// whirlpool(pass)
 
 								// if hashpass = dbpass{session["Authentication"] = crc32(user + rettighed);}
 								// else {string msg = "Brugernavn / adgangskode er ikke korrekt";}
@@ -124,15 +133,9 @@ namespace FDFk7 {
 							}
 
 						}
-
-						catch( Exception e ) 
-						{
-
-						}
-
 					}
 
-				}
+
 				else
 				{
 					txtBruger.Text = "";
