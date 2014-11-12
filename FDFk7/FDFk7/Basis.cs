@@ -125,9 +125,9 @@ namespace FDFk7
                                 string secondHalf = txtPass.Substring( length / 2, length - (length / 2) );
 
                                 /*
-									 * TEST behandling af krydring af password
-									txtBruger.Text = firstHalf + " " + DB_Salt + " " + secondHalf;
-									*/
+								*   TEST behandling af krydring af password
+								*	txtBruger.Text = firstHalf + " " + DB_Salt + " " + secondHalf;
+								*/
 
                                 // Samler password 
                                 string toHash = firstHalf + DB_Salt + secondHalf;
@@ -143,8 +143,39 @@ namespace FDFk7
                                 }
                                 string hashPass = stringBuilder.ToString();
 
-                                txtBruger.Text = hashPass;
+                                if (hashPass == DB_PassWord) {
 
+                                    session["User"] = DB_UserName;
+
+                                    switch (DB_rights)
+                                    {
+                                        case 0:
+                                            // superadmin   = 39d87404
+                                            session["Authentication"] = "39d87404";
+                                            session["UserRights"] = "Super admin";
+                                            break;
+                                        case 1:
+                                            // admin        = 880e0d76
+                                            session["Authentication"] = "880e0d76"; 
+                                            session["UserRights"] = "Admin";                                           
+                                            break;
+                                        case 2:
+                                            // bruger       = c014bea4
+                                            session["Authentication"] = "c014bea4";
+                                            session["UserRights"] = "Bruger";
+                                            break
+                                        default:
+                                            // none         = 7f9000cf
+                                            session["Authentication"] = "7f9000cf";
+                                            break;
+                                    }
+
+                                    txtBruger.Text = "Velkommen " + DB_UserName;
+                                    btnLogin.Text = "Log ud fra rettighedsniveau " + session["UserRights"];
+                                            
+                                    txtBruger.Visible = false;
+                                    txtAdgang.Visible = false;
+                                }
 
                                 //FIXME Noget med sission - DVS til KDSN
                             }
@@ -172,7 +203,6 @@ namespace FDFk7
             }
             catch( Exception e )
             {
-
             }
         }
     }
