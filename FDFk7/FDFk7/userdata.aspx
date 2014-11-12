@@ -104,7 +104,7 @@
 
 
 		        <div class="col-sm-6 top-buffer-small">
-
+                    <div class="well">
 					<label for="exampleInputEmail1">Relation</label>
 					<select class="form-control bottom-buffer-small">
 						<option></option>
@@ -124,6 +124,8 @@
 						<label for="exampleInputEmail1">Telefon</label>
 						<input type="tel" class="form-control bottom-buffer-small" id="TelefonV1">
 					</div>
+                        <div class="clearfix"></div>
+                    </div>
 
 					<label for="exampleInputEmail1">Relation</label>
 					<select class="form-control bottom-buffer-small">
@@ -172,18 +174,22 @@
 		            	</div>
 		              
 			            <div class="col-sm-8 no-gutter">
-			                <textarea class="form-control" id="Allergi" rows="5" placeholder="Allergier"></textarea>
+			                <textarea class="form-control txtAreaNoResize" id="Allergi" rows="5" placeholder="Allergier" ></textarea>
 			            </div>
 					</div>
 
+
+
 		            <div class="col-sm-12 no-gutter bottom-buffer-medium">
-		            	<textarea class="form-control" id="Note" rows="8" placeholder="Noter"></textarea>
+		            	<textarea class="form-control txtAreaNoResize top-buffer-small" id="Note" rows="8" placeholder="Noter"></textarea>
 		            </div>
 
-					<div class="btn-group pull-right">
+					<div class="btn-group pull-right top top-buffer-small">
 						<asp:Button type="button" CssClass="btn btn-default" Text="Ny bruger" runat="server" id="btnNySend" OnClick="IndSendNy" />
-                        <asp:Button type="button" CssClass="btn btn-default" Text="Updater bruger" runat="server" id="btnUpdateSend" OnClick="IndSendUpdate" />
 					</div>
+                    <<div class="btn-group pull-right top top-buffer-small">
+                        <asp:Button type="button" CssClass="btn btn-default" Text="Updater bruger" runat="server" id="btnUpdateSend" OnClick="IndSendUpdate" />
+                    </div>
 
 				</div>
 
