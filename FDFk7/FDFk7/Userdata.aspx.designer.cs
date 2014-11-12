@@ -11,7 +11,7 @@
 namespace FDFk7 {
 	
 	
-	public partial class Default {
+	public partial class Userdata {
 		
 		protected System.Web.UI.HtmlControls.HtmlForm body;
 		
@@ -30,5 +30,9 @@ namespace FDFk7 {
 		protected System.Web.UI.WebControls.Button btnOmOs;
 		
 		protected System.Web.UI.WebControls.Button btnKontakt;
+		
+		protected System.Web.UI.WebControls.Button btnNySend;
+		
+		protected System.Web.UI.WebControls.Button btnUpdateSend;
 	}
 }

@@ -21,7 +21,7 @@ namespace FDFk7 {
 		
 		protected System.Web.UI.WebControls.Button btnLogin;
 		
-		protected System.Web.UI.WebControls.Button btnForside;
+		protected System.Web.UI.WebControls.Button btnDefault;
 		
 		protected System.Web.UI.WebControls.Button btnUdlejning;
 		

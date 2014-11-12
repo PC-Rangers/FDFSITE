@@ -1,11 +1,9 @@
-﻿// /** Made By Daniel V. Sandholt **/
-using System;
+﻿using System;
 using System.Data.SqlClient;
 using System.Web;
 using System.Web.SessionState;
 using System.Web.UI.WebControls;
 using System.Text;
-//using System.Web.Security;
 using System.Security.Cryptography;
 
 namespace FDFk7 {
@@ -18,40 +16,66 @@ namespace FDFk7 {
 		private HttpResponse hR;
 		private HttpSessionState session;
 
-		public Basis( string fnk, object[] obj ) {
-			switch( fnk ) {
+		/** Load og LoginOut **/
+		public Basis( string fnk, object[] obj )
+		{
+			switch( fnk )
+			{
 			case "Load":
-				session = ( HttpSessionState )obj[ 3 ];
-				if( session[ "UserAuthentication" ] != null ) {
+				session = (HttpSessionState)obj[3];
+				if( session["UserAuthentication"] != null )
+				{
 					Load( obj );
 				}
 				break;
 			case "Login":
 			case "Logout":
-				session = ( HttpSessionState )obj[ 3 ];
-				LogInUd( fnk, obj );
-				break;
-			case "Forside":
-				Sideskift( ( HttpResponse )obj[ 1 ], "Default" );
-				break;
-			case "Udlejning":
-			case "OmOs":
-			case "Kontakt":
-				Sideskift( ( HttpResponse )obj[ 1 ], ( ( Button )obj[ 0 ] ).Text.Replace( " ", string.Empty ) );
-				break;
+				session = (HttpSessionState)obj[3];
+				LogInUd( obj );
+				break;//FIXME LogInUd skal laves om så man kan bruge GaaTil; Kig i Basis( object[] obj )
 			}
 		}
 
-		private void Sideskift( HttpResponse hR, string til ) {
-			hR.Redirect( mainURL + til + ".aspx" );
+		/** GaaTil **/
+		public Basis( object[] obj )
+		{
+			switch( ((Button)obj[0]).ID )
+			{
+			case "btnDefault":
+			case "btnUdlejning":
+			case "btnOmOs":
+			case "btnKontakt":
+				((HttpResponse)obj[1]).Redirect( mainURL + ((Button)obj[0]).ID.Substring( 3 ) + ".aspx" );
+				break; // Sideskift ( adresse + knapnavn + .aspx)
+				//fx = http://fdfk7.dk.nt8.unoeuro-server.com/ + Default + .aspx
+
+				/*
+                case "btnLogin":
+                case "btnLogout":
+                    session = (HttpSessionState)obj[3];
+                    LogInUd( obj );
+                    break;//FIXME LogInUd skal laves om så man ser på om man er logget ind i stedet for understående
+                    if (btnLogin.Text.Substring(4, 2) == "ud")
+                    {
+                        Basis bob = new Basis("Logout", new object[]{ txtBruger, txtAdgang, btnLogin, Session });
+                    }
+                    else if (txtBruger.Text != "" && txtAdgang.Text != "")
+                    {
+                        Basis bob = new Basis("Login", new object[]{ txtBruger, txtAdgang, btnLogin, Session });
+                    }
+            */
+			}
 		}
 
-		private void Load( object[] obj ) {
-			( ( TextBox )obj[ 0 ] ).Visible = false;
-			( ( TextBox )obj[ 1 ] ).Visible = false;
-			Button btn = ( Button )obj[ 2 ];
-			btn.Text = "Log ud " + session[ "UserAuthentication" ];
+		private void Load( object[] obj )
+		{//FIXME skal laves så der også Loades når man ikke er logget ind
+			((TextBox)obj[0]).Visible = false;
+			((TextBox)obj[1]).Visible = false;
+			Button btn = (Button)obj[2];
+			btn.Text = "Log ud " + session["UserAuthentication"];
 		}
+
+
 
 		private void LogInUd( string fnk, object[] obj ) {
 			TextBox txtBruger = ( ( TextBox )obj[ 0 ] );
@@ -152,4 +176,3 @@ namespace FDFk7 {
 		} 
 	}
 }
-

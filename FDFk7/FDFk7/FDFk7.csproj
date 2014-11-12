@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -79,7 +79,6 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="DBcon.cs" />
     <Compile Include="mester.master.cs">
       <DependentUpon>mester.master</DependentUpon>
     </Compile>
@@ -111,6 +110,15 @@
     <Compile Include="Udlejning.aspx.designer.cs">
       <DependentUpon>Udlejning.aspx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+=======
+    <Compile Include="Userdata.aspx.cs">
+      <DependentUpon>Userdata.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Userdata.aspx.designer.cs">
+      <DependentUpon>Userdata.aspx</DependentUpon>
+    </Compile>
+>>>>>>> FETCH_HEAD
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -120,6 +128,10 @@
   <ProjectExtensions>
     <MonoDevelop>
       <Properties>
+        <Policies>
+          <TextStylePolicy inheritsSet="VisualStudio" inheritsScope="text/plain" scope="text/x-csharp" />
+          <CSharpFormattingPolicy IndentSwitchBody="True" IndentBlocksInsideExpressions="True" AnonymousMethodBraceStyle="NextLine" PropertyBraceStyle="NextLine" PropertyGetBraceStyle="NextLine" PropertySetBraceStyle="NextLine" EventBraceStyle="NextLine" EventAddBraceStyle="NextLine" EventRemoveBraceStyle="NextLine" StatementBraceStyle="NextLine" ElseNewLinePlacement="NewLine" CatchNewLinePlacement="NewLine" FinallyNewLinePlacement="NewLine" WhileNewLinePlacement="DoNotCare" ArrayInitializerWrapping="DoNotChange" ArrayInitializerBraceStyle="NextLine" BeforeMethodDeclarationParentheses="False" WithinMethodDeclarationParentheses="True" BeforeMethodCallParentheses="False" WithinMethodCallParentheses="True" BeforeConstructorDeclarationParentheses="False" WithinConstructorDeclarationParentheses="True" NewLineBeforeConstructorInitializerColon="NewLine" NewLineAfterConstructorInitializerColon="SameLine" BeforeIndexerDeclarationBracket="False" BeforeDelegateDeclarationParentheses="False" AfterDelegateDeclarationParameterComma="True" WithinDelegateDeclarationParentheses="True" NewParentheses="False" IfParentheses="False" WhileParentheses="False" ForParentheses="False" ForeachParentheses="False" CatchParentheses="False" SwitchParentheses="False" LockParentheses="False" UsingParentheses="False" AroundNullCoalescingOperator="False" WithinIfParentheses="True" WithinWhileParentheses="True" WithinForParentheses="True" WithinForEachParentheses="True" WithinCatchParentheses="True" WithinSwitchParentheses="True" WithinLockParentheses="True" WithinUsingParentheses="True" WithinSizeOfParentheses="True" WithinTypeOfParentheses="True" WithinNewParentheses="True" SpacesBeforeBrackets="False" SpacesBeforeForSemicolon="True" inheritsSet="Mono" inheritsScope="text/x-csharp" scope="text/x-csharp" />
+        </Policies>
         <XspParameters Port="8080" Address="127.0.0.1" SslMode="None" SslProtocol="Default" KeyType="None" CertFile="" KeyFile="" PasswordOptions="None" Password="" Verbose="True" />
       </Properties>
     </MonoDevelop>
