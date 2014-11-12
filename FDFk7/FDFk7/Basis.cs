@@ -16,7 +16,6 @@ namespace FDFk7
         * Win: "http://localhost:51017/";
         * Web: "http://fdfk7.dk.nt8.unoeuro-server.com/";
         */
-        private HttpResponse hR;
         private HttpSessionState session;
 
         /** Load og LoginOut **/
@@ -78,8 +77,6 @@ namespace FDFk7
             btn.Text = "Log ud " + session["UserAuthentication"];
         }
 
-
-
         private void LogInUd( string fnk, object[] obj )
         {
             TextBox txtBruger = ((TextBox)obj[0]);
@@ -114,10 +111,10 @@ namespace FDFk7
 
                             while( DB_Reader.Read() )
                             {
-                                string DB_UserName = DB_Reader["BrugerNavn"].ToString();
-                                string DB_PassWord = DB_Reader["Adgangskode"].ToString();
+//                                string DB_UserName = DB_Reader["BrugerNavn"].ToString();
+//                                string DB_PassWord = DB_Reader["Adgangskode"].ToString();
                                 string DB_Salt = DB_Reader["Salt"].ToString();
-                                string DB_rights = DB_Reader["Rettighedder"].ToString();
+//                                string DB_rights = DB_Reader["Rettighedder"].ToString();
 
                                 string txtPass = txtAdgang.Text;
 
@@ -149,7 +146,7 @@ namespace FDFk7
                                 txtBruger.Text = hashPass;
 
 
-
+                                //FIXME Noget med sission - DVS til KDSN
                             }
 
 
