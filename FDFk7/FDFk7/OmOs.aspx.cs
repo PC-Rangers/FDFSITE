@@ -9,7 +9,7 @@ namespace FDFk7
         {
             if( Session["UserAuthentication"] != null )
             {
-                Basis bob = new Basis( "Load", new object[]{ txtBruger, txtAdgang, btnLogin, Session } );
+                new Basis( "Load", new object[]{ txtBruger, txtAdgang, btnLogin, Session } );
             }
         }
 
@@ -17,17 +17,17 @@ namespace FDFk7
         {
             if( btnLogin.Text.Substring( 4, 2 ) == "ud" )
             {
-                Basis bob = new Basis( "Logout", new object[]{ txtBruger, txtAdgang, btnLogin, Session } );
+                new Basis( "Logout", new object[]{ txtBruger, txtAdgang, btnLogin, Session } );
             }
             else if( txtBruger.Text != "" && txtAdgang.Text != "" )
             {
-                Basis bob = new Basis( "Login", new object[]{ txtBruger, txtAdgang, btnLogin, Session } );
+                new Basis( "Login", new object[]{ txtBruger, txtAdgang, btnLogin, Session } );
             }
         }
 
         public void GaaTil( object sender, EventArgs args )
         {
-            Basis bob = new Basis( new object[]{ sender, Response, Session } );
+            new Basis( new object[]{ sender, Response, Session } );
         }
 
     }

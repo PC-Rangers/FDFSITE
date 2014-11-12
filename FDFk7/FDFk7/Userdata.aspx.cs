@@ -13,11 +13,7 @@ namespace FDFk7
         {
             if (Session["UserAuthentication"] != null)
             {
-<<<<<<< HEAD
                 Basis bob = new Basis("Load", new object[] { txtBruger, txtAdgang, btnLogin, Session });
-=======
-                Basis bob = new Basis( "Load", new object[] { txtBruger, txtAdgang, btnLogin, Session } );
->>>>>>> parent of d08a494... Fjernelse af Warning
             }
         }
 
@@ -25,19 +21,11 @@ namespace FDFk7
         {
             if (btnLogin.Text.Substring(4, 2) == "ud")
             {
-<<<<<<< HEAD
                 Basis bob = new Basis("Logout", new object[] { txtBruger, txtAdgang, btnLogin, Session });
-=======
-                Basis bob = new Basis( "Logout", new object[] { txtBruger, txtAdgang, btnLogin, Session } );
->>>>>>> parent of d08a494... Fjernelse af Warning
             }
             else if (txtBruger.Text != "" && txtAdgang.Text != "")
             {
-<<<<<<< HEAD
                 Basis bob = new Basis("Login", new object[] { txtBruger, txtAdgang, btnLogin, Session });
-=======
-                Basis bob = new Basis( "Login", new object[] { txtBruger, txtAdgang, btnLogin, Session } );
->>>>>>> parent of d08a494... Fjernelse af Warning
             }
         }
 
@@ -58,11 +46,7 @@ namespace FDFk7
 
         public void GotoKontakt(object sender, EventArgs args)
         {
-<<<<<<< HEAD
             Basis bob = new Basis("Kontakt", new object[] { sender, Response, Session });
-=======
-            Basis bob = new Basis( new object[]{ sender, Response, Session } );
->>>>>>> parent of d08a494... Fjernelse af Warning
         }
 
         public void IndSendNy(object sender, EventArgs args)
