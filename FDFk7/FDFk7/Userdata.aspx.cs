@@ -1,6 +1,7 @@
 ﻿using System;
 
-namespace FDFk7 {
+namespace FDFk7 
+{
 
     public partial class Userdata : System.Web.UI.Page
     {
@@ -46,18 +47,6 @@ namespace FDFk7 {
 
         private void Send(string fnk, object[] obj)
         {
-            string s_navn;
-            string s_adresse;
-            string s_postnr;
-            string s_by;
-            string s_e_email;
-            string s_telefon;
-            DateTime dt_fdag;
-            int int_cpr;
-            string s_skole;
-            string s_klasse;
-
-            
 
         }
     }
