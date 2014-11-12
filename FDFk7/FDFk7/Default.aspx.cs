@@ -9,7 +9,7 @@ namespace FDFk7
         {//FIXME skal laves så der også Loades når man ikke er logget ind
             if( Session["UserAuthentication"] != null )
             {
-                new Basis( "Load", new object[]{ txtBruger, txtAdgang, btnLogin, Session, Request } );
+                Basis bob = new Basis( "Load", new object[]{ txtBruger, txtAdgang, btnLogin, Session, Request } );
             }
         }
 
@@ -17,17 +17,17 @@ namespace FDFk7
         {//FIXME skal laves så den kan bruges i GaaTil
             if( btnLogin.Text.Substring( 4, 2 ) == "ud" )
             {
-                new Basis( "Logout", new object[]{ txtBruger, txtAdgang, btnLogin, Session } );
+                Basis bob = new Basis( "Logout", new object[]{ txtBruger, txtAdgang, btnLogin, Session } );
             }
             else if( txtBruger.Text != "" && txtAdgang.Text != "" )
             {
-                new Basis( "Login", new object[]{ txtBruger, txtAdgang, btnLogin, Session } );
+                Basis bob = new Basis( "Login", new object[]{ txtBruger, txtAdgang, btnLogin, Session } );
             }
         }
 
         public void GaaTil( object sender, EventArgs args )
         {
-            new Basis( new object[]{ sender, Response, Session } );
+            Basis bob = new Basis( new object[]{ sender, Response, Session } );
         }
 
     }
