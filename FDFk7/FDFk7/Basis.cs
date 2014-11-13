@@ -18,77 +18,60 @@ namespace FDFk7
         */
         private HttpSessionState session;
 
-        /** Load og LoginOut **/
+        /** Load **/
         public Basis( string fnk, object[] obj )
         {
-            try
+            session = (HttpSessionState)obj[3];
+            if( fnk == "Load" )
             {
-                switch( fnk )
-                {
-                    case "Load":
-                        session = (HttpSessionState)obj[3];
-                        if( session["Authentication"] != null )
-                        {
-                            Load( obj );
-                        }
-                        break;
-                    case "Login":
-                    case "Logout":
-                        session = (HttpSessionState)obj[3];
-                        LogInUd( fnk, obj );
-                        break;//FIXME LogInUd skal måske laves om så man kan bruge GaaTil; Kig i Basis( object[] obj )
-                }
-            }
-            catch( Exception e )
-            {
+                Load( obj );
             }
         }
 
-        /** GaaTil **/
+        /** GaaTil og LogInOut **/
         public Basis( object[] obj )
         {
             switch( ((Button)obj[0]).ID )
             {
                 case "btnDefault":
-                case "btnUdlejning":
-                case "btnOmOs":
+                case "btnUdlejning":// Sideskift ( adresse + knapnavn + .aspx)
+                case "btnOmOs"://fx = http://fdfk7.dk.nt8.unoeuro-server.com/ + Default + .aspx
                 case "btnKontakt":
                     ((HttpResponse)obj[1]).Redirect( mainURL + ((Button)obj[0]).ID.Substring( 3 ) + ".aspx" );
-                    break; // Sideskift ( adresse + knapnavn + .aspx)
-            //fx = http://fdfk7.dk.nt8.unoeuro-server.com/ + Default + .aspx
+                    break;
 
-            /*
                 case "btnLogin":
-                case "btnLogout":
-                    session = (HttpSessionState)obj[3];
-                    LogInUd( obj );
-                    break;//FIXME LogInUd skal måske laves om så man ser på om man er logget ind i stedet for understående fra hver fil
-                    if (btnLogin.Text.Substring(4, 2) == "ud")
+                    session = (HttpSessionState)obj[2];
+                    //FIXME LogInUd modtager new Object[]{ sender, Response, Session, txtBruger, txtAdgang } );
+                    if( ((Button)obj[0]).Text.Substring( 4, 2 ) == "ud" )//Der logges ud
                     {
-                        Basis bob = new Basis("Logout", new object[]{ txtBruger, txtAdgang, btnLogin, Session });
+                        LogInUd( "Logud", obj );
                     }
-                    else if (txtBruger.Text != "" && txtAdgang.Text != "")
+                    else if( ((TextBox)obj[3]).Text != "" && ((TextBox)obj[4]).Text != "" )//Brugernavn og pass er ikke tomme
                     {
-                        Basis bob = new Basis("Login", new object[]{ txtBruger, txtAdgang, btnLogin, Session });
+                        LogInUd( "Login", obj );
                     }
-            */
+                    break;
             }
         }
 
         private void Load( object[] obj )
         {//FIXME skal laves så der også Loades når man ikke er logget ind
-            ((TextBox)obj[0]).Visible = false;
-            ((TextBox)obj[1]).Visible = false;
-            Button btn = (Button)obj[2];
-            btn.Text = "Log ud " + session["UserAuthentication"];
+            if( session["Authentication"] != null )
+            {
+                ((TextBox)obj[0]).Visible = false;
+                ((TextBox)obj[1]).Visible = false;
+                Button btn = (Button)obj[2];
+                btn.Text = "Log ud " + session["UserAuthentication"];
+            }
         }
 
         private void LogInUd( string fnk, object[] obj )
         {
-            TextBox txtBruger = ((TextBox)obj[0]);
-            TextBox txtAdgang = ((TextBox)obj[1]);
-            Button btnLogin = ((Button)obj[2]);
-            //string fnk = ((Button)obj[0]).ID;
+            TextBox txtBruger = ((TextBox)obj[3]);
+            TextBox txtAdgang = ((TextBox)obj[4]);
+            Button btnLogin = ((Button)obj[0]);
+
             try
             {
                 if( fnk == "Login" )
@@ -191,7 +174,7 @@ namespace FDFk7
                             }
 
                             //Se på rettigheder og gå til rette side
-                            //LogindTilSide( obj );
+                            LogTilSide( true, obj );
 
                         }
                         else
@@ -208,6 +191,7 @@ namespace FDFk7
                     txtAdgang.Visible = true;
                     btnLogin.Text = "Log ind";
                     session.Abandon();
+                    LogTilSide( false, obj );
                 }
             }
             catch( Exception e )
@@ -216,12 +200,23 @@ namespace FDFk7
 
         }
 
-        private void LogindTilSide( object[] obj )
+        private void LogTilSide( bool ind, object[] obj )
         {
-            //hvis bruger
-            ((HttpResponse)obj[1]).Redirect( mainURL + "Userdata.aspx" );
-            //hvis admin
-            //hvis super
+            if( ind )
+            {
+                switch( (string)session["UserRights"] )
+                {
+                    case "Bruger"://FIXME skal selvfølgeligt være forskelligt
+                    case "Admin":
+                    case "Super admin":
+                        ((HttpResponse)obj[1]).Redirect( mainURL + "Bruger.aspx" );
+                        break;
+                }
+            }
+            else//Logud
+            {
+                ((HttpResponse)obj[1]).Redirect( mainURL + "Default.aspx" );
+            }
         }
 
     }

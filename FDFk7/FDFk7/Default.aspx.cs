@@ -11,15 +11,8 @@ namespace FDFk7
         }
 
         public void LoginOut( object sender, EventArgs args )
-        {//FIXME skal laves så den kan bruges i GaaTil
-            if( btnLogin.Text.Substring( 4, 2 ) == "ud" )
-            {
-                new Basis( "Logout", new object[]{ txtBruger, txtAdgang, btnLogin, Session } );
-            }
-            else if( txtBruger.Text != "" && txtAdgang.Text != "" )
-            {
-                new Basis( "Login", new object[]{ txtBruger, txtAdgang, btnLogin, Session } );
-            }
+        {
+            new Basis( new Object[]{ sender, Response, Session, txtBruger, txtAdgang } );
         }
 
         public void GaaTil( object sender, EventArgs args )
