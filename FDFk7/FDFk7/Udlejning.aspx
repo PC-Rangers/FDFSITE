@@ -24,7 +24,7 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <a class="navbar-brand" href="#">FDFK7</a>
+	      <a class="navbar-brand" href="/Default.aspx">FDFK7</a>
 	    </div>
 	    <div id="navbar" class="navbar-collapse collapse" runat="server">
 	      <div class="navbar-form navbar-right" role="form">

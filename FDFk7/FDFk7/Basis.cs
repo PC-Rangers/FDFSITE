@@ -39,7 +39,7 @@ namespace FDFk7
                         break;//FIXME LogInUd skal måske laves om så man kan bruge GaaTil; Kig i Basis( object[] obj )
                 }
             }
-            catch( Exception ex )
+            catch( Exception e )
             {
             }
         }
@@ -149,7 +149,7 @@ namespace FDFk7
                                 }
                                 string hashPass = stringBuilder.ToString();
 
-                                if( hashPass == DB_PassWord )//lav et breakpoint her
+                                if( hashPass == DB_PassWord )
                                 {
 
                                     session["User"] = DB_UserName;
