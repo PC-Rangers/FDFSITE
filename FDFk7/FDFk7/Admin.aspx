@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" Inherits="FDFk7.adminCreateUser" %>
+﻿<%@ Page Language="C#" Inherits="FDFk7.Admin" %>
 <!DOCTYPE html>
 <html>
 <head runat="server">
@@ -60,34 +60,12 @@
 	<div class="container">
     	<div class="row top-buffer-small">
 
-				<div class="col-sm-6 top-buffer-small">
+			<h1>Admin.aspx</h1>
+			<p>
+				Link til <a href="adminCreateUser.aspx"> opret bruger </a>
+			</p>
 
-		            <label for="exampleInputEmail1">Brugernavn</label>
-		            <input type="text" class="form-control bottom-buffer-small" id="navn">
-
-		            <label for="exampleInputEmail1">Midlertidig adgangskode</label>
-		            <input type="text" class="form-control bottom-buffer-small" id="kode">
-
-		            <input type="hidden" id="salt" value="date"> <!-- skal laves i koden og ikke sendes med her fra. -->
-
-		            <label for="exampleInputEmail1">Email adresse </label>
-		            <input type="text" class="form-control bottom-buffer-small" id="mail"> 
-
-		            <label for="exampleInputEmail1">Bruger gruppe</label>
-		            <input type="text" class="form-control bottom-buffer-small" id="gruppe"> <!-- skal være en drop down menu. -->
-
-		            <label for="exampleInputEmail1">Rettigheds niveau</label>
-		            <input type="text" class="form-control bottom-buffer-small" id="rettighed"> <!-- skal være en drop down menu. -->
-
-
-
-
-
-
-				</div>
-
-
-
+    	</div> <!-- / 1. row med top buffer -->
 	</div> <!-- /container -->
 
 </form>

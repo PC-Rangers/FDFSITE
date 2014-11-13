@@ -11,7 +11,7 @@
 namespace FDFk7 {
 	
 	
-	public partial class adminCreateUser {
+	public partial class Admin {
 		
 		protected System.Web.UI.HtmlControls.HtmlForm body;
 		

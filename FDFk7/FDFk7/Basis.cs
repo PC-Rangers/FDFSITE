@@ -207,9 +207,11 @@ namespace FDFk7
                 switch( (string)session["UserRights"] )
                 {
                     case "Bruger"://FIXME skal selvfølgeligt være forskelligt
+                        ((HttpResponse)obj[1]).Redirect( mainURL + "Bruger.aspx" );
+                        break;
                     case "Admin":
                     case "Super admin":
-                        ((HttpResponse)obj[1]).Redirect( mainURL + "Bruger.aspx" );
+                        ((HttpResponse)obj[1]).Redirect( mainURL + "Admin.aspx" );
                         break;
                 }
             }

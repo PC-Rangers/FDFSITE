@@ -69,6 +69,7 @@
     <Content Include="Udlejning.aspx" />
     <Content Include="Userdata.aspx" />
     <Content Include="adminCreateUser.aspx" />
+    <Content Include="Admin.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -123,6 +124,12 @@
     </Compile>
     <Compile Include="adminCreateUser.aspx.designer.cs">
       <DependentUpon>adminCreateUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <PropertyGroup>

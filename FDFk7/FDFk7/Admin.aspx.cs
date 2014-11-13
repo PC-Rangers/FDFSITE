@@ -1,17 +1,16 @@
 ﻿using System;
+using System.Data.SqlClient;
 using System.Web;
-using System.Web.UI;
-
-using System.Security.Cryptography;
-using System.Text;
-using System.Diagnostics; // krævet for Stopwatch.GetTimestamp()
+using System.Web.SessionState;
+using System.Web.UI.WebControls;
+using System.Web.Security;
 
 namespace FDFk7
 {
 	
-    public partial class adminCreateUser : System.Web.UI.Page
+    public partial class Admin : System.Web.UI.Page   
     {
-		
+
         protected void Page_Load( object sender, EventArgs args )
         {
             new Basis( "Load", new object[]{ txtBruger, txtAdgang, btnLogin, Session } );
@@ -34,22 +33,9 @@ namespace FDFk7
             new Basis( new object[]{ sender, Response, Session } );
         }
 
-        public void CreateUser ( string fnk, object[] obj )
-        {
-            // generere salt
-            SHA512 sha = new SHA512Managed();
 
-            String timeStamp = Stopwatch.GetTimestamp(DateTime.Now);
 
-            byte[] hash = sha.ComputeHash( Encoding.ASCII.GetBytes( timeStamp ) );
 
-            StringBuilder stringBuilder = new StringBuilder();
-            foreach( byte b in hash )
-            {
-                stringBuilder.AppendFormat( "{0:x2}", b );
-            }
-            string salt = stringBuilder.ToString();
-        }
     }
 }
 
