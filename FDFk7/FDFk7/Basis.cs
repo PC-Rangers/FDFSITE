@@ -190,7 +190,8 @@ namespace FDFk7
 
                             }
 
-
+                            //Se på rettigheder og gå til rette side
+                            //LogindTilSide( obj );
 
                         }
                         else
@@ -212,6 +213,16 @@ namespace FDFk7
             catch( Exception e )
             {
             }
+
         }
+
+        private void LogindTilSide( object[] obj )
+        {
+            //hvis bruger
+            ((HttpResponse)obj[1]).Redirect( mainURL + "Userdata.aspx" );
+            //hvis admin
+            //hvis super
+        }
+
     }
 }
