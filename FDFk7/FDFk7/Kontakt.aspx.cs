@@ -7,10 +7,7 @@ namespace FDFk7
 
         protected void Page_Load( object sender, EventArgs args )
         {
-            if( Session["UserAuthentication"] != null )
-            {
-                new Basis( "Load", new object[]{ txtBruger, txtAdgang, btnLogin, Session } );
-            }
+            new Basis( "Load", new object[]{ txtBruger, txtAdgang, btnLogin, Session } );
         }
 
         public void LoginOut( object sender, EventArgs args )

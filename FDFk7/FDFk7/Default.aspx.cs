@@ -6,11 +6,8 @@ namespace FDFk7
     {
 
         protected void Page_Load( object sender, EventArgs args )
-        {//FIXME skal laves så der også Loades når man ikke er logget ind
-            if( Session["UserAuthentication"] != null )
-            {
-                new Basis( "Load", new object[]{ txtBruger, txtAdgang, btnLogin, Session, Request } );
-            }
+        {
+            new Basis( "Load", new object[]{ txtBruger, txtAdgang, btnLogin, Session, Request } );
         }
 
         public void LoginOut( object sender, EventArgs args )

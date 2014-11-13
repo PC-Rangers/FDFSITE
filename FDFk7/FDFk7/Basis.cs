@@ -21,20 +21,26 @@ namespace FDFk7
         /** Load og LoginOut **/
         public Basis( string fnk, object[] obj )
         {
-            switch( fnk )
+            try
             {
-                case "Load":
-                    session = (HttpSessionState)obj[3];
-                    if( session["UserAuthentication"] != null )
-                    {
-                        Load( obj );
-                    }
-                    break;
-                case "Login":
-                case "Logout":
-                    session = (HttpSessionState)obj[3];
-                    LogInUd( fnk, obj );
-                    break;//FIXME LogInUd skal laves om så man kan bruge GaaTil; Kig i Basis( object[] obj )
+                switch( fnk )
+                {
+                    case "Load":
+                        session = (HttpSessionState)obj[3];
+                        if( session["Authentication"] != null )
+                        {
+                            Load( obj );
+                        }
+                        break;
+                    case "Login":
+                    case "Logout":
+                        session = (HttpSessionState)obj[3];
+                        LogInUd( fnk, obj );
+                        break;//FIXME LogInUd skal måske laves om så man kan bruge GaaTil; Kig i Basis( object[] obj )
+                }
+            }
+            catch( Exception ex )
+            {
             }
         }
 
@@ -56,7 +62,7 @@ namespace FDFk7
                 case "btnLogout":
                     session = (HttpSessionState)obj[3];
                     LogInUd( obj );
-                    break;//FIXME LogInUd skal laves om så man ser på om man er logget ind i stedet for understående
+                    break;//FIXME LogInUd skal måske laves om så man ser på om man er logget ind i stedet for understående fra hver fil
                     if (btnLogin.Text.Substring(4, 2) == "ud")
                     {
                         Basis bob = new Basis("Logout", new object[]{ txtBruger, txtAdgang, btnLogin, Session });
@@ -143,11 +149,12 @@ namespace FDFk7
                                 }
                                 string hashPass = stringBuilder.ToString();
 
-                                if (hashPass == DB_PassWord) {
+                                if( hashPass == DB_PassWord )//lav et breakpoint her
+                                {
 
                                     session["User"] = DB_UserName;
 
-                                    switch (DB_rights)
+                                    switch( DB_rights )
                                     {
                                         case "0":
                                             // superadmin   = 39d87404
