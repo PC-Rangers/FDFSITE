@@ -19,18 +19,15 @@ namespace FDFk7
         private HttpSessionState session;
 
         /** Load **/
-        public Basis( string fnk, object[] obj )
+        public Basis( string fnk, object[] obj ) // { sender, Response, Session, txtBruger, txtAdgang, btnLogin }
         {
-            session = (HttpSessionState)obj[3];
-            if( fnk == "Load" )
-            {
-                Load( obj );
-            }
+            session = (HttpSessionState)obj[2];
+            Load( obj );
         }
 
         /** GaaTil og LogInOut **/
-        public Basis( object[] obj )
-        {
+        public Basis( object[] obj ) // LogInUd { sender, Response, Session, txtBruger, txtAdgang }
+        {                          // Sideskift { sender, Response, Session }
             switch( ((Button)obj[0]).ID )
             {
                 case "btnDefault":
@@ -42,12 +39,10 @@ namespace FDFk7
 
                 case "btnLogin":
                     session = (HttpSessionState)obj[2];
-                    //FIXME LogInUd modtager new Object[]{ sender, Response, Session, txtBruger, txtAdgang } );
                     if( ((Button)obj[0]).Text.Substring( 4, 2 ) == "ud" )//Der logges ud
                     {
                         LogInUd( "Logud", obj );
-                    }
-                    else if( ((TextBox)obj[3]).Text != "" && ((TextBox)obj[4]).Text != "" )//Brugernavn og pass er ikke tomme
+                    } else if( ((TextBox)obj[3]).Text != "" && ((TextBox)obj[4]).Text != "" )//Brugernavn og pass er ikke tomme
                     {
                         LogInUd( "Login", obj );
                     }
@@ -57,12 +52,31 @@ namespace FDFk7
 
         private void Load( object[] obj )
         {//FIXME skal laves så der også Loades når man ikke er logget ind
-            if( session["Authentication"] != null )
+            if( session["UserRights"] == null )//hvis man ikke er logget ind
             {
-                ((TextBox)obj[0]).Visible = false;
-                ((TextBox)obj[1]).Visible = false;
-                Button btn = (Button)obj[2];
-                btn.Text = "Log ud " + session["UserAuthentication"];
+                switch( ((System.Web.UI.Page)obj[0]).Request.AppRelativeCurrentExecutionFilePath )//navn på den side der gåes til
+                {
+                    case "~/Admin.aspx":
+                    case "~/Bruger.aspx":
+                    case "~/Userdate.aspx":
+                    case "~/adminCreateUser.aspx":
+                        LogTilSide( false, obj );
+                        break;
+                }
+            } else if( (session["UserRights"] == "Admin") || (session["UserRights"] == "Super admin") )
+            {
+                ((TextBox)obj[3]).Visible = false;
+                ((TextBox)obj[4]).Visible = false;
+                ((Button)obj[5]).Text = "Log ud " + session["UserAuthentication"];
+            } else// almindelig bruger
+            {
+                switch( ((System.Web.UI.Page)obj[0]).Request.AppRelativeCurrentExecutionFilePath )//navn på den side der gåes til
+                {
+                    case "~/Admin.aspx":
+                    case "~/adminCreateUser.aspx":
+                        LogTilSide( false, obj );
+                        break;
+                }
             }
         }
 
@@ -162,11 +176,7 @@ namespace FDFk7
 
                                     txtBruger.Text = "Velkommen " + DB_UserName;
                                     btnLogin.Text = "Log ud fra rettighedsniveau " + session["UserRights"];
-                                            
-                                    txtBruger.Visible = false;
-                                    txtAdgang.Visible = false;
-                                }
-                                else
+                                } else
                                 {
                                     txtBruger.Text = "Brugernavn / adgangskode er ikke korrekt";
                                 }
@@ -176,25 +186,18 @@ namespace FDFk7
                             //Se på rettigheder og gå til rette side
                             LogTilSide( true, obj );
 
-                        }
-                        else
+                        } else
                         {
                             txtBruger.Text = "Brugernavn / adgangskode er ikke korrekt";
                         }
 
                     }
-                }
-                else
+                } else
                 {
-                    txtBruger.Text = "";
-                    txtBruger.Visible = true;
-                    txtAdgang.Visible = true;
-                    btnLogin.Text = "Log ind";
                     session.Abandon();
                     LogTilSide( false, obj );
                 }
-            }
-            catch( Exception e )
+            } catch( Exception e )
             {
             }
 
@@ -206,7 +209,7 @@ namespace FDFk7
             {
                 switch( (string)session["UserRights"] )
                 {
-                    case "Bruger"://FIXME skal selvfølgeligt være forskelligt
+                    case "Bruger":
                         ((HttpResponse)obj[1]).Redirect( mainURL + "Bruger.aspx" );
                         break;
                     case "Admin":
@@ -214,8 +217,7 @@ namespace FDFk7
                         ((HttpResponse)obj[1]).Redirect( mainURL + "Admin.aspx" );
                         break;
                 }
-            }
-            else//Logud
+            } else//Logud
             {
                 ((HttpResponse)obj[1]).Redirect( mainURL + "Default.aspx" );
             }

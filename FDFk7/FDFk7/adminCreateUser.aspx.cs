@@ -8,13 +8,12 @@ using System.Diagnostics;
 
 namespace FDFk7
 {
-	
     public partial class adminCreateUser : System.Web.UI.Page
     {
 
         protected void Page_Load( object sender, EventArgs args )
         {
-            new Basis( "Load", new object[]{ txtBruger, txtAdgang, btnLogin, Session, Request } );
+            new Basis( "Load", new object[]{ sender, Response, Session, txtBruger, txtAdgang, btnLogin } );
         }
 
         public void LoginOut( object sender, EventArgs args )

@@ -12,7 +12,7 @@ namespace FDFk7
 
         protected void Page_Load( object sender, EventArgs args )
         {
-            new Basis( "Load", new object[]{ txtBruger, txtAdgang, btnLogin, Session, Request } );
+            new Basis( "Load", new object[]{ sender, Response, Session, txtBruger, txtAdgang, btnLogin } );
         }
 
         public void LoginOut( object sender, EventArgs args )
