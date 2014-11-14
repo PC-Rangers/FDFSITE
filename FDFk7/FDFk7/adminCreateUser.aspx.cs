@@ -4,7 +4,7 @@ using System.Web.UI;
 
 using System.Security.Cryptography;
 using System.Text;
-using System.Diagnostics; // krævet for Stopwatch.GetTimestamp()
+using System.Diagnostics; // krævet for Stopwatch.GetTimestamp
 
 namespace FDFk7
 {
@@ -39,7 +39,7 @@ namespace FDFk7
             // generere salt
             SHA512 sha = new SHA512Managed();
 
-            String timeStamp = Stopwatch.GetTimestamp(DateTime.Now);
+            String timeStamp = Stopwatch.GetTimestamp().ToString();
 
             byte[] hash = sha.ComputeHash( Encoding.ASCII.GetBytes( timeStamp ) );
 
