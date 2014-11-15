@@ -5,6 +5,7 @@ using System.Text;
 
 // krævet for Stopwatch.GetTimestamp
 using System.Diagnostics;
+using System.Web.UI.WebControls;
 
 namespace FDFk7
 {
@@ -13,7 +14,10 @@ namespace FDFk7
 
         protected void Page_Load( object sender, EventArgs args )
         {
-            new Basis( "Load", new object[]{ sender, Response, Session, txtBruger, txtAdgang, btnLogin } );
+            new Basis( 
+                new object[]{ sender, Response, Session, txtBruger, txtAdgang },
+                new Button[]{ btnLogin, btnProfil, btnOpretBesked, btnNytMedlem, btnBrugere, btnHytte, btnNyeResavationer, btnNyLeder, btnCMS }
+            );
         }
 
         public void LoginOut( object sender, EventArgs args )

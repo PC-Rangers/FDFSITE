@@ -19,10 +19,10 @@ namespace FDFk7
         private HttpSessionState session;
 
         /** Load **/
-        public Basis( string fnk, object[] obj ) // { sender, Response, Session, txtBruger, txtAdgang, btnLogin }
+        public Basis( object[] obj, Button[] knapper ) // { sender, Response, Session, txtBruger, txtAdgang }, knapper[]
         {
             session = (HttpSessionState)obj[2];
-            Load( obj );
+            Load( obj, knapper );
         }
 
         /** GaaTil og LogInOut **/
@@ -47,12 +47,48 @@ namespace FDFk7
             }
         }
 
-        private void Load( object[] obj )
+        private void Load( object[] obj, Button[] knapper )// { sender, Response, Session, txtBruger, txtAdgang } knapper[]
         {
-            if( session["UserRights"] == null )//hvis man ikke er logget ind
+            if( session["UserRights"] == "Super admin" )
+            {
+                knapper[0].Text = "Log ud " + session["UserAuthentication"];
+            } else if( session["UserRights"] == "Admin" )
+            {
+                knapper[0].Text = "Log ud " + session["UserAuthentication"];
+                knapper[7].Visible = false;
+                knapper[8].Visible = false;
+                switch( ((System.Web.UI.Page)obj[0]).Request.AppRelativeCurrentExecutionFilePath )//navn på den side der gåes til
+                {
+                    case "~/NyLeder.aspx":
+                    case "~/CMS.aspx":
+                        LogTilSide( false, obj );
+                        break;
+                }
+            } else if( session["UserRights"] == "Bruger" )
+            {
+                knapper[0].Text = "Log ud " + session["UserAuthentication"];
+                switch( ((System.Web.UI.Page)obj[0]).Request.AppRelativeCurrentExecutionFilePath )//navn på den side der gåes til
+                {
+                    case "~/NyLeder.aspx":
+                    case "~/CMS.aspx":
+                    case "~/Admin.aspx":
+                    case "~/adminCreateUser.aspx":
+                        LogTilSide( false, obj );
+                        break;
+                }
+                knapper[2].Visible = false;
+                knapper[3].Visible = false;
+                knapper[4].Visible = false;
+                knapper[5].Visible = false;
+                knapper[6].Visible = false;
+                knapper[7].Visible = false;
+                knapper[8].Visible = false;
+            } else
             {
                 switch( ((System.Web.UI.Page)obj[0]).Request.AppRelativeCurrentExecutionFilePath )//navn på den side der gåes til
                 {
+                    case "~/NyLeder.aspx":
+                    case "~/CMS.aspx":
                     case "~/Admin.aspx":
                     case "~/Bruger.aspx":
                     case "~/Userdate.aspx":
@@ -61,20 +97,14 @@ namespace FDFk7
                         LogTilSide( false, obj );
                         break;
                 }
-            } else if( (session["UserRights"] == "Admin") || (session["UserRights"] == "Super admin") )
-            {
-                ((TextBox)obj[3]).Visible = false;
-                ((TextBox)obj[4]).Visible = false;
-                ((Button)obj[5]).Text = "Log ud " + session["UserAuthentication"];
-            } else// almindelig bruger
-            {
-                switch( ((System.Web.UI.Page)obj[0]).Request.AppRelativeCurrentExecutionFilePath )//navn på den side der gåes til
-                {
-                    case "~/Admin.aspx":
-                    case "~/adminCreateUser.aspx":
-                        LogTilSide( false, obj );
-                        break;
-                }
+                knapper[1].Visible = false;
+                knapper[2].Visible = false;
+                knapper[3].Visible = false;
+                knapper[4].Visible = false;
+                knapper[5].Visible = false;
+                knapper[6].Visible = false;
+                knapper[7].Visible = false;
+                knapper[8].Visible = false;
             }
         }
 
