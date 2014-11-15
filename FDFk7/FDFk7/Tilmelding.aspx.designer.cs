@@ -30,7 +30,7 @@ namespace FDFk7
 
         protected System.Web.UI.WebControls.Button btnKontakt;
 
-        protected System.Web.UI.WebControls.Button btnProfil;
+        protected System.Web.UI.WebControls.Button btnBruger;
 
         protected System.Web.UI.WebControls.Button btnOpretBesked;
 

@@ -10,7 +10,7 @@ namespace FDFk7
         {
             new Basis( 
                 new object[]{ sender, Response, Session, txtBruger, txtAdgang },
-                new Button[]{ btnLogin, btnProfil, btnOpretBesked, btnNytMedlem, btnBrugere, btnHytte, btnNyeResavationer, btnNyLeder, btnCMS }
+                new Button[]{ btnLogin, btnBruger, btnOpretBesked, btnNytMedlem, btnBrugere, btnHytte, btnNyeResavationer, btnNyLeder, btnCMS }
             );
         }
 
