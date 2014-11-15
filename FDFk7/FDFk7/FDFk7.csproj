@@ -62,7 +62,6 @@
     <Content Include="css\bootstrap-theme.min.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
-    <Content Include="mester.master" />
     <Content Include="OmOs.aspx" />
     <Content Include="Kontakt.aspx" />
     <Content Include="Bruger.aspx" />
@@ -81,12 +80,6 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="mester.master.cs">
-      <DependentUpon>mester.master</DependentUpon>
-    </Compile>
-    <Compile Include="mester.master.designer.cs">
-      <DependentUpon>mester.master</DependentUpon>
     </Compile>
     <Compile Include="OmOs.aspx.cs">
       <DependentUpon>OmOs.aspx</DependentUpon>
