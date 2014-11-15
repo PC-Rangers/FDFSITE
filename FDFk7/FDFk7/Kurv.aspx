@@ -73,26 +73,28 @@
         <div class="row top-buffer-small">
 
             <div>
+            	<!-- Indtastning -->
                 <div class="col-sm-6 top-buffer-small">
-                    <label for="exampleInputEmail1">Navn</label>
-                    <input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
+                    <label for="txtNavn">Navn</label>
+                    <asp:TextBox type="email" placeholder="Navn" CssClass="form-control bottom-buffer-small" runat="server" id="txtNavn" />
 
-                    <label for="exampleInputEmail1">Adresse</label>
-                    <input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
+                    <label for="txtAdresse">Adresse</label>
+                    <asp:TextBox type="email" placeholder="Adresse" CssClass="form-control bottom-buffer-small" runat="server" id="txtAdresse" />
 
                     <div class="col-sm-4 no-gutter right-padding-small">
-                        <label for="exampleInputEmail1">Post nr.</label>
-                        <input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
+                        <label for="txtPostNr">Post nr.</label>
+                    	<asp:TextBox type="email" placeholder="PostNr" CssClass="form-control bottom-buffer-small" runat="server" id="txtPostNr" />
                     </div>
                     <div class="col-sm-8 no-gutter">
-                        <label for="exampleInputEmail1">By</label>
-                        <input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
+                        <label for="txtBy">By</label>
+                    	<asp:TextBox type="email" placeholder="By" CssClass="form-control bottom-buffer-small" runat="server" id="txtBy" />
                     </div>
 
-                    <label for="exampleInputEmail1">Evt. Note</label>
-                    <input type="email" class="form-control bottom-buffer-small" id="exampleInputEmail1">
+                    <label for="txtNote">Evt. Note</label>
+                    <asp:TextBox type="email" placeholder="Note" CssClass="form-control bottom-buffer-small" runat="server" id="txtNote" />
                 </div>
 
+                <!-- Info om pris -->
                 <div class="col-sm-12 top-buffer-small">
                     <table class="table table-striped">
                         <thead>
@@ -151,12 +153,16 @@
                   </div>
 
               </div>
-          </div>
+          	</div>
 
-          <div class="pull-right btn-margin"><button type="submit" class="btn btn-default">Tilføj periode</button></div>
-          <div class="pull-right btn-margin"><button type="submit" class="btn btn-default">Gå til betaling</button></div>
-          <!-- Usage as a class -->
-          <div class="clearfix"></div>
+          	<div class="pull-right btn-margin">
+          		<asp:Button type="button" CssClass="btn btn-default" Text="Tilføj periode" runat="server" 	id="btnTiljoejPeriode" OnClick="ClickTilfoejPeriode" />
+          	</div>
+			<div class="pull-right btn-margin">
+          		<asp:Button type="button" CssClass="btn btn-default" Text="Gå til betaling" runat="server" 	id="btnGaaTilBetaling" OnClick="ClickGaaTilBetaling" />
+			</div>
+			<!-- Usage as a class -->
+			<div class="clearfix"></div>
 
       </div>
     </div><!-- Side -->

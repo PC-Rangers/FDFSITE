@@ -110,7 +110,9 @@
 		        	<div role="form">
 
 
-			        	<div class="pull-right btn-margin"><button type="submit" class="btn btn-default">Tilmeld</button></div>
+			        	<div class="pull-right btn-margin">
+			        		<asp:Button type="button" CssClass="btn btn-default" Text="Bestil" runat="server" id="btnKurv" OnClick="GaaTil" />
+			        	</div>
 			        	<!-- Usage as a class -->
 			        	<div class="clearfix"></div>
 
@@ -119,7 +121,7 @@
 			</div>
 		</div>
 
-	</div> <!-- /container -->
+	</div> <!-- /Side -->
 
 </form>
 

@@ -26,6 +26,15 @@ namespace FDFk7
         {
             new Basis( new object[]{ sender, Response, Session } );
         }
+
+        public void ClickTilmeld( object sender, EventArgs args )
+        {
+            //FIXME
+            //txtNavn
+            //txtTelefon
+            //txtEmail
+            //txtBesked
+        }
 		
     }
 }

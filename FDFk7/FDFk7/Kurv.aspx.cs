@@ -26,6 +26,21 @@ namespace FDFk7
         {
             new Basis( new object[]{ sender, Response, Session } );
         }
+
+        public void ClickTilfoejPeriode( object sender, EventArgs args )
+        {
+            //FIXME gør noget med "Tilføj periode"
+        }
+
+        public void ClickGaaTilBetaling( object sender, EventArgs args )
+        {
+            //txtNavn
+            //txtAdresse
+            //txtPostNr
+            //txtBy
+            //txtNote
+            //FIXME "Gå til betaling"
+        }
 		
     }
 }

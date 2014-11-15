@@ -71,7 +71,6 @@
     <!-- Side indhold -->
     <div class="container">
         <div class="row top-buffer-small">
-
             <img src="http://fdftaarnby.com/wp-content/themes/taarnby/images/frontpagephotos/traditioner.png" width="100%" class="bottom-buffer-medium">
         </div>
 
@@ -112,25 +111,29 @@
 
                     <div role="form">
                         <div class="form-group top-buffer-small">
-                            <label for="exampleInputEmail1">Navn</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1">
+                            <label for="txtNavn">Navn</label>
+                            <asp:TextBox type="text" placeholder="Navn" CssClass="form-control" runat="server" id="txtNavn" />
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Telefon</label>
-                            <input type="text" class="form-control" id="exampleInputPassword1">
+                            <label for="txtTelefon">Telefon</label>
+                            <asp:TextBox type="text" placeholder="Telefon" CssClass="form-control" runat="server" id="txtTelefon" />
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1">E-mail</label>
-                            <input type="text" class="form-control" id="exampleInputPassword1">
+                            <label for="txtEmail">E-mail</label>
+                            <asp:TextBox type="text" placeholder="E-mail" CssClass="form-control" runat="server" id="txtEmail" />
                         </div>
-                        <label for="besked">Evt. besked</label>
-                        <textarea class="form-control" id="besked" rows="1"></textarea>
+                        <label for="txtBesked">Evt. besked</label>
+                        <asp:TextBox type="text" placeholder="Besked" CssClass="form-control" runat="server" id="txtBesked" />
 
-                        <div class="pull-right btn-margin"><button type="submit" class="btn btn-default">Tilmeld</button></div>
+                        <div class="pull-right btn-margin">
+                        	<asp:Button type="button" CssClass="btn btn-default" Text="Tilmeld" runat="server" 	id="btnTilmeld" OnClick="ClickTilmeld" />
+                        </div>
+
                         <!-- Usage as a class -->
                         <div class="clearfix"></div>
                     </div>
-                </div>
+
+                </div><!-- /Tilmelding -->
 
             </div>
         </div>

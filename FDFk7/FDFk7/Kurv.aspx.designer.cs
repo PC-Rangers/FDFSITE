@@ -46,5 +46,19 @@ namespace FDFk7 {
 		protected System.Web.UI.WebControls.Button btnadminNyeResavationer;
 		
 		protected System.Web.UI.WebControls.Button btnadminCMS;
+		
+		protected System.Web.UI.WebControls.TextBox txtNavn;
+		
+		protected System.Web.UI.WebControls.TextBox txtAdresse;
+		
+		protected System.Web.UI.WebControls.TextBox txtPostNr;
+		
+		protected System.Web.UI.WebControls.TextBox txtBy;
+		
+		protected System.Web.UI.WebControls.TextBox txtNote;
+		
+		protected System.Web.UI.WebControls.Button btnTiljoejPeriode;
+		
+		protected System.Web.UI.WebControls.Button btnGaaTilBetaling;
 	}
 }
