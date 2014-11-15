@@ -30,14 +30,6 @@ namespace FDFk7
         {                          // Sideskift { sender, Response, Session }
             switch( ((Button)obj[0]).ID )
             {
-                case "btnDefault":
-                case "btnUdlejning":// Sideskift ( adresse + knapnavn + .aspx)
-                case "btnOmOs"://fx = http://fdfk7.dk.nt8.unoeuro-server.com/ + OmOs + .aspx
-                case "btnKontakt":
-                case "btnTilmelding":
-                    ((HttpResponse)obj[1]).Redirect( mainURL + ((Button)obj[0]).ID.Substring( 3 ) + ".aspx" );
-                    break;
-
                 case "btnLogin":
                     session = (HttpSessionState)obj[2];
                     if( ((Button)obj[0]).Text.Substring( 4, 2 ) == "ud" )//Der logges ud
@@ -48,11 +40,15 @@ namespace FDFk7
                         LogInUd( "Login", obj );
                     }
                     break;
+            //hvis knappen hedder "btn" + navnPåSide bruges default
+                default:// mainURL + (knapID - "btn") + sideEndelse ;; fx = "http://fdfk7.dk.nt8.unoeuro-server.com/" + "OmOs" + ".aspx"
+                    ((HttpResponse)obj[1]).Redirect( mainURL + ((Button)obj[0]).ID.Substring( 3 ) + ".aspx" );
+                    break;
             }
         }
 
         private void Load( object[] obj )
-        {//FIXME skal laves så der også Loades når man ikke er logget ind
+        {
             if( session["UserRights"] == null )//hvis man ikke er logget ind
             {
                 switch( ((System.Web.UI.Page)obj[0]).Request.AppRelativeCurrentExecutionFilePath )//navn på den side der gåes til
