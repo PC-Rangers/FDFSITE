@@ -69,6 +69,9 @@
     <Content Include="Userdata.aspx" />
     <Content Include="adminCreateUser.aspx" />
     <Content Include="Admin.aspx" />
+    <Content Include="Tilmelding.aspx" />
+    <Content Include="Shop.aspx" />
+    <Content Include="Kurv.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -123,6 +126,24 @@
     </Compile>
     <Compile Include="Admin.aspx.designer.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tilmelding.aspx.cs">
+      <DependentUpon>Tilmelding.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tilmelding.aspx.designer.cs">
+      <DependentUpon>Tilmelding.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shop.aspx.cs">
+      <DependentUpon>Shop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shop.aspx.designer.cs">
+      <DependentUpon>Shop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Kurv.aspx.cs">
+      <DependentUpon>Kurv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Kurv.aspx.designer.cs">
+      <DependentUpon>Kurv.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <PropertyGroup>

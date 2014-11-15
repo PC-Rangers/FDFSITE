@@ -11,7 +11,7 @@
 namespace FDFk7 {
 	
 	
-	public partial class Kontakt {
+	public partial class Kurv {
 		
 		protected System.Web.UI.HtmlControls.HtmlForm body;
 		

@@ -60,6 +60,7 @@ namespace FDFk7
                     case "~/Bruger.aspx":
                     case "~/Userdate.aspx":
                     case "~/adminCreateUser.aspx":
+                    case "~/Tilmelding.aspx":
                         LogTilSide( false, obj );
                         break;
                 }

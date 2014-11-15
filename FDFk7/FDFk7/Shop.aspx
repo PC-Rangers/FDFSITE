@@ -1,11 +1,11 @@
-﻿<%@ Page Language="C#" Inherits="FDFk7.adminCreateUser" %>
+﻿<%@ Page Language="C#" Inherits="FDFk7.Shop" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>FDF K7 Frihavn - adminCreateUser</title>
+	<title>FDF K7 Frihavn - Shop</title>
 
 	<!-- Bootstrap -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
@@ -58,52 +58,64 @@
 		</div>
 	</div>
 
-	<!-- Side indhold -->
-	<div class="container">
-    	<div class="row top-buffer-small">
+    <!-- Side indhold -->
+    <div class="container">
+        <div class="row top-buffer-small">
+            <img src="http://fdftaarnby.com/wp-content/themes/taarnby/images/frontpagephotos/traditioner.png" width="100%" class="bottom-buffer-medium">
+        </div>
 
-				<div class="col-sm-6 top-buffer-small">
+        <div class="col-sm-6 top-buffer-small">
+            <h2 class="bottom-buffer-small">Hytten</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
 
-		            <label for="exampleInputEmail1">Brugernavn</label>
-		            <input type="text" class="form-control bottom-buffer-small" id="navn">
+            <table class="tbl-margin top-buffer-large">
+                <tr>
+                    <td class="tbl-padding">Pris weekend</td>
+                    <td>1.199,00 kr.</td>
+                </tr>
+                <tr>
+                    <td class="tbl-padding">Pris</td>
+                    <td>3.445,00 kr.</td>
+                </tr>
+            </table>
+        </div>
 
-		            <label for="exampleInputEmail1">Midlertidig adgangskode</label>
-		            <input type="text" class="form-control bottom-buffer-small" id="kode">
+        <div class="col-sm-6 top-buffer-small">
+            <div class="thumbnail">
 
-		            <input type="hidden" id="salt" value="date"> <!-- skal laves i koden og ikke sendes med her fra. -->
+                <div class="caption">
+                    <h2>Periode valg</h2>
 
-		            <label for="exampleInputEmail1">Email adresse </label>
-		            <input type="text" class="form-control bottom-buffer-small" id="mail"> 
+                    <div role="form">
+                        <div class="pull-right btn-margin"><button type="submit" class="btn btn-default">Tilmeld</button></div>
+                        <!-- Usage as a class -->
+                        <div class="clearfix"></div>
+                    </div>
 
-		            <label for="exampleInputEmail1">Bruger gruppe</label>
-		            <input type="text" class="form-control bottom-buffer-small" id="gruppe"> <!-- skal være en drop down menu. -->
+                </div>
 
-		            <label for="exampleInputEmail1">Rettigheds niveau</label>
-		            <input type="text" class="form-control bottom-buffer-small" id="rettighed"> <!-- skal være en drop down menu. -->
-
-
-
-
-
-
-				</div>
-
-
-
-	</div> <!-- /container -->
+            </div>
+        </div>
+    </div>
 
 </form>
 
     <hr>
 
     <footer>
-    	<div class="container">
-        	<div class="row">
-        	<p>© 2014 FDFK7 - Alle rettigheder forbeholdes</p>
-        	</div>
-    	</div>
+      <div class="container">
+        <div class="row">
+          <p>© 2014 FDFK7 - Alle rettigheder forbeholdes</p>
+        </div>
+      </div>
     </footer>
-
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -115,5 +127,6 @@
     <script src="../../dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
 </body>
 </html>

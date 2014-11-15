@@ -15,8 +15,10 @@
 </head>
 <body>
 <form class="container" id="body" runat="server" role="form">
+
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 	  	<div class="container">
+
 		    <div class="navbar-header">
 		      	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 			        <span class="sr-only">Toggle navigation</span>
@@ -26,6 +28,7 @@
 			    </button>
 			    <a class="navbar-brand" href="/Default.aspx">FDFK7</a>
 		    </div>
+
 		    <div id="navbar" class="navbar-collapse collapse" runat="server">
 				<div class="navbar-form navbar-right" role="form">
 					<div class="form-group">
@@ -37,6 +40,7 @@
 					<asp:Button type="submit" CssClass="btn btn-success" id="btnLogin" Text="Log ind" runat="server" OnClick="LoginOut" />
   				</div>
 		    </div><!--/.navbar-collapse -->
+
 		</div>
 	</nav>
 
@@ -54,6 +58,7 @@
 		</div>
 	</div>
 
+	<!-- Side -->
 	<div class="container">
 		<!-- Example row of columns -->
 		<div class="row top-buffer-small">
@@ -158,7 +163,7 @@
 			</div> <!-- /container -->
 
 		</div> <!-- /row top-buffer-small -->
-	</div> <!-- /container -->
+	</div> <!-- Side -->
 
 </form>
 
