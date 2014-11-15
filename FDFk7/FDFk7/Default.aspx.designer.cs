@@ -31,6 +31,8 @@ namespace FDFk7 {
 		
 		protected System.Web.UI.WebControls.Button btnKontakt;
 		
+		protected System.Web.UI.WebControls.Button btnProfil;
+		
 		protected System.Web.UI.WebControls.Button btnOpretBesked;
 		
 		protected System.Web.UI.WebControls.Button btnNytMedlem;

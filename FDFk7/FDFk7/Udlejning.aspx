@@ -54,6 +54,8 @@
 	            	<asp:Button type="button" CssClass="btn btn-default" Text="Om Os" runat="server" id="btnOmOs" OnClick="GaaTil" />
 	            	<asp:Button type="button" CssClass="btn btn-default" Text="Kontakt" runat="server" id="btnKontakt" OnClick="GaaTil" />
 
+	            	<asp:Button type="button" CssClass="btn btn-default" Text="Profil" runat="server" 	id="btnProfil" OnClick="GaaTil" />
+
 	            	<asp:Button type="button" CssClass="btn btn-default" Text="Opret besked" runat="server" 	id="btnOpretBesked" OnClick="GaaTil" />
 	            	<asp:Button type="button" CssClass="btn btn-default" Text="Nyt medlem" runat="server" 		id="btnNytMedlem" OnClick="GaaTil" />
 	            	<asp:Button type="button" CssClass="btn btn-default" Text="Ny leder" runat="server" 		id="btnNyLeder" OnClick="GaaTil" />
