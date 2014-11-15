@@ -21,7 +21,6 @@ namespace FDFk7
         /** Load **/
         public Basis( object[] obj, Button[] knapper ) // { sender, Response, Session, txtBruger, txtAdgang }, knapper[]
         {
-            session = (HttpSessionState)obj[2];
             Load( obj, knapper );
         }
 
@@ -40,6 +39,7 @@ namespace FDFk7
                         LogInUd( "Login", obj );
                     }
                     break;
+
             //hvis knappen hedder "btn" + navnPåSide bruges default
                 default:// mainURL + (knapID - "btn") + sideEndelse ;; fx = "http://fdfk7.dk.nt8.unoeuro-server.com/" + "OmOs" + ".aspx"
                     ((HttpResponse)obj[1]).Redirect( mainURL + ((Button)obj[0]).ID.Substring( 3 ) + ".aspx" );
@@ -49,12 +49,18 @@ namespace FDFk7
 
         private void Load( object[] obj, Button[] knapper )// { sender, Response, Session, txtBruger, txtAdgang } knapper[]
         {
+            session = (HttpSessionState)obj[2];
             if( session["UserRights"] == "Super admin" )
             {
+                ((TextBox)obj[3]).Visible = false;
+                ((TextBox)obj[4]).Visible = false;
                 knapper[0].Text = "Log ud " + session["UserAuthentication"];
             } else if( session["UserRights"] == "Admin" )
             {
+                ((TextBox)obj[3]).Visible = false;
+                ((TextBox)obj[4]).Visible = false;
                 knapper[0].Text = "Log ud " + session["UserAuthentication"];
+
                 knapper[7].Visible = false;
                 knapper[8].Visible = false;
                 switch( ((System.Web.UI.Page)obj[0]).Request.AppRelativeCurrentExecutionFilePath )//navn på den side der gåes til
@@ -66,7 +72,10 @@ namespace FDFk7
                 }
             } else if( session["UserRights"] == "Bruger" )
             {
+                ((TextBox)obj[3]).Visible = false;
+                ((TextBox)obj[4]).Visible = false;
                 knapper[0].Text = "Log ud " + session["UserAuthentication"];
+
                 switch( ((System.Web.UI.Page)obj[0]).Request.AppRelativeCurrentExecutionFilePath )//navn på den side der gåes til
                 {
                     case "~/NyLeder.aspx":

@@ -56,14 +56,13 @@
 
 	            	<asp:Button type="button" CssClass="btn btn-default" Text="Profil" runat="server" 	id="btnBruger" OnClick="GaaTil" />
 
-	            	<asp:Button type="button" CssClass="btn btn-default" Text="Opret besked" runat="server" 	id="btnOpretBesked" OnClick="GaaTil" />
-	            	<asp:Button type="button" CssClass="btn btn-default" Text="Nyt medlem" runat="server" 		id="btnNytMedlem" OnClick="GaaTil" />
-	            	<asp:Button type="button" CssClass="btn btn-default" Text="Ny leder" runat="server" 		id="btnNyLeder" OnClick="GaaTil" />
-	            	<asp:Button type="button" CssClass="btn btn-default" Text="Brugere" runat="server" 			id="btnBrugere" OnClick="GaaTil" />
-	            	<asp:Button type="button" CssClass="btn btn-default" Text="Hytte" runat="server" 			id="btnHytte" OnClick="GaaTil" />
-	            	<asp:Button type="button" CssClass="btn btn-default" Text="Nye resavationer" runat="server" id="btnNyeResavationer" OnClick="GaaTil" />
-	            	<asp:Button type="button" CssClass="btn btn-default" Text="CMS" runat="server" 				id="btnCMS" OnClick="GaaTil" />
-		        </div>
+	            	<asp:Button type="button" CssClass="btn btn-default" Text="Opret besked" runat="server" 	id="btnadminCreateMessage" OnClick="GaaTil" />
+	            	<asp:Button type="button" CssClass="btn btn-default" Text="Nyt medlem" runat="server" 		id="btnadminCreateUser" OnClick="GaaTil" />
+	            	<asp:Button type="button" CssClass="btn btn-default" Text="Ny leder" runat="server" 		id="btnadminCreateAdmin" OnClick="GaaTil" />
+	            	<asp:Button type="button" CssClass="btn btn-default" Text="Brugere" runat="server" 			id="btnadminUseres" OnClick="GaaTil" />
+	            	<asp:Button type="button" CssClass="btn btn-default" Text="Hytte" runat="server" 			id="btnadminHytte" OnClick="GaaTil" />
+	            	<asp:Button type="button" CssClass="btn btn-default" Text="Nye resavationer" runat="server" id="btnadminNyeResavationer" OnClick="GaaTil" />
+	            	<asp:Button type="button" CssClass="btn btn-default" Text="CMS" runat="server" 				id="btnadminCMS" OnClick="GaaTil" />
 		        </div>
 		    </div>
 		</div>
@@ -73,35 +72,29 @@
 	<div class="container">
     	<div class="row top-buffer-small">
 
-				<div class="col-sm-6 top-buffer-small">
+			<div class="col-sm-6 top-buffer-small">
 
-		            <label for="exampleInputEmail1">Brugernavn</label>
-		            <input type="text" class="form-control bottom-buffer-small" id="navn">
+	            <label for="exampleInputEmail1">Brugernavn</label>
+	            <input type="text" class="form-control bottom-buffer-small" id="navn">
 
-		            <label for="exampleInputEmail1">Midlertidig adgangskode</label>
-		            <input type="text" class="form-control bottom-buffer-small" id="kode">
+	            <label for="exampleInputEmail1">Midlertidig adgangskode</label>
+	            <input type="text" class="form-control bottom-buffer-small" id="kode">
 
-		            <input type="hidden" id="salt" value="date"> <!-- skal laves i koden og ikke sendes med her fra. -->
+	            <input type="hidden" id="salt" value="date"> <!-- skal laves i koden og ikke sendes med her fra. -->
 
-		            <label for="exampleInputEmail1">Email adresse </label>
-		            <input type="text" class="form-control bottom-buffer-small" id="mail"> 
+	            <label for="exampleInputEmail1">Email adresse </label>
+	            <input type="text" class="form-control bottom-buffer-small" id="mail"> 
 
-		            <label for="exampleInputEmail1">Bruger gruppe</label>
-		            <input type="text" class="form-control bottom-buffer-small" id="gruppe"> <!-- skal være en drop down menu. -->
+	            <label for="exampleInputEmail1">Bruger gruppe</label>
+	            <input type="text" class="form-control bottom-buffer-small" id="gruppe"> <!-- skal være en drop down menu. -->
 
-		            <label for="exampleInputEmail1">Rettigheds niveau</label>
-		            <input type="text" class="form-control bottom-buffer-small" id="rettighed"> <!-- skal være en drop down menu. -->
+	            <label for="exampleInputEmail1">Rettigheds niveau</label>
+	            <input type="text" class="form-control bottom-buffer-small" id="rettighed"> <!-- skal være en drop down menu. -->
 
+			</div>
 
-
-
-
-
-				</div>
-
-
-
-	</div> <!-- /container -->
+		</div>
+	</div> <!-- Side slut -->
 
 </form>
 

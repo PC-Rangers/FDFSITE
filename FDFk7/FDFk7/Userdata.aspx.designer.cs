@@ -12,6 +12,7 @@ namespace FDFk7
 {
     public partial class Userdata
     {
+
         protected System.Web.UI.HtmlControls.HtmlForm body;
 
         protected System.Web.UI.HtmlControls.HtmlGenericControl navbar;
@@ -32,19 +33,19 @@ namespace FDFk7
 
         protected System.Web.UI.WebControls.Button btnBruger;
 
-        protected System.Web.UI.WebControls.Button btnOpretBesked;
+        protected System.Web.UI.WebControls.Button btnadminCreateMessage;
 
-        protected System.Web.UI.WebControls.Button btnNytMedlem;
+        protected System.Web.UI.WebControls.Button btnadminCreateUser;
 
-        protected System.Web.UI.WebControls.Button btnNyLeder;
+        protected System.Web.UI.WebControls.Button btnadminCreateAdmin;
 
-        protected System.Web.UI.WebControls.Button btnBrugere;
+        protected System.Web.UI.WebControls.Button btnadminUseres;
 
-        protected System.Web.UI.WebControls.Button btnHytte;
+        protected System.Web.UI.WebControls.Button btnadminHytte;
 
-        protected System.Web.UI.WebControls.Button btnNyeResavationer;
+        protected System.Web.UI.WebControls.Button btnadminNyeResavationer;
 
-        protected System.Web.UI.WebControls.Button btnCMS;
+        protected System.Web.UI.WebControls.Button btnadminCMS;
 
         protected System.Web.UI.WebControls.Button btnTilmelding;
 		

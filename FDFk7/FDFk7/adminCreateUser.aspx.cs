@@ -16,7 +16,10 @@ namespace FDFk7
         {
             new Basis( 
                 new object[]{ sender, Response, Session, txtBruger, txtAdgang },
-                new Button[]{ btnLogin, btnBruger, btnOpretBesked, btnNytMedlem, btnBrugere, btnHytte, btnNyeResavationer, btnNyLeder, btnCMS }
+                new System.Web.UI.WebControls.Button[]
+                { btnLogin, btnBruger, btnadminCreateMessage, btnadminCreateUser, btnadminUseres,
+                    btnadminHytte, btnadminNyeResavationer, btnadminCreateAdmin, btnadminCMS
+                }
             );
         }
 
