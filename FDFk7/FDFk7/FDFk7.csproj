@@ -75,6 +75,9 @@
     <Content Include="adminCreateAdmin.aspx" />
     <Content Include="adminCreateMessage.aspx" />
     <Content Include="adminUseres.aspx" />
+    <Content Include="adminHytte.aspx" />
+    <Content Include="adminNyeResavationer.aspx" />
+    <Content Include="adminCMS.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -165,6 +168,24 @@
     </Compile>
     <Compile Include="adminUseres.aspx.designer.cs">
       <DependentUpon>adminUseres.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminHytte.aspx.cs">
+      <DependentUpon>adminHytte.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminHytte.aspx.designer.cs">
+      <DependentUpon>adminHytte.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminNyeResavationer.aspx.cs">
+      <DependentUpon>adminNyeResavationer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminNyeResavationer.aspx.designer.cs">
+      <DependentUpon>adminNyeResavationer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminCMS.aspx.cs">
+      <DependentUpon>adminCMS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminCMS.aspx.designer.cs">
+      <DependentUpon>adminCMS.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <PropertyGroup>
