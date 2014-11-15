@@ -115,7 +115,9 @@
 								<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
 
 								<div role="form">
-						        	<div class="pull-right btn-margin"><button type="submit" class="btn btn-default">Tilmeld</button></div>
+						        	<div class="pull-right btn-margin">
+						            	<asp:Button type="button" CssClass="btn btn-default" Text="Tilmeld" runat="server" id="btnTilmelding" OnClick="GaaTil" />
+					            	</div>
 						        	<!-- Usage as a class -->
 						        	<div class="clearfix"></div>
 

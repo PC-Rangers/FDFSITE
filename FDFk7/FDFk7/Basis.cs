@@ -32,8 +32,9 @@ namespace FDFk7
             {
                 case "btnDefault":
                 case "btnUdlejning":// Sideskift ( adresse + knapnavn + .aspx)
-                case "btnOmOs"://fx = http://fdfk7.dk.nt8.unoeuro-server.com/ + Default + .aspx
+                case "btnOmOs"://fx = http://fdfk7.dk.nt8.unoeuro-server.com/ + OmOs + .aspx
                 case "btnKontakt":
+                case "btnTilmelding":
                     ((HttpResponse)obj[1]).Redirect( mainURL + ((Button)obj[0]).ID.Substring( 3 ) + ".aspx" );
                     break;
 
