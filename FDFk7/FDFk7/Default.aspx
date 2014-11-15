@@ -53,6 +53,14 @@
 	            	<asp:Button type="button" CssClass="btn btn-default" Text="Udlejning" runat="server" id="btnUdlejning" OnClick="GaaTil" />
 	            	<asp:Button type="button" CssClass="btn btn-default" Text="Om Os" runat="server" id="btnOmOs" OnClick="GaaTil" />
 	            	<asp:Button type="button" CssClass="btn btn-default" Text="Kontakt" runat="server" id="btnKontakt" OnClick="GaaTil" />
+
+	            	<asp:Button type="button" CssClass="btn btn-default" Text="Opret besked" runat="server" 	id="btnOpretBesked" OnClick="GaaTil" />
+	            	<asp:Button type="button" CssClass="btn btn-default" Text="Nyt medlem" runat="server" 		id="btnNytMedlem" OnClick="GaaTil" />
+	            	<asp:Button type="button" CssClass="btn btn-default" Text="Ny leder" runat="server" 		id="btnNyLeder" OnClick="GaaTil" />
+	            	<asp:Button type="button" CssClass="btn btn-default" Text="Brugere" runat="server" 			id="btnBrugere" OnClick="GaaTil" />
+	            	<asp:Button type="button" CssClass="btn btn-default" Text="Hytte" runat="server" 			id="btnHytte" OnClick="GaaTil" />
+	            	<asp:Button type="button" CssClass="btn btn-default" Text="Nye resavationer" runat="server" id="btnNyeResavationer" OnClick="GaaTil" />
+	            	<asp:Button type="button" CssClass="btn btn-default" Text="CMS" runat="server" 				id="btnCMS" OnClick="GaaTil" />
 		        </div>
 		    </div>
 		</div>
