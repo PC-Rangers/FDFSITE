@@ -72,6 +72,9 @@
     <Content Include="Tilmelding.aspx" />
     <Content Include="Shop.aspx" />
     <Content Include="Kurv.aspx" />
+    <Content Include="adminCreateAdmin.aspx" />
+    <Content Include="adminCreateMessage.aspx" />
+    <Content Include="adminUseres.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -144,6 +147,24 @@
     </Compile>
     <Compile Include="Kurv.aspx.designer.cs">
       <DependentUpon>Kurv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminCreateAdmin.aspx.cs">
+      <DependentUpon>adminCreateAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminCreateAdmin.aspx.designer.cs">
+      <DependentUpon>adminCreateAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminCreateMessage.aspx.cs">
+      <DependentUpon>adminCreateMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminCreateMessage.aspx.designer.cs">
+      <DependentUpon>adminCreateMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminUseres.aspx.cs">
+      <DependentUpon>adminUseres.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminUseres.aspx.designer.cs">
+      <DependentUpon>adminUseres.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <PropertyGroup>
