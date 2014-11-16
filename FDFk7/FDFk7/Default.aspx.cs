@@ -26,5 +26,26 @@ namespace FDFk7
             new Basis( new object[]{ sender, Response, Session } );
         }
 
+        public void GaaTilTilmeld( object sender, EventArgs args )
+        {
+            try
+            {
+                switch( (string)Session["UserRights"] )
+                {
+                    case "Super admin":
+                    case "Admin":
+                    case"Bruger":
+                        GaaTil( sender, args );
+                        break;
+                    default:
+                        Response.Write( "<script language=javascript>alert('Du skal være logget ind for at kunne dette.')</script>" );
+                        break;
+                }
+            } catch( Exception e )
+            {
+                
+            }
+        }
+
     }
 }

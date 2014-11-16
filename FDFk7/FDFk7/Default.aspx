@@ -128,7 +128,7 @@
 
 								<div role="form">
 						        	<div class="pull-right btn-margin">
-						            	<asp:Button type="button" CssClass="btn btn-default" Text="Tilmeld" runat="server" id="btnTilmelding" OnClick="GaaTil" />
+						            	<asp:Button type="button" CssClass="btn btn-default" Text="Tilmeld" runat="server" id="btnTilmelding" OnClick="GaaTilTilmeld" />
 					            	</div>
 
 						        	<!-- ryd formateringen -->
