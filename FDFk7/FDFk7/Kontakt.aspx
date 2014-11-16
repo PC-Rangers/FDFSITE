@@ -72,7 +72,7 @@
     <div class="container">
         <div class="row top-buffer-small">
          
-
+        	<!-- Google Maps -->
 			<div class="padding bottom-buffer-small">
 				<div id="map-container" class="col-md-12">
 				 <!-- Skal være i slutningen af dokumentet -->
@@ -181,6 +181,7 @@
 				</div>
 		    </div>
 
+		    <!-- Information -->
 	        <div class="col-sm-6 top-buffer-small">
 
 				<h2 class="bottom-buffer-small">FDF K7 Frihavn</h2>
@@ -196,7 +197,7 @@
 				  </tr>
 				    <tr>
 				    <td class="tbl-padding">E-mail</td>
-				    <td><a href="mailto:#">alias@domain.tld</a></td>
+				    <td><a href="mailto:alias@domain.tld">alias@domain.tld</a></td>
 				  </tr>
 				</table>
 
@@ -211,7 +212,7 @@
 				  </tr>
 				    <tr>
 				    <td class="tbl-padding">E-mail</td>
-				    <td><a href="mailto:#">alias@domain.tld</a></td>
+				    <td><a href="mailto:alias@domain.tld">alias@domain.tld</a></td>
 				  </tr>
 				</table>
 
@@ -226,7 +227,7 @@
 				  </tr>
 				    <tr>
 				    <td class="tbl-padding">E-mail</td>
-				    <td><a href="mailto:#">alias@domain.tld</a></td>
+				    <td><a href="mailto:alias@domain.tld">alias@domain.tld</a></td>
 				  </tr>
 				</table>
 
@@ -241,7 +242,7 @@
 				  </tr>
 				    <tr>
 				    <td class="tbl-padding">E-mail</td>
-				    <td><a href="mailto:#">alias@domain.tld</a></td>
+				    <td><a href="mailto:alias@domain.tld">alias@domain.tld</a></td>
 				  </tr>
 				</table>
 
@@ -256,13 +257,13 @@
 				  </tr>
 				    <tr>
 				    <td class="tbl-padding">E-mail</td>
-				    <td><a href="mailto:#">alias@domain.tld</a></td>
+				    <td><a href="mailto:alias@domain.tld">alias@domain.tld</a></td>
 				  </tr>
 				</table>
         	
         	</div>
 
-
+        	<!-- Indput -->
 	        <div class="col-sm-6 top-buffer-small">
 	        	<div class="thumbnail">
 	        
@@ -270,17 +271,19 @@
 						<h2>Kontakt</h2>
 						<div role="form">
 						  	<div class="form-group top-buffer-small">
-						    	<label for="exampleInputEmail1">Email adresse</label>
-						    	<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Indtast din email her.">
+						    	<label for="txtEmail">E-mail adresse</label>
+						    	<asp:TextBox type="email" placeholder="Indtast e-mail her" CssClass="form-control" runat="server" id="txtEmail" />
 							</div>
 							<div class="form-group">
-							    <label for="exampleInputPassword1">Emne</label>
-						    	<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Hvad drejer din henvendelse sig om?">
+							    <label for="txtEmne">Emne</label>
+						    	<asp:TextBox type="text" placeholder="Hvad drejer din henvendelse sig om?" CssClass="form-control" runat="server" id="txtEmne" />
 						  	</div>
 
-								<textarea class="form-control" rows="6" placeholder="Din mor!!!!!"></textarea>
+							<asp:TextBox type="text" placeholder="Din besked" CssClass="form-control" runat="server" id="txtBesked" TextMode="MultiLine" />
 
-							<div class="pull-right btn-margin"><button type="submit" class="btn btn-default">Send besked</button></div>
+							<div class="pull-right btn-margin">
+								<asp:Button type="button" CssClass="btn btn-default" Text="Send besked" runat="server" 	id="btnSendBesked" OnClick="ClickSendBesked" />
+							</div>
 							<!-- Usage as a class -->
 							<div class="clearfix"></div>
 						</div>

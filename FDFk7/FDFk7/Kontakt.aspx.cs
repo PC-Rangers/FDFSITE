@@ -27,5 +27,13 @@ namespace FDFk7
             new Basis( new object[]{ sender, Response, Session } );
         }
 
+        public void ClickSendBesked( object sender, EventArgs args )
+        {
+            //FIXME gør noget med
+            //txtEmail
+            //txtEmne
+            //txtBesked
+        }
+
     }
 }
