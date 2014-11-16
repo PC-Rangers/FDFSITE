@@ -50,6 +50,7 @@ namespace FDFk7
         private void Load( object[] obj, Button[] knapper )// { sender, Response, Session, txtBruger, txtAdgang } knapper[]
         {
             session = (HttpSessionState)obj[2];
+            //hvis session["UserRights"] har noget i sig, så bliver sessionVariable sat til det, ellers bliver sessionVariable = ""
             string sessionVariable = !string.IsNullOrEmpty( (string)session["UserRights"] ) == true ? session["UserRights"].ToString() : "";
 
             if( sessionVariable == "Super admin" )
