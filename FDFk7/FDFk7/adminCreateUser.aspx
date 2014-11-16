@@ -86,10 +86,32 @@
 	            <input type="text" class="form-control bottom-buffer-small" id="mail"> 
 
 	            <label for="exampleInputEmail1">Bruger gruppe</label>
-	            <input type="text" class="form-control bottom-buffer-small" id="gruppe"> <!-- skal være en drop down menu. -->
+	            <select class="form-control bottom-buffer-small">
+				  <option value="1">Medlem</option>
+				  <option value="0">Leder</option>
+				</select>
 
 	            <label for="exampleInputEmail1">Rettigheds niveau</label>
 	            <input type="text" class="form-control bottom-buffer-small" id="rettighed"> <!-- skal være en drop down menu. -->
+				<select class="form-control bottom-buffer-small">
+				  <option value="2">Bruger</option>
+				  <option value="1">Admin</option>
+
+				  <%  if( session["Authentication"] == "39d87404" ) { %>
+				  <option value="0">test</option>
+				  <% } %>
+
+
+				</select>
+
+	        
+
+
+
+
+
+
+
 
 			</div>
 
