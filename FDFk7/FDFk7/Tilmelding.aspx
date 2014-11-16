@@ -101,6 +101,7 @@
                     <td>Benny Hansen</td>
                 </tr>
             </table>
+
         </div>
 
         <div class="col-sm-6 top-buffer-small">

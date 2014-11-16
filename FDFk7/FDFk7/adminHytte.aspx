@@ -90,7 +90,6 @@
                 </div>
             </div>
 
-
             <div class="col-sm-6 top-buffer-small">
                 <div class="thumbnail">
 

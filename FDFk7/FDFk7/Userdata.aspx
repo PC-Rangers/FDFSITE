@@ -190,8 +190,6 @@
 			            </div>
 					</div>
 
-
-
 		            <div class="col-sm-12 no-gutter bottom-buffer-medium">
 		            	<textarea class="form-control txtAreaNoResize top-buffer-small" id="Note" rows="8" placeholder="Noter"></textarea>
 		            </div>
@@ -199,7 +197,7 @@
 					<div class="btn-group pull-right top top-buffer-small">
 						<asp:Button type="button" CssClass="btn btn-default" Text="Ny bruger" runat="server" id="btnNySend" OnClick="IndSendNy" />
 					</div>
-                    <<div class="btn-group pull-right top top-buffer-small">
+                    <div class="btn-group pull-right top top-buffer-small">
                         <asp:Button type="button" CssClass="btn btn-default" Text="Updater bruger" runat="server" id="btnUpdateSend" OnClick="IndSendUpdate" />
                     </div>
 
@@ -218,7 +216,7 @@
     <footer>
     	<div class="container">
         	<div class="row">
-        	<p>© 2014 FDFK7 - Alle rettigheder forbeholdes</p>
+        		<p>© 2014 FDFK7 - Alle rettigheder forbeholdes</p>
         	</div>
     	</div>
     </footer>

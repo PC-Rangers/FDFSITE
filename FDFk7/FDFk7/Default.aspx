@@ -117,6 +117,7 @@
 			<div class="container">
 				<div class="row">
 
+					<!-- Det til venstre -->
 					<div class="col-md-6 top-buffer-large">
 						<div class="thumbnail">
 
@@ -139,6 +140,7 @@
 						</div>
 					</div>
 
+					<!-- Det til højre -->
 					<div class="col-md-6 top-buffer-large">
 						<h2>Beskeder fra lederne</h2>
 						<div class="media">

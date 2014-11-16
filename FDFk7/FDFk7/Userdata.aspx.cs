@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Data.SqlClient;
-using System.Web;
-using System.Web.SessionState;
-using System.Web.UI.WebControls;
-using System.Web.Security;
 
 namespace FDFk7
 {
