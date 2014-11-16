@@ -92,19 +92,22 @@
 				</select>
 
 	            <label for="exampleInputEmail1">Rettigheds niveau</label>
-	            <input type="text" class="form-control bottom-buffer-small" id="rettighed"> <!-- skal være en drop down menu. -->
-				<select class="form-control bottom-buffer-small">
+	            <select class="form-control bottom-buffer-small">
 				  <option value="2">Bruger</option>
 				  <option value="1">Admin</option>
 
-				  <%  if( session["Authentication"] == "39d87404" ) { %>
-				  <option value="0">test</option>
+				  <%  if( Session["Authentication"] == "39d87404" ) { %>
+				  <option value="0">SuperAdmin</option>
 				  <% } %>
-
 
 				</select>
 
 	        
+							<div class="pull-right horisontal-buffer-small">
+								<asp:Button type="button" CssClass="btn btn-default" Text="Send besked" runat="server" 	id="btnSendBesked"/>
+							</div>
+							<!-- Usage as a class -->
+							<div class="clearfix"></div>
 
 
 
