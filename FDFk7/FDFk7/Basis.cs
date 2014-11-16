@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Data.SqlClient;
 using System.Web;
 using System.Web.SessionState;
@@ -49,15 +49,15 @@ namespace FDFk7
 
         private void Load( object[] obj, Button[] knapper )// { sender, Response, Session, txtBruger, txtAdgang } knapper[]
         {
-            //string sessionVariable = !string.IsNullOrEmpty( session["UserRights"].ToString() ) == true ? session["UserRights"].ToString() : "";
-
             session = (HttpSessionState)obj[2];
-            if( session["UserRights"] == "Super admin" )
+            string sessionVariable = !string.IsNullOrEmpty( (string)session["UserRights"] ) == true ? session["UserRights"].ToString() : "";
+
+            if( sessionVariable == "Super admin" )
             {
                 ((TextBox)obj[3]).Visible = false;
                 ((TextBox)obj[4]).Visible = false;
                 knapper[0].Text = "Log ud " + session["UserAuthentication"];
-            } else if( session["UserRights"] == "Admin" )
+            } else if( sessionVariable == "Admin" )
             {
                 ((TextBox)obj[3]).Visible = false;
                 ((TextBox)obj[4]).Visible = false;
@@ -72,7 +72,7 @@ namespace FDFk7
                         LogTilSide( false, obj );
                         break;
                 }
-            } else if( session["UserRights"] == "Bruger" )
+            } else if( sessionVariable == "Bruger" )
             {
                 ((TextBox)obj[3]).Visible = false;
                 ((TextBox)obj[4]).Visible = false;
@@ -130,7 +130,7 @@ namespace FDFk7
                 if( fnk == "Login" )
                 {
                     // Tjek for input af brugernavn og adgangskode
-                    if( !string.IsNullOrEmpty(txtBruger.Text) && !string.IsNullOrEmpty(txtAdgang.Text))
+                    if( !string.IsNullOrEmpty( txtBruger.Text ) && !string.IsNullOrEmpty( txtAdgang.Text ) )
                     {
                         // Opretter forbindelse til databasen
                         SqlConnection Con = new SqlConnection( "Data Source=mssql3.unoeuro.com;Initial Catalog=fdfk7_dk_db;Persist Security Info=True;User ID=fdfk7_dk;Password=4Xbc8tun" );
@@ -216,7 +216,7 @@ namespace FDFk7
                                     txtBruger.Text = "Velkommen " + DB_UserName;
                                     btnLogin.Text = "Log ud fra rettighedsniveau " + session["UserRights"];
 
-                                    btnLogin.Text = string.Format("Log ud fra rettighedsniveau {0}", session["UserRights"]);
+                                    btnLogin.Text = string.Format( "Log ud fra rettighedsniveau {0}", session["UserRights"] );
 
 
 
