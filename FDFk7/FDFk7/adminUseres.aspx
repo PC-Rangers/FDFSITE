@@ -79,7 +79,7 @@
                         <h2>Næste gruppe møde:</h2>
 
                         <h5>Onsdag d. 14/02-14</h5>
-                        <p class="text-muted"><strong>(Husk at betale medie licens)</strong></p>
+                        <p class="text-muted"><strong>(Husk ikke at betale medielicens)</strong></p>
 
                         <p>Husk Pælestik og Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -105,7 +105,7 @@
                                     </tr>
                                     <tr>
                                         <td class="tbl-padding">E-mail</td>
-                                        <td><a href="mailto:#">alias@domain.tld</a></td>
+                                        <td><a href="mailto:alias@domain.tld">alias@domain.tld</a></td>
                                     </tr>
                                 </table>
 							<!-- /p -->
@@ -160,6 +160,8 @@
     </div>
 
 </form>
+
+    <div class="clearfix"></div>
 
     <hr>
 
