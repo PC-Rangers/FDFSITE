@@ -90,15 +90,15 @@
                 </div>
             </div>
 
-
+            <!-- Brugerinfo -->
             <div class="col-sm-6 top-buffer-small">
                 <div class="thumbnail">
 
                     <div class="caption">
                         <div class="col-sm-8">
                             <h2>Palle Panik</h2>
-                            <p>
-                                <table class="tbl-margin">
+                           
+                                <table class="tbl-buffer-medium">
                                     <tr>
                                         <td class="tbl-padding">Telefon</td>
                                         <td>11 22 33 44</td>
@@ -108,7 +108,7 @@
                                         <td><a href="mailto:#">alias@domain.tld</a></td>
                                     </tr>
                                 </table>
-							<!-- /p -->
+							
                         </div>
 
                         <div class="col-sm-4">

@@ -37,6 +37,9 @@ namespace FDFk7
                     } else if( ((TextBox)obj[3]).Text != "" && ((TextBox)obj[4]).Text != "" )//Brugernavn og pass er ikke tomme
                     {
                         LogInUd( "Login", obj );
+                    } else
+                    {
+                        ((HttpResponse)obj[1]).Write( "<script language=javascript>alert('Begge felter skal udfyldes!')</script>" );
                     }
                     break;
 
@@ -152,6 +155,8 @@ namespace FDFk7
                             cmd_select.Connection = Con;
                             SqlDataReader DB_Reader = cmd_select.ExecuteReader();
 
+                            bool forkert = false;
+
                             while( DB_Reader.Read() )
                             {
                                 string DB_UserName = DB_Reader["BrugerNavn"].ToString();
@@ -219,21 +224,25 @@ namespace FDFk7
 
                                     btnLogin.Text = string.Format( "Log ud fra rettighedsniveau {0}", session["UserRights"] );
 
-
-
                                 } else
                                 {
-                                    txtBruger.Text = "Brugernavn / adgangskode er ikke korrekt";
+                                    forkert = true;// Brugernavn / adgangskode er ikke korrekt
                                 }
 
                             }
 
-                            //Se på rettigheder og gå til rette side
-                            LogTilSide( true, obj );
+                            // Se på rettigheder og gå til rette side
+                            if( forkert )
+                            {
+                                ((HttpResponse)obj[1]).Write( "<script language=javascript>alert('Brugernavn / adgangskode er ikke korrekt')</script>" );
+                            } else
+                            {
+                                LogTilSide( true, obj );
+                            }
 
-                        } else
+                        } else // Hvis brugernavn ikke findes eller at der er dubletter i databasen (hvilket der ikke bør være)
                         {
-                            txtBruger.Text = "Brugernavn / adgangskode er ikke korrekt";
+                            ((HttpResponse)obj[1]).Write( "<script language=javascript>alert('Brugernavn / adgangskode er ikke korrekt')</script>" );
                         }
 
                     }

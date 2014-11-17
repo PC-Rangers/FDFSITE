@@ -68,6 +68,10 @@ h2{
 .tbl-margin{
     margin-bottom: 20px;
 }
+
+.tbl-buffer-medium{
+    margin: 35px 0px 20px 0px;
+}
 .tbl-padding{
     padding: 0 25px 3px 0;
 }
