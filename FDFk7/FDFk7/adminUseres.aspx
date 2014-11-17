@@ -16,6 +16,7 @@
 <body>
 <form class="container" id="body" runat="server" role="form">
 
+	<!-- Top -->
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 	  	<div class="container">
 
@@ -71,55 +72,59 @@
     <!-- Side indhold -->
     <div class="container">
         <div class="row top-buffer-small">
+        	
+    		<asp:Table ID="solutions" runat="server" Width="100%" />
 
 			<h2>Ledere</h2>
-           <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Navn</th>
-                                <th>Gruppe</th>
-                                <th>Telefon</th>
-                                <th>Email</th>
-                                <th>Rettighed</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Anders Duch</td>
-                                <td>Blå Smølfer</td>
-                                <td>11 22 33 44</td>
-                                <td>ad@fdfk7.dk</td>
-                                <td>leder</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    		<h2>Spejdere</h2>
-           <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Navn</th>
-                                <th>Gruppe</th>
-                                <th>Telefon</th>
-                                <th>Email</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Lille Frejnede Louise</td>
-                                <td>Blå Smølfer</td>
-                                <td>12 23 34 45</td>
-                                <td>lp@45.dk</td>
-                            </tr>
-                        </tbody>
-                    </table>
+			<table class="table table-striped">
 
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Navn</th>
+						<th>Gruppe</th>
+						<th>Telefon</th>
+						<th>Email</th>
+						<th>Rettighed</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>Anders Duch</td>
+						<td>Blå Smølfer</td>
+						<td>11 22 33 44</td>
+						<td>ad@fdfk7.dk</td>
+						<td>leder</td>
+					</tr>
+				</tbody>
+
+			</table>
+
+    		<h2>Spejdere</h2>
+           <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Navn</th>
+                        <th>Gruppe</th>
+                        <th>Telefon</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Lille Frejnede Louise</td>
+                        <td>Blå Smølfer</td>
+                        <td>12 23 34 45</td>
+                        <td>lp@45.dk</td>
+                    </tr>
+                </tbody>
+            </table>
 
         </div>
-    </div>
+    </div> <!-- /Side -->
 
 </form>
 

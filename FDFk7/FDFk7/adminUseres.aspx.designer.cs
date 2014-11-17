@@ -46,5 +46,7 @@ namespace FDFk7 {
 		protected System.Web.UI.WebControls.Button btnadminNyeReservation;
 		
 		protected System.Web.UI.WebControls.Button btnadminCMS;
+		
+		protected System.Web.UI.WebControls.Table solutions;
 	}
 }
