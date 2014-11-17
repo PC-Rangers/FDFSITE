@@ -57,6 +57,7 @@ namespace FDFk7
             subject.Add( "Beta" );
             subject.Add( "Delta" );
             subject.Add( "Gamma" );
+            subject.Add( "Theta" );
             solCount = subject.Count - 1;
 
             int adder = 0;
@@ -64,11 +65,11 @@ namespace FDFk7
             {
                 TableRow newRow = new TableRow();
                 solutions.Rows.Add( newRow );
-                for( int i = 0 ; i <= 5 ; i++ )
+                for( int i = 0 ; i <= solCount ; i++ )
                 {
                     TableCell newcell = new TableCell();
                     newRow.Cells.Add( newcell );
-                    newcell.Text = subject[adder].ToString();
+                    newcell.Text = subject[adder].ToString() + " " + subject[i].ToString();
                 }
                 adder++;
             }
