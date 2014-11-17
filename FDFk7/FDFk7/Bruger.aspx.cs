@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Web.UI.WebControls;
+using System.Data.SqlClient;
 
 namespace FDFk7
 {
@@ -31,11 +32,59 @@ namespace FDFk7
         public void SetVaerdier()
         {//FIXME skal hentes fra databasen
             //Næste møde
-            lblTidspunkt.Text = DateTime.Now.ToString();
-            lblBesked.Text = "(Husk ikke at betale medie licens)";
-            lblTekst.Text = "Husk Pælestik og Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.";
+            try{
+                // Opretter forbindelse til databasen
+                SqlConnection Con = new SqlConnection( "Data Source=mssql3.unoeuro.com;Initial Catalog=fdfk7_dk_db;Persist Security Info=True;User ID=fdfk7_dk;Password=4Xbc8tun" );
+
+                SqlCommand cmd_select = new SqlCommand( "SELECT ADM_GruppeMode.Besked, ADM_GruppeMode.Tekst, ADM_GruppeMode.StandardDato, ADM_GruppeMode.NaesteDato FROM USR_Gruppe, ADM_GruppeMode, USR_Medlemmer WHERE USR_Medlemmer.MedlemID = 1 AND ADM_GruppeMode.Gruppe = USR_Gruppe.GruppeID AND USR_Gruppe.GruppeID = USR_Medlemmer.Gruppe" );
+
+                Con.Open();
+
+                cmd_select.Connection = Con;
+                SqlDataReader DB_Reader = cmd_select.ExecuteReader();
+                while( DB_Reader.Read() )
+                {
+                    string normDato = DB_Reader["StandardDato"].ToString();
+                    string nxtDato = DB_Reader["NaesteDato"].ToString();
+
+                    lblBesked.Text = DB_Reader["Besked"].ToString();
+                    lblTekst.Text  = DB_Reader["Tekst"].ToString();
+
+                    if (!string.IsNullOrEmpty( nxtDato )){
+                        lblTidspunkt.Text = nxtDato;
+                    }
+                    else {
+                        lblTidspunkt.Text = normDato;
+                    }
+                }
+            }
+            catch( Exception e )
+            {
+            }
+
 
             //Lederinfo
+            try{
+                // Opretter forbindelse til databasen
+                SqlConnection Con = new SqlConnection( "Data Source=mssql3.unoeuro.com;Initial Catalog=fdfk7_dk_db;Persist Security Info=True;User ID=fdfk7_dk;Password=4Xbc8tun" );
+
+                SqlCommand cmd_select = new SqlCommand( "SELECT ADM_GruppeMode.Besked, ADM_GruppeMode.Tekst, ADM_GruppeMode.StandardDato, ADM_GruppeMode.NaesteDato FROM USR_Gruppe, ADM_GruppeMode, USR_Medlemmer WHERE USR_Medlemmer.MedlemID = 1 AND ADM_GruppeMode.Gruppe = USR_Gruppe.GruppeID AND USR_Gruppe.GruppeID = USR_Medlemmer.Gruppe" );
+
+                Con.Open();
+
+                cmd_select.Connection = Con;
+                SqlDataReader DB_Reader = cmd_select.ExecuteReader();
+                while( DB_Reader.Read() )
+                {
+
+                }
+            }
+            catch( Exception e )
+            {
+            }
+
+
+
             lblLederTlf.Text = "11 22 33 44";
             lnkLederMail.InnerText = "alias@domain.tld";
             lnkLederMail.HRef = "mailto:alias@domain.tld";
@@ -43,6 +92,8 @@ namespace FDFk7
             lblLederTekst.Text = "Ea commodo\n                          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\n                          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\n                          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
         
             //Næste arrangement
+        
+
             lnkArrBillede.ImageUrl = "http://fdftaarnby.com/wp-content/themes/taarnby/images/frontpagephotos/traditioner.png";
             lblArrTitel.Text = "Bålhygge i snestorm";
             lblArrTekst.Text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\n                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\n                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\n                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
