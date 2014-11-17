@@ -47,6 +47,10 @@ namespace FDFk7 {
 		
 		protected System.Web.UI.WebControls.Button btnadminCMS;
 		
+		protected System.Web.UI.WebControls.TextBox txtBesked;
+		
+		protected System.Web.UI.WebControls.CheckBox chkPrivat;
+		
 		protected System.Web.UI.WebControls.Button btnSendBesked;
 	}
 }

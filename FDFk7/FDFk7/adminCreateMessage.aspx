@@ -74,13 +74,13 @@
 
           	<div class="col-sm-6 top-buffer-small">
 
-	            <label for="exampleInputEmail1">Besked</label>
-	            <textarea class="form-control" rows="6"></textarea>
+	            <label for="txtBesked">Besked</label>
+	            <asp:TextBox runat="server" id="txtBesked" TextMode="MultiLine" CssClass="form-control" Rows="6" />
 
-	            <input id="inputPrivate" type="checkbox" class="top-buffer-small"><label for="inputPrivate" class="left-buffer-small top-buffer-small">&nbsp; Privat besked</label>
+	            <asp:CheckBox CssClass="left-buffer-small top-buffer-small" runat="server" id="chkPrivat" Text="&nbsp; Privat besked" />
 
 	            <div class="pull-right horisontal-buffer-small top-buffer-medium">
-					<asp:Button type="button" CssClass="btn btn-default" Text="Send besked" runat="server" 	id="btnSendBesked"/>
+					<asp:Button type="button" CssClass="btn btn-default" Text="Send besked" runat="server" 	id="btnSendBesked" OnClick="OpretNyhed"/>
 				</div>
 				<!-- Usage as a class -->
 				<div class="clearfix"></div>

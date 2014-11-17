@@ -27,5 +27,12 @@ namespace FDFk7
         {
             new Basis( new object[]{ sender, Response, Session } );
         }
+
+        public void OpretNyhed( object sender, EventArgs args )
+        {
+            //FIXME opret en nyhed og 
+//            txtBesked.Text;
+//            chkPrivat.Enabled;
+        }
     }
 }
