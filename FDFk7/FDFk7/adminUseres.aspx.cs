@@ -45,7 +45,7 @@ namespace FDFk7
 //            cmd_select.Connection = Con;
 //            SqlDataReader DB_Reader = cmd_select.ExecuteReader();
 
-            List<String> subject = new List<string>();
+            List<String> tmplstString = new List<string>();
             int solCount = 0;
             /*while( DB_Reader.Read() )
             {
@@ -53,13 +53,28 @@ namespace FDFk7
                 solCount++;
             }
             DB_Reader.Close();*/
-            subject.Add( "Alfa" );
-            subject.Add( "Beta" );
-            subject.Add( "Delta" );
-            subject.Add( "Gamma" );
-            subject.Add( "Theta" );
-            solCount = subject.Count - 1;
+            tmplstString.Add( "Alfa" );
+            tmplstString.Add( "Beta" );
+            tmplstString.Add( "Delta" );
+            tmplstString.Add( "Gamma" );
+            tmplstString.Add( "Theta" );
+            tmplstString.Add( "Gekko?" );
+            solCount = tmplstString.Count - 1;
 
+            //Top af tabel
+            string[] strHeadList = new string[]{ "#", "Navn", "Gruppe", "Telefon", "E-mail", "Rettighed" };
+
+            solutions.Rows.Add( new TableHeaderRow() );
+            TableHeaderCell[] tcList = new TableHeaderCell[strHeadList.Count()];
+            for( int i = 0 ; i < tcList.Count() ; i++ )
+            {
+                tcList[i] = new TableHeaderCell();
+                tcList[i].Text = strHeadList[i];
+            }
+
+            solutions.Rows[0].Cells.AddRange( tcList );
+
+            //Inset data
             int adder = 0;
             while( adder <= solCount )
             {
@@ -69,7 +84,7 @@ namespace FDFk7
                 {
                     TableCell newcell = new TableCell();
                     newRow.Cells.Add( newcell );
-                    newcell.Text = subject[adder].ToString() + " " + subject[i].ToString();
+                    newcell.Text = tmplstString[adder].ToString() + " " + tmplstString[i].ToString();
                 }
                 adder++;
             }
