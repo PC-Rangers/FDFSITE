@@ -44,12 +44,18 @@ h2{
 .top-buffer-small { 
     margin-top:25px; 
 }
-
+.top-buffer-medium { 
+    margin-top:55px; 
+}
 .top-buffer-large { 
     margin-top:95px;
 }
 
 .right-buffer-small {
+    margin-right:15px; 
+}
+
+.left-buffer-small {
     margin-right:15px; 
 }
 .bottom-buffer-small {
