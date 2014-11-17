@@ -35,6 +35,12 @@ namespace FDFk7
 
         public void CreateUser( string fnk, object[] obj )
         {
+            TextBox txtBruger = ((TextBox)obj[0]);
+            TextBox txtAdgang = ((TextBox)obj[1]);
+            TextBox txtmail   = ((TextBox)obj[2]);
+            TextBox txtGruppe = ((TextBox)obj[3]);
+            TextBox txtRet    = ((TextBox)obj[4]);
+
             // generere salt
             SHA512 sha = new SHA512Managed();
 
@@ -48,6 +54,8 @@ namespace FDFk7
                 stringBuilder.AppendFormat( "{0:x2}", b );
             }
             string salt = stringBuilder.ToString();
+
+
         }
     }
 }
