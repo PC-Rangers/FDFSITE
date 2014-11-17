@@ -8,7 +8,9 @@
 	<title>FDF K7 Frihavn - Udlejning</title>
 
 	<!-- Bootstrap -->
-	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="./css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
 
 	<!-- Custom -->
 	<link href="css/app.css" rel="stylesheet">
@@ -104,8 +106,25 @@
 		<div class="col-sm-6 top-buffer-small">
     		<div class="thumbnail">
 
-	        	<div class="caption">
+	        	<div class="caption buf">
 	         		<h2>Periode valg</h2>
+
+                    <form action="" class="top-buffer-small">
+                    <input type="radio" name="periode" value="uge"> Hel uge</>
+                        <br>
+                    <input type="radio" name="periode" value="weekend"> Weekend</>
+                    </form>
+
+                     <label for="dtp_input2" class="col-md-2 control-label top-buffer-small">Vælg Dato</label>
+                    <div class="input-group date form_date top-buffer-small" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                    <input class="form-control" size="16" type="text" value="" readonly>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+					<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                </div>
+				<input type="hidden" id="dtp_input2" value="" /><br/>
+            </div>
+
+            </div>
 
 		        	<div role="form">
 
@@ -140,7 +159,14 @@
 
 
 
-
+    
+    <script type="text/javascript" src="./jquery-1.8.3.min.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="./js/locales/bootstrap-datetimepicker.da.js" charset="UTF-8"></script>
+        <script type="text/javascript">
+            $('.form_date').datetimepicker({ formate: 'yyyy-mm-dd hh:ii', language: 'da', weekStart: 1, todayBtn: 1, autoclose: 1, todayHighlight: 1, startView: 2, minView: 2, forceParse: 0 });
+    </script>
 
 
 
@@ -148,7 +174,7 @@
 	================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
+    z
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 
 	<script src="../../dist/js/bootstrap.min.js"></script>
