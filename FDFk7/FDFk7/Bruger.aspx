@@ -72,53 +72,47 @@
     <div class="container">
         <div class="row top-buffer-small">
 
+        	<!-- Næste møde -->
             <div class="col-sm-6 top-buffer-small">
                 <div class="thumbnail">
 
                     <div class="caption">
                         <h2>Næste gruppe møde:</h2>
 
-                        <h5>Onsdag d. 14/02-14</h5>
-                        <p class="text-muted"><strong>(Husk at betale medie licens)</strong></p>
+                        <h5> <asp:Label type="text" runat="server" id="lblTidspunkt" /> </h5>
+                        <p class="text-muted"><strong> <asp:Label type="text" runat="server" id="lblBesked" /> </strong></p>
 
-                        <p>Husk Pælestik og Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                          cillum dolore eu fugiat nulla pariatur.</p>
+                        <p> <asp:Label type="text" runat="server" id="lblTekst" /> </p>
                     </div>
+
                 </div>
             </div>
 
-            <!-- Brugerinfo -->
+            <!-- Leder info -->
             <div class="col-sm-6 top-buffer-small">
                 <div class="thumbnail">
 
-                    <div class="caption">
+                	<div class="caption">
+
                         <div class="col-sm-8">
                             <h2>Palle Panik</h2>
-                           
-                                <table class="tbl-buffer-medium">
-                                    <tr>
-                                        <td class="tbl-padding">Telefon</td>
-                                        <td>11 22 33 44</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="tbl-padding">E-mail</td>
-                                        <td><a href="mailto:#">alias@domain.tld</a></td>
-                                    </tr>
-                                </table>
-							
+                            <table class="tbl-buffer-medium">
+                                <tr>
+                                    <td class="tbl-padding">Telefon</td>
+                                    <td> <asp:Label runat="server" id="lblLederTlf" /> </td>
+                                </tr>
+                                <tr>
+                                    <td class="tbl-padding">E-mail</td>
+                                    <td> <a runat="server" id="lnkLederMail"> </a> </td>
+                                </tr>
+                            </table>
                         </div>
 
                         <div class="col-sm-4">
-                            <img src="http://img2.wikia.nocookie.net/__cb20071101145659/da.uncyclopedia/images/thumb/1/10/Spejder.jpg/254px-Spejder.jpg" width="150px" height="150px" class="img-circle">
+                            <asp:Image runat="server" id="lnkLederBillede" width="150px" height="150px" CssClass="img-circle" />
                         </div>
 
-                        <div class="col-sm-12">Ea commodo
-                          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                        <div class="col-sm-12"> <asp:Label runat="server" id="lblLederTekst" /> </div>
 
                     </div>
 
@@ -126,32 +120,26 @@
                 </div>
             </div>
 
+            <!-- Næste arrangement -->
             <div class="col-sm-12 top-buffer-small">
-                <img src="http://fdftaarnby.com/wp-content/themes/taarnby/images/frontpagephotos/traditioner.png" width="100%" class="bottom-buffer-medium">
+            	<asp:Image runat="server" id="lnkArrBillede" width="100%" CssClass="bottom-buffer-medium" />
 
-                <h2 class="bottom-buffer-small">Bålhygge i snestorm</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-                <p class="lead">Husk brandeknuder og skumfiduser</p>
+                <h2 class="bottom-buffer-small"> <asp:Label runat="server" id="lblArrTitel" /> </h2>
+                <p> <asp:Label runat="server" id="lblArrTekst" /> </p>
+                <p class="lead"> <asp:Label runat="server" id="lblArrNote" /> </p>
 
                 <table class="tbl-margin">
                     <tr>
                         <td class="tbl-padding"><strong>Dato</strong></td>
-                        <td><strong>04/01-15</strong></td>
+                        <td><strong> <asp:Label runat="server" id="lblArrDato" /> </strong></td>
                     </tr>
                     <tr>
                         <td class="tbl-padding">Pris</td>
-                        <td>2.445,00 kr.</td>
+                        <td> <asp:Label runat="server" id="lblArrPris" /> </td>
                     </tr>
                     <tr>
                         <td class="tbl-padding">Arrangør</td>
-                        <td>Benny Hansen</td>
+                        <td> <asp:Label runat="server" id="lblArrArrangoer" /> </td>
                     </tr>
                 </table>
             </div>

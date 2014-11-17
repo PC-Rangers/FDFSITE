@@ -46,5 +46,33 @@ namespace FDFk7 {
 		protected System.Web.UI.WebControls.Button btnadminNyeResavationer;
 		
 		protected System.Web.UI.WebControls.Button btnadminCMS;
+		
+		protected System.Web.UI.WebControls.Label lblTidspunkt;
+		
+		protected System.Web.UI.WebControls.Label lblBesked;
+		
+		protected System.Web.UI.WebControls.Label lblTekst;
+		
+		protected System.Web.UI.WebControls.Label lblLederTlf;
+		
+		protected System.Web.UI.HtmlControls.HtmlAnchor lnkLederMail;
+		
+		protected System.Web.UI.WebControls.Image lnkLederBillede;
+		
+		protected System.Web.UI.WebControls.Label lblLederTekst;
+		
+		protected System.Web.UI.WebControls.Image lnkArrBillede;
+		
+		protected System.Web.UI.WebControls.Label lblArrTitel;
+		
+		protected System.Web.UI.WebControls.Label lblArrTekst;
+		
+		protected System.Web.UI.WebControls.Label lblArrNote;
+		
+		protected System.Web.UI.WebControls.Label lblArrDato;
+		
+		protected System.Web.UI.WebControls.Label lblArrPris;
+		
+		protected System.Web.UI.WebControls.Label lblArrArrangoer;
 	}
 }
