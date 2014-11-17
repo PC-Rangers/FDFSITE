@@ -21,10 +21,7 @@ namespace FDFk7
                     btnadminHytte, btnadminNyeResavationer, btnadminCreateAdmin, btnadminCMS
                 }
             );
-            if( !ddlRettighed.AutoPostBack )
-            {
-                SetData();
-            }
+            SetData();
         }
 
         public void LoginOut( object sender, EventArgs args )
@@ -39,16 +36,19 @@ namespace FDFk7
 
         void SetData()
         {
-            ddlBrugerGrp.AutoPostBack = true;
-            ddlBrugerGrp.Items.Add( new ListItem( "Medlem", "1" ) );
-            ddlBrugerGrp.Items.Add( new ListItem( "Leder", "0" ) );
-
-            ddlRettighed.AutoPostBack = true;
-            ddlRettighed.Items.Add( new ListItem( "Bruger", "2" ) );
-            ddlRettighed.Items.Add( new ListItem( "Admin", "1" ) );
-            if( Session["Authentication"] == "39d87404" )
+            if( !ddlRettighed.AutoPostBack )
             {
-                ddlRettighed.Items.Add( new ListItem( "Super Admin", "0" ) );
+                ddlBrugerGrp.AutoPostBack = true;
+                ddlBrugerGrp.Items.Add( new ListItem( "Medlem", "1" ) );
+                ddlBrugerGrp.Items.Add( new ListItem( "Leder", "0" ) );
+
+                ddlRettighed.AutoPostBack = true;
+                ddlRettighed.Items.Add( new ListItem( "Bruger", "2" ) );
+                ddlRettighed.Items.Add( new ListItem( "Admin", "1" ) );
+                if( (string)Session["Authentication"] == "39d87404" )
+                {
+                    ddlRettighed.Items.Add( new ListItem( "Super Admin", "0" ) );
+                }
             }
         }
 

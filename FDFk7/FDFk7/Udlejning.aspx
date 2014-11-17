@@ -72,35 +72,33 @@
 
 	<!-- Side -->
 	<div class="container">
-		<!-- Example row of columns -->
+		
 		<div class="row top-buffer-small">
-
 		    <img src="http://fdftaarnby.com/wp-content/themes/taarnby/images/frontpagephotos/traditioner.png" width="100%" class="bottom-buffer-medium">
-    	
 		</div>
 
     	<div class="col-sm-6 top-buffer-small">
 
 		    <h2 class="bottom-buffer-small">Hytten</h2>
-		      <p>
-		        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		      </p>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
 
-		      <table class="tbl-margin top-buffer-large">
-		        <tr>
-		          <td class="tbl-padding">Pris weekend</td>
-		          <td>1.199,00 kr.</td>
-		        </tr>
-		        <tr>
-		          <td class="tbl-padding">Pris Uge</td>
-		          <td>3.445,00 kr.</td>
-		        </tr>
-		      </table>
+			<table class="tbl-margin top-buffer-large">
+				<tr>
+					<td class="tbl-padding">Pris weekend</td>
+					<td>1.199,00 kr.</td>
+				</tr>
+				<tr>
+					<td class="tbl-padding">Pris Uge</td>
+					<td>3.445,00 kr.</td>
+				</tr>
+			</table>
 		</div>
 
 		<div class="col-sm-6 top-buffer-small">
@@ -109,35 +107,30 @@
 	        	<div class="caption buf">
 	         		<h2>Periode valg</h2>
 
-                    <form action="" class="top-buffer-small">
-                    <input type="radio" name="periode" value="uge"> Hel uge</>
-                        <br>
-                    <input type="radio" name="periode" value="weekend"> Weekend</>
-                    </form>
+                    <div action="form" class="top-buffer-small">
+	                    <asp:RadioButtonList runat="server" id="rblTidsrum" />
+                    </div>
 
-                     <label for="dtp_input2" class="col-md-2 control-label top-buffer-small">Vælg Dato</label>
+                    <label for="dtp_input2" class="col-md-2 control-label top-buffer-small">Vælg Dato</label>
                     <div class="input-group date form_date top-buffer-small" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-                    <input class="form-control" size="16" type="text" value="" readonly>
-                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
-					<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-                </div>
-				<input type="hidden" id="dtp_input2" value="" /><br/>
-            </div>
+                    	<input class="form-control" size="16" type="text" value="" readonly >
+	                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+						<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+					
+	                </div>
+					<input type="hidden" id="dtp_input2" value="" /><br/>
+            	</div>
 
-            </div>
+        	</div>
 
-		        	<div role="form">
-
-
-			        	<div class="pull-right btn-margin">
-			        		<asp:Button type="button" CssClass="btn btn-default" Text="Bestil" runat="server" id="btnKurv" OnClick="GaaTil" />
-			        	</div>
-			        	<!-- Usage as a class -->
-			        	<div class="clearfix"></div>
-
-	    			</div>
-	    		</div>
+        	<div role="form">
+	        	<div class="pull-right btn-margin">
+	        		<asp:Button type="button" CssClass="btn btn-default" Text="Bestil" runat="server" id="btnKurv" OnClick="GaaTil" />
+	        	</div>
+	        	<!-- Usage as a class -->
+	        	<div class="clearfix"></div>
 			</div>
+	    		
 		</div>
 
 	</div> <!-- /Side -->
@@ -174,7 +167,7 @@
 	================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    z
+    
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 
 	<script src="../../dist/js/bootstrap.min.js"></script>

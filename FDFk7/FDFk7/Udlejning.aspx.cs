@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Web.UI.WebControls;
 
 namespace FDFk7
 {
@@ -14,6 +15,7 @@ namespace FDFk7
                     btnadminHytte, btnadminNyeResavationer, btnadminCreateAdmin, btnadminCMS
                 }
             );
+            SetData();
         }
 
         public void LoginOut( object sender, EventArgs args )
@@ -26,5 +28,20 @@ namespace FDFk7
             new Basis( new object[]{ sender, Response, Session } );
         }
 
+        void SetData()
+        {
+            if( !rblTidsrum.AutoPostBack )
+            {
+                rblTidsrum.AutoPostBack = true;
+                rblTidsrum.Items.Add( new ListItem( "&nbsp; Hel uge", "helUge" ) );
+                rblTidsrum.Items.Add( new ListItem( "&nbsp; Weekend", "weekend" ) );
+            }
+        }
+
+        public void GaaTilKurv( object sender, EventArgs args )
+        {
+            //FIXME gør noget
+            GaaTil( sender, args );
+        }
     }
 }
