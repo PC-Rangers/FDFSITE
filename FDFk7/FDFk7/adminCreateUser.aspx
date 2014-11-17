@@ -74,52 +74,31 @@
 
 			<div class="col-sm-6 top-buffer-small">
 
-	            <label for="exampleInputEmail1">Brugernavn</label>
-	            <input type="text" class="form-control bottom-buffer-small" id="navn">
+	            <label for="txtNavn">Brugernavn</label>
+	            <asp:TextBox type="text" placeholder="Brugernavn" CssClass="form-control bottom-buffer-small" runat="server" id="txtNavn" />
 
-	            <label for="exampleInputEmail1">Midlertidig adgangskode</label>
-	            <input type="text" class="form-control bottom-buffer-small" id="kode">
+	            <label for="txtKode">Midlertidig adgangskode</label>
+	            <asp:TextBox type="text" placeholder="Midlertidig adgangskode" CssClass="form-control bottom-buffer-small" runat="server" id="txtKode" />
 
-	            <input type="hidden" id="salt" value="date"> <!-- skal laves i koden og ikke sendes med her fra. -->
+	            <label for="txtMail">Email adresse </label>
+	            <asp:TextBox type="text" placeholder="Mail" CssClass="form-control bottom-buffer-small" runat="server" id="txtMail" />
 
-	            <label for="exampleInputEmail1">Email adresse </label>
-	            <input type="text" class="form-control bottom-buffer-small" id="mail"> 
+	            <label for="ddlBrugerGrp">Bruger gruppe</label>
+	            <asp:DropDownList CssClass="form-control bottom-buffer-small" runat="server" id="ddlBrugerGrp" />
 
-	            <label for="exampleInputEmail1">Bruger gruppe</label>
-	            <select class="form-control bottom-buffer-small">
-				  <option value="1">Medlem</option>
-				  <option value="0">Leder</option>
-				</select>
+	            <label for="ddlRettighed">Rettigheds niveau</label>
+	            <asp:DropDownList CssClass="form-control bottom-buffer-small" runat="server" id="ddlRettighed" />
 
-	            <label for="exampleInputEmail1">Rettigheds niveau</label>
-	            <select class="form-control bottom-buffer-small">
-				  <option value="2">Bruger</option>
-				  <option value="1">Admin</option>
-
-				  <%  if( Session["Authentication"] == "39d87404" ) { %>
-				  <option value="0">SuperAdmin</option>
-				  <% } %>
-
-				</select>
-
-	        
-							<div class="pull-right horisontal-buffer-small">
-								<asp:Button type="button" CssClass="btn btn-default" Text="Send besked" runat="server" 	id="btnSendBesked"/>
-							</div>
-							<!-- Usage as a class -->
-							<div class="clearfix"></div>
-
-
-
-
-
-
-
+				<div class="pull-right horisontal-buffer-small">
+					<asp:Button type="button" CssClass="btn btn-default" Text="Opret bruger" runat="server" id="btnOpretBruger" OnClick="CreateUser" />
+				</div>
+				<!-- Usage as a class -->
+				<div class="clearfix"></div>
 
 			</div>
 
 		</div>
-	</div> <!-- Side slut -->
+	</div> <!-- /Side -->
 
 </form>
 

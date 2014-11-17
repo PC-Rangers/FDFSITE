@@ -47,6 +47,16 @@ namespace FDFk7 {
 		
 		protected System.Web.UI.WebControls.Button btnadminCMS;
 		
-		protected System.Web.UI.WebControls.Button btnSendBesked;
+		protected System.Web.UI.WebControls.TextBox txtNavn;
+		
+		protected System.Web.UI.WebControls.TextBox txtKode;
+		
+		protected System.Web.UI.WebControls.TextBox txtMail;
+		
+		protected System.Web.UI.WebControls.DropDownList ddlBrugerGrp;
+		
+		protected System.Web.UI.WebControls.DropDownList ddlRettighed;
+		
+		protected System.Web.UI.WebControls.Button btnOpretBruger;
 	}
 }

@@ -21,6 +21,10 @@ namespace FDFk7
                     btnadminHytte, btnadminNyeResavationer, btnadminCreateAdmin, btnadminCMS
                 }
             );
+            if( !ddlRettighed.AutoPostBack )
+            {
+                SetData();
+            }
         }
 
         public void LoginOut( object sender, EventArgs args )
@@ -33,13 +37,28 @@ namespace FDFk7
             new Basis( new object[]{ sender, Response, Session } );
         }
 
-        public void CreateUser( string fnk, object[] obj )
+        void SetData()
         {
-            TextBox txtBruger = ((TextBox)obj[0]);
-            TextBox txtAdgang = ((TextBox)obj[1]);
-            TextBox txtmail   = ((TextBox)obj[2]);
-            TextBox txtGruppe = ((TextBox)obj[3]);
-            TextBox txtRet    = ((TextBox)obj[4]);
+            ddlBrugerGrp.AutoPostBack = true;
+            ddlBrugerGrp.Items.Add( new ListItem( "Medlem", "1" ) );
+            ddlBrugerGrp.Items.Add( new ListItem( "Leder", "0" ) );
+
+            ddlRettighed.AutoPostBack = true;
+            ddlRettighed.Items.Add( new ListItem( "Bruger", "2" ) );
+            ddlRettighed.Items.Add( new ListItem( "Admin", "1" ) );
+            if( Session["Authentication"] == "39d87404" )
+            {
+                ddlRettighed.Items.Add( new ListItem( "Super Admin", "0" ) );
+            }
+        }
+
+        public void CreateUser( object sender, EventArgs args )
+        {
+//            txtNavn.Text;
+//            txtKode.Text;
+//            txtMail.Text;
+//            ddlBrugerGrp.SelectedValue;
+//            ddlRettighed.SelectedValue;
 
             // generere salt
             SHA512 sha = new SHA512Managed();
@@ -54,9 +73,8 @@ namespace FDFk7
                 stringBuilder.AppendFormat( "{0:x2}", b );
             }
             string salt = stringBuilder.ToString();
-
-
         }
+
     }
 }
 
