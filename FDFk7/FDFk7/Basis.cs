@@ -11,7 +11,7 @@ namespace FDFk7
     public class Basis
     {
 
-        private string mainURL = "http://localhost:51017/";
+        private string mainURL = "http://127.0.0.1:8080/";
         /*Mac: "http://127.0.0.1:8080/";
         * Win: "http://localhost:51017/";
         * Web: "http://fdfk7.dk.nt8.unoeuro-server.com/";

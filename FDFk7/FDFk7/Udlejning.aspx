@@ -63,7 +63,7 @@
 	            	<asp:Button type="button" CssClass="btn btn-default" Text="Ny leder" runat="server" 		id="btnadminCreateAdmin" OnClick="GaaTil" />
 	            	<asp:Button type="button" CssClass="btn btn-default" Text="Brugere" runat="server" 			id="btnadminUseres" OnClick="GaaTil" />
 	            	<asp:Button type="button" CssClass="btn btn-default" Text="Hytte" runat="server" 			id="btnadminHytte" OnClick="GaaTil" />
-	            	<asp:Button type="button" CssClass="btn btn-default" Text="Nye reservation" runat="server" id="btnadminNyeReservation" OnClick="GaaTil" />
+	            	<asp:Button type="button" CssClass="btn btn-default" Text="Nye reservation" runat="server"  id="btnadminNyeReservation" OnClick="GaaTil" />
 	            	<asp:Button type="button" CssClass="btn btn-default" Text="CMS" runat="server" 				id="btnadminCMS" OnClick="GaaTil" />
 		        </div>
 		    </div>
@@ -109,35 +109,29 @@
 	        	<div class="caption buf">
 	         		<h2>Periode valg</h2>
 
-                    <form action="" class="top-buffer-small">
-                    <input type="radio" name="periode" value="uge"> Hel uge</>
-                        <br>
-                    <input type="radio" name="periode" value="weekend"> Weekend</>
-                    </form>
+                    <div action="form" class="top-buffer-small">
+	                    <asp:RadioButtonList runat="server" id="rblTidsrum" />
+                    </div>
 
-                     <label for="dtp_input2" class="col-md-2 control-label top-buffer-small">Vælg Dato</label>
+                    <label for="dtp_input2" class="col-md-2 control-label top-buffer-small">Vælg Dato</label>
                     <div class="input-group date form_date top-buffer-small" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-                    <input class="form-control" size="16" type="text" value="" readonly>
-                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
-					<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-                </div>
-				<input type="hidden" id="dtp_input2" value="" /><br/>
-            </div>
+	                    <input class="form-control" size="16" type="text" value="" readonly>
+	                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+						<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+	                </div>
+					<input type="hidden" id="dtp_input2" value="" /><br/>
+            	</div>
 
-            </div>
+        	</div>
 
-		        	<div role="form">
-
-
-			        	<div class="pull-right btn-margin">
-			        		<asp:Button type="button" CssClass="btn btn-default" Text="Bestil" runat="server" id="btnKurv" OnClick="GaaTil" />
-			        	</div>
-			        	<!-- Usage as a class -->
-			        	<div class="clearfix"></div>
-
-	    			</div>
-	    		</div>
+        	<div role="form">
+	        	<div class="pull-right btn-margin">
+	        		<asp:Button type="button" CssClass="btn btn-default" Text="Bestil" runat="server" id="btnKurv" OnClick="GaaTil" />
+	        	</div>
+	        	<!-- Usage as a class -->
+	        	<div class="clearfix"></div>
 			</div>
+
 		</div>
 
 	</div> <!-- /Side -->
@@ -147,13 +141,13 @@
 	<div class="clearfix"></div>
 
 	<div class="footer-color">
-	<div class="container">
-		<div class="row padding">
-			<footer>
-				<p>© Company 2014</p>
-			</footer>
+		<div class="container">
+			<div class="row padding">
+				<footer>
+					<p>© Company 2014</p>
+				</footer>
+			</div>
 		</div>
-</div>
 	</div>
 
 
