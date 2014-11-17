@@ -2,7 +2,7 @@
 
 namespace FDFk7
 {
-    public partial class adminNyeResavationer : System.Web.UI.Page
+    public partial class adminNyereservation : System.Web.UI.Page
     {
 
         protected void Page_Load( object sender, EventArgs args )
@@ -11,7 +11,7 @@ namespace FDFk7
                 new object[]{ sender, Response, Session, txtBruger, txtAdgang },
                 new System.Web.UI.WebControls.Button[]
                 { btnLogin, btnBruger, btnadminCreateMessage, btnadminCreateUser, btnadminUseres,
-                    btnadminHytte, btnadminNyeResavationer, btnadminCreateAdmin, btnadminCMS
+                    btnadminHytte, btnadminNyeReservation, btnadminCreateAdmin, btnadminCMS
                 }
             );
         }

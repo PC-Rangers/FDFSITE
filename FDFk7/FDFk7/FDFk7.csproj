@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -76,7 +76,7 @@
     <Content Include="adminCreateMessage.aspx" />
     <Content Include="adminUseres.aspx" />
     <Content Include="adminHytte.aspx" />
-    <Content Include="adminNyeResavationer.aspx" />
+    <Content Include="adminNyeReservation.aspx" />
     <Content Include="adminCMS.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -92,12 +92,14 @@
     </Compile>
     <Compile Include="OmOs.aspx.cs">
       <DependentUpon>OmOs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="OmOs.aspx.designer.cs">
       <DependentUpon>OmOs.aspx</DependentUpon>
     </Compile>
     <Compile Include="Kontakt.aspx.cs">
       <DependentUpon>Kontakt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Kontakt.aspx.designer.cs">
       <DependentUpon>Kontakt.aspx</DependentUpon>
@@ -105,84 +107,98 @@
     <Compile Include="Basis.cs" />
     <Compile Include="Bruger.aspx.cs">
       <DependentUpon>Bruger.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Bruger.aspx.designer.cs">
       <DependentUpon>Bruger.aspx</DependentUpon>
     </Compile>
     <Compile Include="Udlejning.aspx.cs">
       <DependentUpon>Udlejning.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Udlejning.aspx.designer.cs">
       <DependentUpon>Udlejning.aspx</DependentUpon>
     </Compile>
     <Compile Include="Userdata.aspx.cs">
       <DependentUpon>Userdata.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Userdata.aspx.designer.cs">
       <DependentUpon>Userdata.aspx</DependentUpon>
     </Compile>
     <Compile Include="adminCreateUser.aspx.cs">
       <DependentUpon>adminCreateUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="adminCreateUser.aspx.designer.cs">
       <DependentUpon>adminCreateUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin.aspx.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin.aspx.designer.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tilmelding.aspx.cs">
       <DependentUpon>Tilmelding.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Tilmelding.aspx.designer.cs">
       <DependentUpon>Tilmelding.aspx</DependentUpon>
     </Compile>
     <Compile Include="Shop.aspx.cs">
       <DependentUpon>Shop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Shop.aspx.designer.cs">
       <DependentUpon>Shop.aspx</DependentUpon>
     </Compile>
     <Compile Include="Kurv.aspx.cs">
       <DependentUpon>Kurv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Kurv.aspx.designer.cs">
       <DependentUpon>Kurv.aspx</DependentUpon>
     </Compile>
     <Compile Include="adminCreateAdmin.aspx.cs">
       <DependentUpon>adminCreateAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="adminCreateAdmin.aspx.designer.cs">
       <DependentUpon>adminCreateAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="adminCreateMessage.aspx.cs">
       <DependentUpon>adminCreateMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="adminCreateMessage.aspx.designer.cs">
       <DependentUpon>adminCreateMessage.aspx</DependentUpon>
     </Compile>
     <Compile Include="adminUseres.aspx.cs">
       <DependentUpon>adminUseres.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="adminUseres.aspx.designer.cs">
       <DependentUpon>adminUseres.aspx</DependentUpon>
     </Compile>
     <Compile Include="adminHytte.aspx.cs">
       <DependentUpon>adminHytte.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="adminHytte.aspx.designer.cs">
       <DependentUpon>adminHytte.aspx</DependentUpon>
     </Compile>
-    <Compile Include="adminNyeResavationer.aspx.cs">
-      <DependentUpon>adminNyeResavationer.aspx</DependentUpon>
+    <Compile Include="adminNyeReservation.aspx.cs">
+      <DependentUpon>adminNyeReservation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="adminNyeResavationer.aspx.designer.cs">
-      <DependentUpon>adminNyeResavationer.aspx</DependentUpon>
+    <Compile Include="adminNyeReservation.aspx.designer.cs">
+      <DependentUpon>adminNyeReservation.aspx</DependentUpon>
     </Compile>
     <Compile Include="adminCMS.aspx.cs">
       <DependentUpon>adminCMS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="adminCMS.aspx.designer.cs">
       <DependentUpon>adminCMS.aspx</DependentUpon>

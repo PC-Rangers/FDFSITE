@@ -11,7 +11,7 @@
 namespace FDFk7 {
 	
 	
-	public partial class adminNyeResavationer {
+	public partial class adminNyereservation {
 		
 		protected System.Web.UI.HtmlControls.HtmlForm body;
 		
@@ -43,7 +43,7 @@ namespace FDFk7 {
 		
 		protected System.Web.UI.WebControls.Button btnadminHytte;
 		
-		protected System.Web.UI.WebControls.Button btnadminNyeResavationer;
+		protected System.Web.UI.WebControls.Button btnadminNyeReservation;
 		
 		protected System.Web.UI.WebControls.Button btnadminCMS;
 	}
