@@ -64,7 +64,7 @@ namespace FDFk7
             {
                 TableRow newRow = new TableRow();
                 solutions.Rows.Add( newRow );
-                for( int i = 0 ; i <= 6 ; i++ )
+                for( int i = 0 ; i <= 5 ; i++ )
                 {
                     TableCell newcell = new TableCell();
                     newRow.Cells.Add( newcell );

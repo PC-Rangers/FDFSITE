@@ -72,8 +72,6 @@
     <!-- Side indhold -->
     <div class="container">
         <div class="row top-buffer-small">
-        	
-    		<asp:Table ID="solutions" runat="server" Width="100%" />
 
 			<h2>Ledere</h2>
 			<table class="table table-striped">
@@ -100,6 +98,9 @@
 				</tbody>
 
 			</table>
+
+			<h2>Test</h2>
+			<asp:Table ID="solutions" runat="server" CssClass="table table-striped" Width="100%" />
 
     		<h2>Spejdere</h2>
            <table class="table table-striped">
