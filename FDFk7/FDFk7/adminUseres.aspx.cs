@@ -11,7 +11,6 @@ namespace FDFk7
 {
     public partial class adminUseres : System.Web.UI.Page
     {
-        PlaceHolder phCeller = new PlaceHolder();
 
         protected void Page_Load( object sender, EventArgs args )
         {
@@ -56,7 +55,7 @@ namespace FDFk7
                 // Opretter forbindelse til databasen
                 SqlConnection Con = new SqlConnection( "Data Source=mssql3.unoeuro.com;Initial Catalog=fdfk7_dk_db;Persist Security Info=True;User ID=fdfk7_dk;Password=4Xbc8tun" );
                 // Trækker data fra databasen
-                SqlCommand cmd_select = new SqlCommand( "SELECT USR_Ledere.Navn, USR_Gruppe.GruppeNavn, USR_Ledere.Telefon, USR_Brugere.MailAdresse, USR_Brugere.Rettighedder FROM USR_Gruppe, USR_Ledere, USR_Brugere, RTB_Gruppe_Ledere WHERE USR_Ledere.LederID = USR_Brugere.FKBrugereLedereID AND USR_Ledere.LederID = RTB_Gruppe_Ledere.LederID AND USR_Gruppe.GruppeID = RTB_Gruppe_Ledere.GruppeID" );
+                SqlCommand cmd_select = new SqlCommand( "SELECT USR_Ledere.Navn, USR_Gruppe.GruppeNavn, USR_Ledere.Telefon, USR_Brugere.MailAdresse, USR_Brugere.Rettighedder FROM USR_Gruppe, USR_Ledere, USR_Brugere, RTB_Gruppe_Ledere WHERE USR_Ledere.LederID = USR_Brugere.FKBrugereLedereID AND USR_Ledere.LederID = RTB_Gruppe_Ledere.LederID AND USR_Gruppe.GruppeID = RTB_Gruppe_Ledere.Gruppe_LedereID" );
                 //opretter forbindelse
                 cmd_select.Connection = Con;
                 Con.Open();
@@ -78,7 +77,6 @@ namespace FDFk7
                         newcell.Text = DB_Reader[i].ToString();
                         newcell.ID = "Row" + antal + "Cell" + i;
                         newRow.Cells.Add( newcell );
-                        phCeller.Controls.Add( newRow.Cells[i] );
                         i++;
                     }
 
@@ -86,7 +84,7 @@ namespace FDFk7
                     Button Rediger = new Button();
                     Rediger.Text = "Rediger";
                     Rediger.ID = "btnR" + antal + "Rediger";
-                    Rediger.Click += RedigerSletBruger;
+                    Rediger.Click += RedigerBruger;
                     newRow.Cells.Add( new TableCell() );
                     newRow.Cells[i + 1].Controls.Add( Rediger );
 
@@ -94,7 +92,7 @@ namespace FDFk7
                     Button Slet = new Button();
                     Slet.Text = "Slet";
                     Slet.ID = "btnS" + antal + "Slet";
-                    Slet.Click += RedigerSletBruger;
+                    Slet.Click += SletBruger;
                     newRow.Cells.Add( new TableCell() );
                     newRow.Cells[i + 2].Controls.Add( Slet );
 
@@ -107,38 +105,15 @@ namespace FDFk7
             }
         }
 
-        public void RedigerSletBruger( object sender, EventArgs args )
+        public void RedigerBruger( object sender, EventArgs args )
         {
-            string ID = ((Button)sender).ID.Substring( 4, 1 );
-            string hvad = ((Button)sender).ID.Substring( 5 );
-            string IDLederNavn = "Row" + ID + "Cell0";
-            string IDGruppeNavn = "Row" + ID + "Cell1";
-            string IDLederTlf = "Row" + ID + "Cell2";
-            string IDBrugerMail = "Row" + ID + "Cell3";
-            string IDBrugerRettighed = "Row" + ID + "Cell4";
+//            string tmpID = ((Button)sender).ID;
 
-            foreach( Control c in phCeller.Controls )
-            {
-                if( c.GetType() == typeof( TextBox ) )
-                {
-                    switch( ((TextBox)c).ID )
-                    {
-                        default:
-                            break;
-                    }
-                }
-            }
+        }
 
-//            TextBox tmpTB = phCeller.Controls.GetType();
-
-
-            if( hvad == "Rediger" )
-            {
-
-            } else if( hvad == "Slet" )
-            {
-
-            }
+        public void SletBruger( object sender, EventArgs args )
+        {
+            string tmpID = ((Button)sender).ID;
         }
 
     }
