@@ -45,22 +45,6 @@ namespace FDFk7
 //            cmd_select.Connection = Con;
 //            SqlDataReader DB_Reader = cmd_select.ExecuteReader();
 
-            //List<String> tmplstString = new List<string>();
-            int solCount = 0;
-            /*while( DB_Reader.Read() )
-            {
-                subject.Add( DB_Reader.ToString() );
-                solCount++;
-            }
-            DB_Reader.Close();*/
-//            tmplstString.Add( "Alfa" );
-//            tmplstString.Add( "Beta" );
-//            tmplstString.Add( "Delta" );
-//            tmplstString.Add( "Gamma" );
-//            tmplstString.Add( "Theta" );
-//            tmplstString.Add( "Gekko?" );
-//            solCount = tmplstString.Count - 1;
-
             //Top af tabel
             string[] strHeadList = new string[]{ "#", "Navn", "Gruppe", "Telefon", "E-mail", "Rettighed" };
 
@@ -74,33 +58,37 @@ namespace FDFk7
 
             solutions.Rows[0].Cells.AddRange( tcList );
 
-            //Inset data
+            /*Indset data*/
             // Opretter forbindelse til databasen
             SqlConnection Con = new SqlConnection( "Data Source=mssql3.unoeuro.com;Initial Catalog=fdfk7_dk_db;Persist Security Info=True;User ID=fdfk7_dk;Password=4Xbc8tun" );
             // Trækker data fra databasen
-            SqlCommand cmd_select = new SqlCommand( "SELECT USR_Ledere.Navn, USR_Ledere.Telefon, USR_Brugere.MailAdresse, USR_Brugere.Rettighedder, USR_Gruppe.GruppeNavn FROM USR_Gruppe, USR_Ledere, USR_Brugere WHERE USR_Ledere.LederID  = USR_Brugere.FKBrugereLedereID AND USR_Ledere.LederID  = USR_Gruppe.Gruppe_Leder" );
+            SqlCommand cmd_select = new SqlCommand( "SELECT USR_Ledere.Navn, USR_Gruppe.GruppeNavn, USR_Ledere.Telefon, USR_Brugere.MailAdresse, USR_Brugere.Rettighedder FROM USR_Gruppe, USR_Ledere, USR_Brugere WHERE USR_Ledere.LederID = USR_Brugere.FKBrugereLedereID AND USR_Ledere.LederID  = USR_Gruppe.Gruppe_Leder" );
             //opretter forbindelse
             cmd_select.Connection = Con;
             Con.Open();
             SqlDataReader DB_Reader = cmd_select.ExecuteReader();
 
-
             while( DB_Reader.Read() )
             {
                 //tmplstString.Add( DB_Reader.ToString() );
-                solCount++;
 
                 int adder = 0;
-                while( adder <= solCount )
+                while( adder <= DB_Reader.Depth )
                 {
                     TableRow newRow = new TableRow();
                     solutions.Rows.Add( newRow );
-                    for( int i = 0 ; i <= solCount ; i++ )
+
+                    TableCell newFirstCell = new TableCell();
+                    newFirstCell.Text = adder.ToString();
+                    newRow.Cells.Add( newFirstCell );
+
+                    for( int i = 0 ; i < DB_Reader.FieldCount ; i++ )
                     {
                         TableCell newcell = new TableCell();
+                        newcell.Text = DB_Reader[i].ToString();
                         newRow.Cells.Add( newcell );
-                        newcell.Text = DB_Reader[adder].ToString() + " " + DB_Reader[i].ToString();
                     }
+
                     adder++;
                 }
 
