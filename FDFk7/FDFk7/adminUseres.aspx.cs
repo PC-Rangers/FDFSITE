@@ -53,13 +53,13 @@ namespace FDFk7
                 solCount++;
             }
             DB_Reader.Close();*/
-            tmplstString.Add( "Alfa" );
-            tmplstString.Add( "Beta" );
-            tmplstString.Add( "Delta" );
-            tmplstString.Add( "Gamma" );
-            tmplstString.Add( "Theta" );
-            tmplstString.Add( "Gekko?" );
-            solCount = tmplstString.Count - 1;
+//            tmplstString.Add( "Alfa" );
+//            tmplstString.Add( "Beta" );
+//            tmplstString.Add( "Delta" );
+//            tmplstString.Add( "Gamma" );
+//            tmplstString.Add( "Theta" );
+//            tmplstString.Add( "Gekko?" );
+//            solCount = tmplstString.Count - 1;
 
             //Top af tabel
             string[] strHeadList = new string[]{ "#", "Navn", "Gruppe", "Telefon", "E-mail", "Rettighed" };
@@ -75,19 +75,54 @@ namespace FDFk7
             solutions.Rows[0].Cells.AddRange( tcList );
 
             //Inset data
-            int adder = 0;
-            while( adder <= solCount )
+            // Opretter forbindelse til databasen
+            SqlConnection Con = new SqlConnection( "Data Source=mssql3.unoeuro.com;Initial Catalog=fdfk7_dk_db;Persist Security Info=True;User ID=fdfk7_dk;Password=4Xbc8tun" );
+            // Trækker data fra databasen
+            SqlCommand cmd_select = new SqlCommand( "SELECT USR_Ledere.Navn, USR_Ledere.Telefon, USR_Brugere.MailAdresse, USR_Brugere.Rettighedder, USR_Gruppe.GruppeNavn FROM USR_Gruppe, USR_Ledere, USR_Brugere WHERE USR_Ledere.LederID  = USR_Brugere.FKBrugereLedereID AND USR_Ledere.LederID  = USR_Gruppe.Gruppe_Leder" );
+            //opretter forbindelse
+            cmd_select.Connection = Con;
+            SqlDataReader DB_Reader = cmd_select.ExecuteReader();
+
+
+            while( DB_Reader.Read() )
             {
-                TableRow newRow = new TableRow();
-                solutions.Rows.Add( newRow );
-                for( int i = 0 ; i <= solCount ; i++ )
+                tmplstString.Add( DB_Reader.ToString() );
+                solCount++;
+
+               
+
+                int adder = 0;
+                while( adder <= solCount )
                 {
-                    TableCell newcell = new TableCell();
-                    newRow.Cells.Add( newcell );
-                    newcell.Text = tmplstString[adder].ToString() + " " + tmplstString[i].ToString();
+                    TableRow newRow = new TableRow();
+                    solutions.Rows.Add( newRow );
+                    for( int i = 0 ; i <= solCount ; i++ )
+                    {
+                        TableCell newcell = new TableCell();
+                        newRow.Cells.Add( newcell );
+                        newcell.Text = tmplstString[adder].ToString() + " " + tmplstString[i].ToString();
+                    }
+                    adder++;
                 }
-                adder++;
+
+
             }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
 
         public void ibBru0RClick( object sender, EventArgs args )
