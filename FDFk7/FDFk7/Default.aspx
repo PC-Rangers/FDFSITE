@@ -16,6 +16,7 @@
 <body>
 <form class="container" id="body" runat="server" role="form">
 
+	<!-- Top -->
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 	  	<div class="container">
 
@@ -117,7 +118,7 @@
 
 			</div>
 
-			<!-- Det under carBilleder -->
+			<!-- Resten ved siden af hinanden -->
 			<div class="container">
 				<div class="row">
 
@@ -182,7 +183,7 @@
 					</div>
 					
 				</div>
-			</div> <!-- /det under -->
+			</div> <!-- /Resten -->
 
 		</div>
 	</div> <!-- /Side -->

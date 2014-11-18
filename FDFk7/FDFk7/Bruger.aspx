@@ -16,6 +16,7 @@
 <body>
 <form class="container" id="body" runat="server" role="form">
 
+	<!-- Top -->
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 	  	<div class="container">
 
@@ -29,6 +30,7 @@
 			    <a class="navbar-brand" href="/Default.aspx">FDFK7</a>
 		    </div>
 
+		    <!-- Login/Ud -->
 		    <div id="navbar" class="navbar-collapse collapse" runat="server">
 				<div class="navbar-form navbar-right" role="form">
 					<div class="form-group">
@@ -145,7 +147,7 @@
             </div>
 
         </div>
-    </div>
+    </div> <!-- /Side -->
 
 </form>
 

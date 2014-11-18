@@ -142,7 +142,6 @@ namespace FDFk7
                         // Opretter forbindelse til databasen
                         SqlConnection Con = new SqlConnection( "Data Source=mssql3.unoeuro.com;Initial Catalog=fdfk7_dk_db;Persist Security Info=True;User ID=fdfk7_dk;Password=4Xbc8tun" );
 
-
                         // querry der tæller brugere med det brugernavn i databasen
                         SqlCommand cmd_count = new SqlCommand( "SELECT count(BrugerNavn) FROM USR_Brugere WHERE BrugerNavn = '" + txtBruger.Text + "' ", Con );
 
@@ -250,7 +249,7 @@ namespace FDFk7
 
                     }
                 } else
-                {
+                {// Hvis det ikke er Login må det jo være Logud
                     session.Abandon();
                     LogTilSide( false, obj );
                 }
@@ -273,7 +272,7 @@ namespace FDFk7
                     case "Super admin":
                         ((HttpResponse)obj[1]).Redirect( mainURL + "Admin.aspx" );
                         break;
-                    
+                // Man burde aldrig komme helt ned i default, men for en sikkerheds skyld
                     default:
                         ((HttpResponse)obj[1]).Redirect( mainURL + "Default.aspx" );
                         break;

@@ -30,9 +30,10 @@ namespace FDFk7
         }
 
         public void SetVaerdier()
-        {//FIXME skal hentes fra databasen
+        {
             //Næste møde
-            try{
+            try
+            {
                 // Opretter forbindelse til databasen
                 SqlConnection Con = new SqlConnection( "Data Source=mssql3.unoeuro.com;Initial Catalog=fdfk7_dk_db;Persist Security Info=True;User ID=fdfk7_dk;Password=4Xbc8tun" );
 
@@ -48,23 +49,24 @@ namespace FDFk7
                     string nxtDato = DB_Reader["NaesteDato"].ToString();
 
                     lblBesked.Text = DB_Reader["Besked"].ToString();
-                    lblTekst.Text  = DB_Reader["Tekst"].ToString();
+                    lblTekst.Text = DB_Reader["Tekst"].ToString();
 
-                    if (!string.IsNullOrEmpty( nxtDato )){
+                    if( !string.IsNullOrEmpty( nxtDato ) )
+                    {
                         lblTidspunkt.Text = nxtDato;
-                    }
-                    else {
+                    } else
+                    {
                         lblTidspunkt.Text = normDato;
                     }
                 }
-            }
-            catch( Exception e )
+            } catch( Exception e )
             {
             }
 
 
             //Lederinfo
-            try{
+            try
+            {
                 // Opretter forbindelse til databasen
                 SqlConnection Con = new SqlConnection( "Data Source=mssql3.unoeuro.com;Initial Catalog=fdfk7_dk_db;Persist Security Info=True;User ID=fdfk7_dk;Password=4Xbc8tun" );
 
@@ -78,8 +80,7 @@ namespace FDFk7
                 {
 
                 }
-            }
-            catch( Exception e )
+            } catch( Exception e )
             {
             }
 
