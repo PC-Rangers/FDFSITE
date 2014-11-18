@@ -45,7 +45,7 @@ namespace FDFk7
 //            cmd_select.Connection = Con;
 //            SqlDataReader DB_Reader = cmd_select.ExecuteReader();
 
-            List<String> tmplstString = new List<string>();
+            //List<String> tmplstString = new List<string>();
             int solCount = 0;
             /*while( DB_Reader.Read() )
             {
@@ -81,15 +81,14 @@ namespace FDFk7
             SqlCommand cmd_select = new SqlCommand( "SELECT USR_Ledere.Navn, USR_Ledere.Telefon, USR_Brugere.MailAdresse, USR_Brugere.Rettighedder, USR_Gruppe.GruppeNavn FROM USR_Gruppe, USR_Ledere, USR_Brugere WHERE USR_Ledere.LederID  = USR_Brugere.FKBrugereLedereID AND USR_Ledere.LederID  = USR_Gruppe.Gruppe_Leder" );
             //opretter forbindelse
             cmd_select.Connection = Con;
+            Con.Open();
             SqlDataReader DB_Reader = cmd_select.ExecuteReader();
 
 
             while( DB_Reader.Read() )
             {
-                tmplstString.Add( DB_Reader.ToString() );
+                //tmplstString.Add( DB_Reader.ToString() );
                 solCount++;
-
-               
 
                 int adder = 0;
                 while( adder <= solCount )
@@ -100,7 +99,7 @@ namespace FDFk7
                     {
                         TableCell newcell = new TableCell();
                         newRow.Cells.Add( newcell );
-                        newcell.Text = tmplstString[adder].ToString() + " " + tmplstString[i].ToString();
+                        newcell.Text = DB_Reader[adder].ToString() + " " + DB_Reader[i].ToString();
                     }
                     adder++;
                 }
