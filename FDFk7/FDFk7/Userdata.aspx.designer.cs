@@ -83,6 +83,10 @@ namespace FDFk7 {
 		
 		protected System.Web.UI.WebControls.TextBox txtStivkrampe;
 		
+		protected System.Web.UI.WebControls.CheckBox chkPencilin;
+		
+		protected System.Web.UI.WebControls.CheckBox chkTilBilled;
+		
 		protected System.Web.UI.WebControls.TextBox txtAllergier;
 		
 		protected System.Web.UI.WebControls.TextBox txtNoter;

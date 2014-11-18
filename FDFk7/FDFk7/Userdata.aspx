@@ -168,18 +168,13 @@
 			                <label>Stivkrampe vaccine</label>
 			                <asp:TextBox type="date" placeholder="dato" CssClass="form-control" runat="server" id="txtStivkrampe" />
 
-			                <div class="checkbox">
-			                	<label>
-			                    	<input type="checkbox" id="Penicilin" value="option1">
-			                    	Tåler pencilin
-			                	</label>
+			                <div>
+			                	<asp:CheckBox CssClass="chekbox" runat="server" id="chkPencilin" Text="&nbsp; Tåler pencilin" />
 			                </div>
-			                <div class="checkbox">
-			                	<label>
-			                    	<input type="checkbox" id="TilladBillede" value="option1">
-			                    	Tillad billeder
-			                	</label>
+							<div>
+			                	<asp:CheckBox CssClass="chekbox" runat="server" id="chkTilBilled" Text="&nbsp; Tillad billeder" />
 			                </div>
+
 		            	</div>
 		              
 			            <div class="col-sm-8 no-gutter">
@@ -189,7 +184,6 @@
 
 		            <div class="col-sm-12 no-gutter bottom-buffer-medium">
 		            	<asp:TextBox placeholder="Noter" CssClass="form-control txtAreaNoResize" runat="server" id="txtNoter" TextMode="MultiLine" Rows="8" />
-		            	<textarea class="form-control txtAreaNoResize top-buffer-small" id="Note" rows="8" placeholder="Noter"></textarea>
 		            </div>
 
 					<div class="btn-group pull-right top top-buffer-small">

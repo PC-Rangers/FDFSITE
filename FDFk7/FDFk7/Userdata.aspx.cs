@@ -79,6 +79,10 @@ namespace FDFk7
 
 //            //Info om bruger
 //            txtStivkrampe.Text;
+//            chkPencilin.Checked;
+//            chkTilBilled.Checked;
+//            txtAllergier.Text;
+//            txtNoter.Text;
         }
 
         public void IndSendUpdate( object sender, EventArgs args )
