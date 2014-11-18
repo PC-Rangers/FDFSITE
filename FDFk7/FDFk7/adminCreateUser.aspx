@@ -16,6 +16,7 @@
 <body>
 <form class="container" id="body" runat="server" role="form">
 
+	<!-- Top -->
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 	  	<div class="container">
 
@@ -90,7 +91,7 @@
 	            <asp:DropDownList CssClass="form-control bottom-buffer-small" runat="server" id="ddlRettighed" />
 
 				<div class="pull-right horisontal-buffer-small">
-					<asp:Button type="button" CssClass="btn btn-default" Text="Opret bruger" runat="server" id="btnOpretBruger" OnClick="CreateUser" />
+					<asp:Button type="button" CssClass="btn btn-default" Text="Opret bruger" runat="server" id="btnUserdata" OnClick="CreateUser" />
 				</div>
 				<!-- Usage as a class -->
 				<div class="clearfix"></div>

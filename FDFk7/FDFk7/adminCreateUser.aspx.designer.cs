@@ -57,6 +57,6 @@ namespace FDFk7 {
 		
 		protected System.Web.UI.WebControls.DropDownList ddlRettighed;
 		
-		protected System.Web.UI.WebControls.Button btnOpretBruger;
+		protected System.Web.UI.WebControls.Button btnUserdata;
 	}
 }

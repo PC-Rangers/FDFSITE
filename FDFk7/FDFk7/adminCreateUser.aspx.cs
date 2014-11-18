@@ -73,6 +73,9 @@ namespace FDFk7
                 stringBuilder.AppendFormat( "{0:x2}", b );
             }
             string salt = stringBuilder.ToString();
+
+            //Går videre til næste view
+            GaaTil( sender, args );
         }
 
     }
