@@ -71,8 +71,8 @@ namespace FDFk7
                 knapper[8].Visible = false;
                 switch( ((System.Web.UI.Page)obj[0]).Request.AppRelativeCurrentExecutionFilePath )//navn på den side der gåes til
                 {
-                    case "~/NyLeder.aspx":
-                    case "~/CMS.aspx":
+                    case "~/adminCMS.aspx":
+                    case "~/adminCreateAdmin.aspx":
                         LogTilSide( false, obj );
                         break;
                 }
@@ -84,10 +84,13 @@ namespace FDFk7
 
                 switch( ((System.Web.UI.Page)obj[0]).Request.AppRelativeCurrentExecutionFilePath )//navn på den side der gåes til
                 {
-                    case "~/NyLeder.aspx":
-                    case "~/CMS.aspx":
                     case "~/Admin.aspx":
+                    case "~/adminCMS.aspx":
+                    case "~/adminCreateAdmin.aspx":
+                    case "~/adminCreateMessage.aspx":
                     case "~/adminCreateUser.aspx":
+                    case "~/adminHytte.aspx":
+                    case "~/adminUsers.aspx":
                         LogTilSide( false, obj );
                         break;
                 }
@@ -102,13 +105,13 @@ namespace FDFk7
             {
                 switch( ((System.Web.UI.Page)obj[0]).Request.AppRelativeCurrentExecutionFilePath )//navn på den side der gåes til
                 {
-                    case "~/NyLeder.aspx":
-                    case "~/CMS.aspx":
                     case "~/Admin.aspx":
-                    case "~/Bruger.aspx":
-                    case "~/Userdate.aspx":
+                    case "~/adminCMS.aspx":
+                    case "~/adminCreateAdmin.aspx":
+                    case "~/adminCreateMessage.aspx":
                     case "~/adminCreateUser.aspx":
-                    case "~/Tilmelding.aspx":
+                    case "~/adminHytte.aspx":
+                    case "~/adminUsers.aspx":
                         LogTilSide( false, obj );
                         break;
                 }
