@@ -15,6 +15,7 @@ namespace FDFk7
                     btnadminHytte, btnadminNyeReservation, btnadminCreateAdmin, btnadminCMS
                 }
             );
+            SetData();
         }
 
         public void LoginOut( object sender, EventArgs args )
@@ -25,6 +26,12 @@ namespace FDFk7
         public void GaaTil( object sender, EventArgs args )
         {
             new Basis( new object[]{ sender, Response, Session } );
+        }
+
+        void SetData()
+        {
+            /*/FIXME her settes dataen fra forrige view*/
+            ;
         }
 
         public void IndSendNy( object sender, EventArgs args )
