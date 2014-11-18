@@ -111,6 +111,9 @@
                         <th>Gruppe</th>
                         <th>Telefon</th>
                         <th>Email</th>
+
+                        <th>Rediger</th>
+                        <th>Slet</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -120,6 +123,9 @@
                         <td>Blå Smølfer</td>
                         <td>12 23 34 45</td>
                         <td>lp@45.dk</td>
+
+                        <td><p class="glyphicon glyphicon-edit"></p></td>
+                        <td><p class="glyphicon glyphicon-trash"></p></td>
                     </tr>
                 </tbody>
             </table>
