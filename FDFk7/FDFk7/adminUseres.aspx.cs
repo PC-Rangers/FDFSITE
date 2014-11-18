@@ -112,12 +112,20 @@ namespace FDFk7
         {
             string ID = ((Button)sender).ID.Substring( 4, 1 );
             string hvad = ((Button)sender).ID.Substring( 5 );
+
             string IDLederNavn = "Row" + ID + "Cell0";
             string IDGruppeNavn = "Row" + ID + "Cell1";
             string IDLederTlf = "Row" + ID + "Cell2";
             string IDBrugerMail = "Row" + ID + "Cell3";
             string IDBrugerRettighed = "Row" + ID + "Cell4";
 
+            string LederNavn = "";
+            string GruppeNavn = "";
+            string LederTlf = "";
+            string BrugerMail = "";
+            string BrugerRettighed = "";
+
+            //find de rette felter og læg deres tekster over i nogle brugbare værdier
             foreach( Control c in solutions.Controls )
             {
                 if( c.GetType() == typeof( TableRow ) )
@@ -125,17 +133,27 @@ namespace FDFk7
                     TableRow tro = (TableRow)c;
                     for( int i = 0 ; i < tro.Cells.Count ; i++ )
                     {
-                        if( tro.Cells[i].ID == "Row0Cell0" )
+                        if( tro.Cells[i].ID == IDLederNavn )
                         {
-                            break;
+                            LederNavn = tro.Cells[i].Text;
+                        } else if( tro.Cells[i].ID == IDGruppeNavn )
+                        {
+                            GruppeNavn = tro.Cells[i].Text;
+                        } else if( tro.Cells[i].ID == IDLederTlf )
+                        {
+                            LederTlf = tro.Cells[i].Text;
+                        } else if( tro.Cells[i].ID == IDBrugerMail )
+                        {
+                            BrugerMail = tro.Cells[i].Text;
+                        } else if( tro.Cells[i].ID == IDBrugerRettighed )
+                        {
+                            BrugerRettighed = tro.Cells[i].Text;
                         }
                     }
                 }
             }
 
-            //            TextBox tmpTB = phCeller.Controls.GetType();
-
-
+            //gør noget med ovenstående værdider baseret på om det er Rediger/Slet
             if( hvad == "Rediger" )
             {
 
