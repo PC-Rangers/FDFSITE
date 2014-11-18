@@ -16,6 +16,7 @@
 <body>
 <form class="container" id="body" runat="server" role="form">
 
+	<!-- Top -->
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 	  	<div class="container">
 
@@ -29,6 +30,7 @@
 			    <a class="navbar-brand" href="/Default.aspx">FDFK7</a>
 		    </div>
 
+		    <!-- Login -->
 		    <div id="navbar" class="navbar-collapse collapse" runat="server">
 				<div class="navbar-form navbar-right" role="form">
 					<div class="form-group">
@@ -73,103 +75,98 @@
     	<div class="row top-buffer-small">
 
 			<div class="form">
+				<!-- Bruger -->
 				<div class="col-sm-6 top-buffer-small">
 
-		            <label for="exampleInputEmail1">Navn</label>
-		            <input type="text" class="form-control bottom-buffer-small" id="Navn">
+		            <label for="txtNavn">Navn</label>
+		            <asp:TextBox type="text" placeholder="Navn" CssClass="form-control bottom-buffer-small" runat="server" id="txtNavn" />
 
-		            <label for="exampleInputEmail1">Adresse</label>
-		            <input type="text" class="form-control bottom-buffer-small" id="Adresse">
+		            <label for="txtAdr">Adresse</label>
+		            <asp:TextBox type="text" placeholder="Adresse" CssClass="form-control bottom-buffer-small" runat="server" id="txtAdr" />
 
 		            <div class="col-sm-4 no-gutter right-padding-small bottom-buffer-medium">
-		              <label for="exampleInputEmail1">Post nr.</label>
-		              <input type="text" class="form-control bottom-buffer-small" id="Postnr">
-		            </div>
-		            <div class="col-sm-8 no-gutter bottom-buffer-medium">
-		              <label for="exampleInputEmail1">By</label>
-		              <input type="text" class="form-control bottom-buffer-small" id="Bynavn">
+						<label for="txtPostNr">Post nr.</label>
+						<asp:TextBox type="text" placeholder="Post nummer" CssClass="form-control bottom-buffer-small" runat="server" id="txtPostNr" />
+					</div>
+
+					<div class="col-sm-8 no-gutter bottom-buffer-medium">
+						<label for="txtByNavn">By</label>
+						<asp:TextBox type="text" placeholder="Bynavn" CssClass="form-control bottom-buffer-small" runat="server" id="txtByNavn" />
 		            </div>
 
 		            <div class="col-sm-12 no-gutter bottom-buffer-medium">
+						<label for="txtEmail">E-mail</label>
+		            	<asp:TextBox type="text" placeholder="E-mail" CssClass="form-control bottom-buffer-small" runat="server" id="txtEmail" />
 
-		              <label for="exampleInputEmail1">E-mail</label>
-		              <input type="email" class="form-control bottom-buffer-small" id="Email">
+						<label for="txtTlf">Telefon</label>
+		            	<asp:TextBox type="text" placeholder="Telefon nummer" CssClass="form-control bottom-buffer-small" runat="server" id="txtTlf" />
 
-		              <label for="exampleInputEmail1">Telefon</label>
-		              <input type="tel" class="form-control bottom-buffer-small" id="Telefon">
-
-		              <label for="exampleInputEmail1">CPR nr. (I en smøre uden -)</label>
-		              <input type="text" class="form-control bottom-buffer-small" id="CPR">
-
+						<label for="txtCPR">CPR nr. (I en smøre uden -)</label>
+		            	<asp:TextBox type="text" placeholder="På følgende måde: 1234567890" CssClass="form-control bottom-buffer-small" runat="server" id="txtCPR" />
 		            </div>
+
 		            <div class="col-sm-12 no-gutter bottom-buffer-medium">
+						<label for="txtSkole">Skole</label>
+		            	<asp:TextBox type="text" placeholder="Skole" CssClass="form-control bottom-buffer-small" runat="server" id="txtSkole" />
 
-		              <label for="exampleInputEmail1">Skole</label>
-		              <input type="text" class="form-control bottom-buffer-small" id="Skole">
-
-		              <label for="exampleInputEmail1">Klasse</label>
-		              <input type="text" class="form-control bottom-buffer-small" id="Klasse">
-
+						<label for="txtKlasse">Klasse</label>
+		            	<asp:TextBox type="text" placeholder="Klasse" CssClass="form-control bottom-buffer-small" runat="server" id="txtKlasse" />
 		            </div>
 
 				</div>
 
-
+				<!-- Værge -->
 		        <div class="col-sm-6 top-buffer-small">
+		        	
+		        	<!-- Relation 1 -->
                     <div class="well">
-					<label for="exampleInputEmail1">Relation</label>
-					<select class="form-control bottom-buffer-small">
-						<option></option>
-						<option>Mor</option>
-						<option>Far</option>
-						<option>Værge</option>
-					</select>
+						<label for="ddlR1">Relation</label>
+						<asp:DropDownList CssClass="form-control bottom-buffer-small" runat="server" id="ddlR1" />
 
-					<label for="exampleInputEmail1">Navn</label>
-					<input type="text" class="form-control bottom-buffer-small" id="NavnV1">
+						<label for="txtNavnR1">Navn</label>
+		            	<asp:TextBox type="text" placeholder="Navn" CssClass="form-control bottom-buffer-small" runat="server" id="txtNavnR1" />
 
-					<div class="col-sm-12 no-gutter">
-						<label for="exampleInputEmail1">E-mail</label>
-						<input type="email" class="form-control bottom-buffer-small" id="EmailV1">
-					</div>
-					<div class="col-sm-12 no-gutter bottom-buffer-medium">
-						<label for="exampleInputEmail1">Telefon</label>
-						<input type="tel" class="form-control bottom-buffer-small" id="TelefonV1">
-					</div>
+						<div class="col-sm-12 no-gutter">
+							<label for="txtEmailR1">E-mail</label>
+		            		<asp:TextBox type="text" placeholder="E-mail" CssClass="form-control bottom-buffer-small" runat="server" id="txtEmailR1" />
+						</div>
+
+						<div class="col-sm-12 no-gutter bottom-buffer-medium">
+							<label for="txtTlfR1">Telefon</label>
+		            		<asp:TextBox type="text" placeholder="Telefon" CssClass="form-control bottom-buffer-small" runat="server" id="txtTlfR1" />
+						</div>
+
                         <div class="clearfix"></div>
                     </div>
 
-					<label for="exampleInputEmail1">Relation</label>
-					<select class="form-control bottom-buffer-small">
-						<option></option>
-						<option>Mor</option>
-						<option>Far</option>
-						<option>Værge</option>
-					</select>
+                    <!-- Relation 2 -->
+					<label for="ddlR2">Relation</label>
+					<asp:DropDownList CssClass="form-control bottom-buffer-small" runat="server" id="ddlR2" />
 
-					<label for="exampleInputEmail1">Navn</label>
-					<input type=" text" class="form-control bottom-buffer-small" id="NavnV2">
+					<label for="tctNavnR2">Navn</label>
+	            	<asp:TextBox type="text" placeholder="Navn" CssClass="form-control bottom-buffer-small" runat="server" id="txtNavnR2" />
 
 					<div class="col-sm-12 no-gutter">
-						<label for="exampleInputEmail1">E-mail</label>
-						<input type="email" class="form-control bottom-buffer-small" id="EmailV2">
+						<label for="txtEmailR2">E-mail</label>
+	            		<asp:TextBox type="text" placeholder="E-mail" CssClass="form-control bottom-buffer-small" runat="server" id="txtEmailR2" />
 					</div>
+
 					<div class="col-sm-12 no-gutter bottom-buffer-medium">
-						<label for="exampleInputEmail1">Telefon</label>
-						<input type="tel" class="form-control bottom-buffer-small" id="TelefonV2">
+						<label for="txtTlfR2">Telefon</label>
+	            		<asp:TextBox type="text" placeholder="Telefon" CssClass="form-control bottom-buffer-small" runat="server" id="txtTlfR2" />
 					</div>
 
     			</div>
 
-
+    			<!-- Info om bruger -->
 		        <div class="col-sm-12">
 
+		        	<!-- Pre noter -->
 		            <div class="col-sm-12 no-gutter bottom-buffer-medium">
 		            	<div class="col-sm-4 no-gutter right-padding-small ">
 		                
 			                <label>Stivkrampe vaccine</label>
-			                <input type="date" class="form-control">
-			                
+			                <asp:TextBox type="date" placeholder="dato" CssClass="form-control" runat="server" id="txtStivkrampe" />
 
 			                <div class="checkbox">
 			                	<label>
@@ -186,11 +183,12 @@
 		            	</div>
 		              
 			            <div class="col-sm-8 no-gutter">
-			                <textarea class="form-control txtAreaNoResize" id="Allergi" rows="5" placeholder="Allergier" ></textarea>
+							<asp:TextBox placeholder="Allergier" CssClass="form-control txtAreaNoResize" runat="server" id="txtAllergier" TextMode="MultiLine" Rows="5" />
 			            </div>
 					</div>
 
 		            <div class="col-sm-12 no-gutter bottom-buffer-medium">
+		            	<asp:TextBox placeholder="Noter" CssClass="form-control txtAreaNoResize" runat="server" id="txtNoter" TextMode="MultiLine" Rows="8" />
 		            	<textarea class="form-control txtAreaNoResize top-buffer-small" id="Note" rows="8" placeholder="Noter"></textarea>
 		            </div>
 
@@ -206,8 +204,7 @@
 			</div> <!-- /form -->
 
     	</div>
-
-	</div> <!-- /container -->
+	</div> <!-- /Side -->
 
 </form>
 

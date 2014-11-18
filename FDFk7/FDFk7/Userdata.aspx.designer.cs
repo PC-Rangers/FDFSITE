@@ -47,6 +47,46 @@ namespace FDFk7 {
 		
 		protected System.Web.UI.WebControls.Button btnadminCMS;
 		
+		protected System.Web.UI.WebControls.TextBox txtNavn;
+		
+		protected System.Web.UI.WebControls.TextBox txtAdr;
+		
+		protected System.Web.UI.WebControls.TextBox txtPostNr;
+		
+		protected System.Web.UI.WebControls.TextBox txtByNavn;
+		
+		protected System.Web.UI.WebControls.TextBox txtEmail;
+		
+		protected System.Web.UI.WebControls.TextBox txtTlf;
+		
+		protected System.Web.UI.WebControls.TextBox txtCPR;
+		
+		protected System.Web.UI.WebControls.TextBox txtSkole;
+		
+		protected System.Web.UI.WebControls.TextBox txtKlasse;
+		
+		protected System.Web.UI.WebControls.DropDownList ddlR1;
+		
+		protected System.Web.UI.WebControls.TextBox txtNavnR1;
+		
+		protected System.Web.UI.WebControls.TextBox txtEmailR1;
+		
+		protected System.Web.UI.WebControls.TextBox txtTlfR1;
+		
+		protected System.Web.UI.WebControls.DropDownList ddlR2;
+		
+		protected System.Web.UI.WebControls.TextBox txtNavnR2;
+		
+		protected System.Web.UI.WebControls.TextBox txtEmailR2;
+		
+		protected System.Web.UI.WebControls.TextBox txtTlfR2;
+		
+		protected System.Web.UI.WebControls.TextBox txtStivkrampe;
+		
+		protected System.Web.UI.WebControls.TextBox txtAllergier;
+		
+		protected System.Web.UI.WebControls.TextBox txtNoter;
+		
 		protected System.Web.UI.WebControls.Button btnNySend;
 		
 		protected System.Web.UI.WebControls.Button btnUpdateSend;
