@@ -54,11 +54,6 @@ namespace FDFk7
 
         public void CreateUser( object sender, EventArgs args )
         {
-            pCreateUser( sender, args );
-        }
-
-        private void pCreateUser( object sender, EventArgs args )
-        {
 //            txtNavn.Text;
 //            txtKode.Text;
 //            txtMail.Text;

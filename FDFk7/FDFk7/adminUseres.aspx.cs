@@ -107,22 +107,6 @@ namespace FDFk7
 
 
             }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         }
 
         public void ibBru0RClick( object sender, EventArgs args )
