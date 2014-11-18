@@ -124,8 +124,10 @@
                         <td>12 23 34 45</td>
                         <td>lp@45.dk</td>
 
-                        <td> <asp:ImageButton runat="server" id="ibBru0R" CssClass="glyphicon glyphicon-edit" AlternateText="Rediger" /> </td>
-                        <td> <asp:ImageButton runat="server" id="ibBru0S" CssClass="glyphicon glyphicon-trash" AlternateText="Slet" /> </td>
+                        <td> <asp:Button runat="server" id="ibBru0R" CssClass="glyphicon glyphicon-edit" Text="Rediger" OnClick="ibBru0RClick"/> </td>
+                        <%//td> <asp:ImageButton runat="server" id="ibBru0R" CssClass="glyphicon glyphicon-edit" AlternateText="Rediger" /> </td%>
+                        <td> <asp:Button runat="server" id="ibBru0S" CssClass="glyphicon glyphicon-edit" Text="Slet" OnClick="ibBru0SClick"/> </td>
+                        <%//td> <asp:ImageButton runat="server" id="ibBru0S" CssClass="glyphicon glyphicon-trash" AlternateText="Slet" /> </td%>
                     </tr>
                 </tbody>
             </table>
