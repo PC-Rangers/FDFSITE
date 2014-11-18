@@ -59,7 +59,7 @@ namespace FDFk7
             Con.Open();
             SqlDataReader DB_Reader = cmd_select.ExecuteReader();
 
-            int antal = 1;
+            int antal = 0;
             while( DB_Reader.Read() )
             {
                 TableRow newRow = new TableRow();
@@ -73,6 +73,7 @@ namespace FDFk7
                 {
                     TableCell newcell = new TableCell();
                     newcell.Text = DB_Reader[i].ToString();
+                    newcell.ID = "Row" + antal + "Cell" + i;
                     newRow.Cells.Add( newcell );
                     i++;
                 }
@@ -80,7 +81,7 @@ namespace FDFk7
                 //Rediger knap
                 Button Rediger = new Button();
                 Rediger.Text = "Rediger";
-                Rediger.ID = "btnR" + i;
+                Rediger.ID = "btnR" + antal + "Rediger";
                 Rediger.Click += RedigerBruger;
                 newRow.Cells.Add( new TableCell() );
                 newRow.Cells[i + 1].Controls.Add( Rediger );
@@ -88,7 +89,7 @@ namespace FDFk7
                 //Slet knap
                 Button Slet = new Button();
                 Slet.Text = "Slet";
-                Slet.ID = "btnS" + i;
+                Slet.ID = "btnS" + antal + "Slet";
                 Slet.Click += SletBruger;
                 newRow.Cells.Add( new TableCell() );
                 newRow.Cells[i + 2].Controls.Add( Slet );
@@ -101,12 +102,12 @@ namespace FDFk7
 
         public void RedigerBruger( object sender, EventArgs args )
         {
-
+            string tmpID = ((Button)sender).ID;
         }
 
         public void SletBruger( object sender, EventArgs args )
         {
-
+            string tmpID = ((Button)sender).ID;
         }
 
     }
