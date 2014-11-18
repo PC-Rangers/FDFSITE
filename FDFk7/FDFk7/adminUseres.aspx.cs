@@ -36,17 +36,8 @@ namespace FDFk7
 
         void SetData()
         {
-//            SqlConnection Con = new SqlConnection( "Data Source=mssql3.unoeuro.com;Initial Catalog=fdfk7_dk_db;Persist Security Info=True;User ID=fdfk7_dk;Password=4Xbc8tun" );
-//
-//            SqlCommand cmd_select = new SqlCommand( "SELECT ADM_GruppeMode.Besked, ADM_GruppeMode.Tekst, ADM_GruppeMode.StandardDato, ADM_GruppeMode.NaesteDato FROM USR_Gruppe, ADM_GruppeMode, USR_Medlemmer WHERE USR_Medlemmer.MedlemID = 1 AND ADM_GruppeMode.Gruppe = USR_Gruppe.GruppeID AND USR_Gruppe.GruppeID = USR_Medlemmer.Gruppe" );
-//
-//            Con.Open();
-//
-//            cmd_select.Connection = Con;
-//            SqlDataReader DB_Reader = cmd_select.ExecuteReader();
-
             //Top af tabel
-            string[] strHeadList = new string[]{ "#", "Navn", "Gruppe", "Telefon", "E-mail", "Rettighed" };
+            string[] strHeadList = new string[]{ "#", "Navn", "Gruppe", "Telefon", "E-mail", "Rettighed", "Rediger", "Slet" };
 
             solutions.Rows.Add( new TableHeaderRow() );
             TableHeaderCell[] tcList = new TableHeaderCell[strHeadList.Count()];
@@ -68,40 +59,52 @@ namespace FDFk7
             Con.Open();
             SqlDataReader DB_Reader = cmd_select.ExecuteReader();
 
+            int antal = 1;
             while( DB_Reader.Read() )
             {
-                //tmplstString.Add( DB_Reader.ToString() );
+                TableRow newRow = new TableRow();
 
-                int adder = 0;
-                while( adder <= DB_Reader.Depth )
+                TableCell newFirstCell = new TableCell();
+                newFirstCell.Text = antal.ToString();
+                newRow.Cells.Add( newFirstCell );
+
+                int i = 0;
+                while( i < DB_Reader.FieldCount )
                 {
-                    TableRow newRow = new TableRow();
-                    solutions.Rows.Add( newRow );
-
-                    TableCell newFirstCell = new TableCell();
-                    newFirstCell.Text = adder.ToString();
-                    newRow.Cells.Add( newFirstCell );
-
-                    for( int i = 0 ; i < DB_Reader.FieldCount ; i++ )
-                    {
-                        TableCell newcell = new TableCell();
-                        newcell.Text = DB_Reader[i].ToString();
-                        newRow.Cells.Add( newcell );
-                    }
-
-                    adder++;
+                    TableCell newcell = new TableCell();
+                    newcell.Text = DB_Reader[i].ToString();
+                    newRow.Cells.Add( newcell );
+                    i++;
                 }
 
+                //Rediger knap
+                Button Rediger = new Button();
+                Rediger.Text = "Rediger";
+                Rediger.ID = "btnR" + i;
+                Rediger.Click += RedigerBruger;
+                newRow.Cells.Add( new TableCell() );
+                newRow.Cells[i + 1].Controls.Add( Rediger );
 
+                //Slet knap
+                Button Slet = new Button();
+                Slet.Text = "Slet";
+                Slet.ID = "btnS" + i;
+                Slet.Click += SletBruger;
+                newRow.Cells.Add( new TableCell() );
+                newRow.Cells[i + 2].Controls.Add( Slet );
+
+                solutions.Rows.Add( newRow );
+
+                antal++;
             }
         }
 
-        public void ibBru0RClick( object sender, EventArgs args )
+        public void RedigerBruger( object sender, EventArgs args )
         {
 
         }
 
-        public void ibBru0SClick( object sender, EventArgs args )
+        public void SletBruger( object sender, EventArgs args )
         {
 
         }
