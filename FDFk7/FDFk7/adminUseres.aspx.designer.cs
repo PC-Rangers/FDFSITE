@@ -48,5 +48,9 @@ namespace FDFk7 {
 		protected System.Web.UI.WebControls.Button btnadminCMS;
 		
 		protected System.Web.UI.WebControls.Table solutions;
+		
+		protected System.Web.UI.WebControls.ImageButton ibBru0R;
+		
+		protected System.Web.UI.WebControls.ImageButton ibBru0S;
 	}
 }

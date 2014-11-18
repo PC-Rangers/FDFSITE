@@ -124,8 +124,8 @@
                         <td>12 23 34 45</td>
                         <td>lp@45.dk</td>
 
-                        <td><p class="glyphicon glyphicon-edit"></p></td>
-                        <td><p class="glyphicon glyphicon-trash"></p></td>
+                        <td> <asp:ImageButton runat="server" id="ibBru0R" CssClass="glyphicon glyphicon-edit" AlternateText="Rediger" /> </td>
+                        <td> <asp:ImageButton runat="server" id="ibBru0S" CssClass="glyphicon glyphicon-trash" AlternateText="Slet" /> </td>
                     </tr>
                 </tbody>
             </table>
