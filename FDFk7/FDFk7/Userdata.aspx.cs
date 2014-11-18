@@ -44,8 +44,23 @@ namespace FDFk7
                 ddlR2.Items.Add( new ListItem( "Værge", "2" ) );
             }
 
-            /*/FIXME her settes dataen fra forrige view*/
-            ;
+            //her settes dataen fra forrige view/databasen
+            try
+            {
+                /*Indset data*/
+                // Opretter forbindelse til databasen
+                SqlConnection Con = new SqlConnection( "Data Source=mssql3.unoeuro.com;Initial Catalog=fdfk7_dk_db;Persist Security Info=True;User ID=fdfk7_dk;Password=4Xbc8tun" );
+                // Trækker data fra databasen
+                SqlCommand cmd_select = new SqlCommand( "SELECT USR_Ledere.Navn, USR_Gruppe.GruppeNavn, USR_Ledere.Telefon, USR_Brugere.MailAdresse, USR_Brugere.Rettighedder FROM USR_Gruppe, USR_Ledere, USR_Brugere, RTB_Gruppe_Ledere WHERE USR_Ledere.LederID = USR_Brugere.FKBrugereLedereID AND USR_Ledere.LederID = RTB_Gruppe_Ledere.LederID AND USR_Gruppe.GruppeID = RTB_Gruppe_Ledere.GruppeID" );
+                //opretter forbindelse
+                cmd_select.Connection = Con;
+                Con.Open();
+                SqlDataReader DB_Reader = cmd_select.ExecuteReader();
+
+                //FIXME hent noget
+            } catch( Exception e )
+            {
+            }
         }
 
         public void IndSendNy( object sender, EventArgs args )

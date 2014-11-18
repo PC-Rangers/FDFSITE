@@ -74,6 +74,9 @@ namespace FDFk7
             }
             string salt = stringBuilder.ToString();
 
+            //læg data op
+            //FIXME her
+
             //Går videre til næste view
             GaaTil( sender, args );
         }
