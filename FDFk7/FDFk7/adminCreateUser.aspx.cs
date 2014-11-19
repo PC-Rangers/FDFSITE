@@ -6,6 +6,7 @@ using System.Text;
 // krævet for Stopwatch.GetTimestamp
 using System.Diagnostics;
 using System.Web.UI.WebControls;
+using System.Data.SqlClient;
 
 namespace FDFk7
 {
@@ -54,11 +55,11 @@ namespace FDFk7
 
         public void CreateUser( object sender, EventArgs args )
         {
-//            txtNavn.Text;
-//            txtKode.Text;
-//            txtMail.Text;
-//            ddlBrugerGrp.SelectedValue;
-//            ddlRettighed.SelectedValue;
+            string strNavn = txtNavn.Text;
+            string strKode = txtKode.Text;
+            string strMail = txtMail.Text;
+            string strGruppe = ddlBrugerGrp.SelectedValue;
+            string strRet = ddlRettighed.SelectedValue;
 
             // generere salt
             SHA512 sha = new SHA512Managed();
@@ -75,7 +76,11 @@ namespace FDFk7
             string salt = stringBuilder.ToString();
 
             //læg data op
-            //FIXME her
+            SqlConnection ConNy = new SqlConnection( "Data Source=mssql3.unoeuro.com;Initial Catalog=fdfk7_dk_db;Persist Security Info=True;User ID=fdfk7_dk;Password=4Xbc8tun" );
+            ConNy.Open();
+            SqlCommand Cmd_insert = new SqlCommand( "INSERT INTO USR_Brugere (BrugerNavn, Adgangskode, MailAdresse, BrugerGruppe, Rettighedder, Salt)" +
+                                        " VALUES('" + strNavn + "', '" + strKode + "', '" + strMail + "', '" + strGruppe + "', '" + strRet + "', '" + salt + "')", ConNy );
+            Cmd_insert.ExecuteNonQuery();
 
             //Går videre til næste view
             GaaTil( sender, args );

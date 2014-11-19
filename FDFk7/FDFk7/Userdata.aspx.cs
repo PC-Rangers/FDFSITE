@@ -65,10 +65,6 @@ namespace FDFk7
 
         public void IndSendNy( object sender, EventArgs args )
         {
-            SqlConnection ConNy = new SqlConnection( "Data Source=mssql3.unoeuro.com;Initial Catalog=fdfk7_dk_db;Persist Security Info=True;User ID=fdfk7_dk;Password=4Xbc8tun" );
-            SqlCommand Cmd_insert = new SqlCommand( "", ConNy );
-            ConNy.Open();
-
             //FIXME gør noget med data
 
 //            //Bruger
@@ -80,7 +76,11 @@ namespace FDFk7
 //            txtTlf.Text;
 //            txtCPR.Text;
 //            txtSkole.Text;
-//            txtKlasse.Text;
+            //            txtKlasse.Text;
+
+//            SqlConnection ConNy = new SqlConnection( "Data Source=mssql3.unoeuro.com;Initial Catalog=fdfk7_dk_db;Persist Security Info=True;User ID=fdfk7_dk;Password=4Xbc8tun" );
+//            SqlCommand Cmd_insert = new SqlCommand( "INSERT INTO USR_Brugere (BrugerNavn, Adgangskode, Mail)", ConNy );
+//            ConNy.Open();
 
 //            //Relation 1
 //            txtNavnR1.Text;
