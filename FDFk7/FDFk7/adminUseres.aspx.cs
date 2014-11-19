@@ -164,7 +164,10 @@ namespace FDFk7
 
             } else if( hvad == "Slet" )
             {
-
+                SqlConnection ConNy = new SqlConnection( "Data Source=mssql3.unoeuro.com;Initial Catalog=fdfk7_dk_db;Persist Security Info=True;User ID=fdfk7_dk;Password=4Xbc8tun" );
+                ConNy.Open();
+                SqlCommand Cmd_insert = new SqlCommand( "DELETE FROM USR_Brugere WHERE BrugerID= '" + BrugerID + "' ", ConNy );
+                Cmd_insert.ExecuteNonQuery();
             }
         }
 
