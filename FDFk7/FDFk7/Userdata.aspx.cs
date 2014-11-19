@@ -45,28 +45,28 @@ namespace FDFk7
             }
 
             // Opretter forbindelse til databasen
-            SqlConnection Con = new SqlConnection( "Data Source=mssql3.unoeuro.com;Initial Catalog=fdfk7_dk_db;Persist Security Info=True;User ID=fdfk7_dk;Password=4Xbc8tun" );
-            try
-            {
-                /*Indset data*/
-                // Trækker data fra databasen
-                SqlCommand cmd_select = new SqlCommand( "SELECT USR_Ledere.Navn, USR_Gruppe.GruppeNavn, USR_Ledere.Telefon, USR_Brugere.MailAdresse, USR_Brugere.Rettighedder FROM USR_Gruppe, USR_Ledere, USR_Brugere, RTB_Gruppe_Ledere WHERE USR_Ledere.LederID = USR_Brugere.FKBrugereLedereID AND USR_Ledere.LederID = RTB_Gruppe_Ledere.LederID AND USR_Gruppe.GruppeID = RTB_Gruppe_Ledere.GruppeID" );
-                //opretter forbindelse
-                cmd_select.Connection = Con;
-                Con.Open();
-                SqlDataReader DB_Reader = cmd_select.ExecuteReader();
-
-                int antal = 0;
-                while( DB_Reader.Read() )
-                {
-                    txtNavn.Text = DB_Reader[0].ToString();
-
-                    antal++;
-                }
-            } finally
-            {
-                Con.Close();
-            }
+//            SqlConnection Con = new SqlConnection( "Data Source=mssql3.unoeuro.com;Initial Catalog=fdfk7_dk_db;Persist Security Info=True;User ID=fdfk7_dk;Password=4Xbc8tun" );
+//            try
+//            {
+//                /*Indset data*/
+//                // Trækker data fra databasen
+//                SqlCommand cmd_select = new SqlCommand( "SELECT USR_Ledere.Navn, USR_Gruppe.GruppeNavn, USR_Ledere.Telefon, USR_Brugere.MailAdresse, USR_Brugere.Rettighedder FROM USR_Gruppe, USR_Ledere, USR_Brugere, RTB_Gruppe_Ledere WHERE USR_Ledere.LederID = USR_Brugere.FKBrugereLedereID AND USR_Ledere.LederID = RTB_Gruppe_Ledere.LederID AND USR_Gruppe.GruppeID = RTB_Gruppe_Ledere.GruppeID" );
+//                //opretter forbindelse
+//                cmd_select.Connection = Con;
+//                Con.Open();
+//                SqlDataReader DB_Reader = cmd_select.ExecuteReader();
+//
+//                int antal = 0;
+//                while( DB_Reader.Read() )
+//                {
+//                    txtNavn.Text = DB_Reader[0].ToString();
+//
+//                    antal++;
+//                }
+//            } finally
+//            {
+//                Con.Close();
+//            }
         }
 
         public void IndSendNy( object sender, EventArgs args )
