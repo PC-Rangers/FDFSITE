@@ -91,8 +91,6 @@ namespace FDFk7 {
 		
 		protected System.Web.UI.WebControls.TextBox txtNoter;
 		
-		protected System.Web.UI.WebControls.Button btnNySend;
-		
 		protected System.Web.UI.WebControls.Button btnUpdateSend;
 	}
 }

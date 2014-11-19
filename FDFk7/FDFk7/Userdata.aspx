@@ -168,7 +168,7 @@
 			                <label>Stivkrampe vaccine</label>
 			                <asp:TextBox type="date" placeholder="dato" CssClass="form-control" runat="server" id="txtStivkrampe" />
 
-			                <div>
+			                <div class="top-buffer-small">
 			                	<asp:CheckBox CssClass="chekbox" runat="server" id="chkPencilin" Text="&nbsp; Tåler pencilin" />
 			                </div>
 							<div>
@@ -182,13 +182,10 @@
 			            </div>
 					</div>
 
-		            <div class="col-sm-12 no-gutter bottom-buffer-medium">
+		            <div class="col-sm-12 no-gutter top-buffer-small bottom-buffer-medium">
 		            	<asp:TextBox placeholder="Noter" CssClass="form-control txtAreaNoResize" runat="server" id="txtNoter" TextMode="MultiLine" Rows="8" />
 		            </div>
 
-					<div class="btn-group pull-right top top-buffer-small">
-						<asp:Button type="button" CssClass="btn btn-default" Text="Ny bruger" runat="server" id="btnNySend" OnClick="IndSendNy" />
-					</div>
                     <div class="btn-group pull-right top top-buffer-small">
                         <asp:Button type="button" CssClass="btn btn-default" Text="Updater bruger" runat="server" id="btnUpdateSend" OnClick="IndSendUpdate" />
                     </div>
