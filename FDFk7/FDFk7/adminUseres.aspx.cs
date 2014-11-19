@@ -50,13 +50,13 @@ namespace FDFk7
 
             solutions.Rows[0].Cells.AddRange( tcList );
 
+            // Opretter forbindelse til databasen
+            SqlConnection Con = new SqlConnection( "Data Source=mssql3.unoeuro.com;Initial Catalog=fdfk7_dk_db;Persist Security Info=True;User ID=fdfk7_dk;Password=4Xbc8tun" );
             try
             {
                 /*Indset data*/
-                // Opretter forbindelse til databasen
-                SqlConnection Con = new SqlConnection( "Data Source=mssql3.unoeuro.com;Initial Catalog=fdfk7_dk_db;Persist Security Info=True;User ID=fdfk7_dk;Password=4Xbc8tun" );
                 // Trækker data fra databasen
-                SqlCommand cmd_select = new SqlCommand( "SELECT USR_Ledere.Navn, USR_Gruppe.GruppeNavn, USR_Ledere.Telefon, USR_Brugere.MailAdresse, USR_Brugere.Rettighedder FROM USR_Gruppe, USR_Ledere, USR_Brugere, RTB_Gruppe_Ledere WHERE USR_Ledere.LederID = USR_Brugere.FKBrugereLedereID AND USR_Ledere.LederID = RTB_Gruppe_Ledere.LederID AND USR_Gruppe.GruppeID = RTB_Gruppe_Ledere.GruppeID" );
+                SqlCommand cmd_select = new SqlCommand( "SELECT USR_Brugere.BrugerID, USR_Ledere.Navn, USR_Gruppe.GruppeNavn, USR_Ledere.Telefon, USR_Brugere.MailAdresse, USR_Brugere.Rettighedder FROM USR_Gruppe, USR_Ledere, USR_Brugere, RTB_Gruppe_Ledere WHERE USR_Ledere.LederID = USR_Brugere.FKBrugereLedereID AND USR_Ledere.LederID = RTB_Gruppe_Ledere.LederID AND USR_Gruppe.GruppeID = RTB_Gruppe_Ledere.GruppeID" );
                 //opretter forbindelse
                 cmd_select.Connection = Con;
                 Con.Open();
@@ -68,9 +68,9 @@ namespace FDFk7
                     TableRow newRow = new TableRow();
                     newRow.ID = "Row" + antal;
 
-                    TableCell newFirstCell = new TableCell();
-                    newFirstCell.Text = antal.ToString();
-                    newRow.Cells.Add( newFirstCell );
+//                    TableCell newFirstCell = new TableCell();
+//                    newFirstCell.Text = antal.ToString();
+//                    newRow.Cells.Add( newFirstCell );
 
                     int i = 0;
                     while( i < DB_Reader.FieldCount )
@@ -88,7 +88,7 @@ namespace FDFk7
                     Rediger.ID = "btnR" + antal + "Rediger";
                     Rediger.Click += RedigerSletBruger;
                     newRow.Cells.Add( new TableCell() );
-                    newRow.Cells[i + 1].Controls.Add( Rediger );
+                    newRow.Cells[i].Controls.Add( Rediger );
 
                     //Slet knap
                     Button Slet = new Button();
@@ -96,15 +96,15 @@ namespace FDFk7
                     Slet.ID = "btnS" + antal + "Slet";
                     Slet.Click += RedigerSletBruger;
                     newRow.Cells.Add( new TableCell() );
-                    newRow.Cells[i + 2].Controls.Add( Slet );
+                    newRow.Cells[i + 1].Controls.Add( Slet );
 
                     solutions.Rows.Add( newRow );
 
-                    //phCeller.FindControl( "Row" + antal + "Cell" + i );
                     antal++;
                 }
-            } catch( Exception ex )
+            } finally
             {
+                Con.Close();
             }
         }
 
