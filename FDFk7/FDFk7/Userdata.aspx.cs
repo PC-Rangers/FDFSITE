@@ -65,39 +65,47 @@ namespace FDFk7
 
         public void IndSendNy( object sender, EventArgs args )
         {
-            //FIXME gør noget med data
-
 //            //Bruger
-//            txtNavn.Text;
-//            txtAdr.Text;
-//            txtPostNr.Text;
-//            txtByNavn.Text;
-//            txtEmail.Text;
-//            txtTlf.Text;
-//            txtCPR.Text;
-//            txtSkole.Text;
-            //            txtKlasse.Text;
-
-//            SqlConnection ConNy = new SqlConnection( "Data Source=mssql3.unoeuro.com;Initial Catalog=fdfk7_dk_db;Persist Security Info=True;User ID=fdfk7_dk;Password=4Xbc8tun" );
-//            SqlCommand Cmd_insert = new SqlCommand( "INSERT INTO USR_Brugere (BrugerNavn, Adgangskode, Mail)", ConNy );
-//            ConNy.Open();
+            string strNavn = txtNavn.Text;
+            string strAdr = txtAdr.Text;
+            string strPostNr = txtPostNr.Text;
+            string strByNavn = txtByNavn.Text;
+            string strEmail = txtEmail.Text;
+            string strTlf = txtTlf.Text;
+            string strCPR = txtCPR.Text;
+            string strSkole = txtSkole.Text;
+            string strKlasse = txtKlasse.Text;
 
 //            //Relation 1
-//            txtNavnR1.Text;
-//            txtEmailR1.Text;
-//            txtTlfR1.Text;
+            string strNavnR1 = txtNavnR1.Text;
+            string strEmailR1 = txtEmailR1.Text;
+            string strTlfR1 = txtTlfR1.Text;
 
 //            //Relation 2
-//            txtNavnR1.Text;
-//            txtEmailR1.Text;
-//            txtTlfR1.Text;
+            string strNavnR2 = txtNavnR2.Text;
+            string strEmailR2 = txtEmailR2.Text;
+            string strTlfR2 = txtTlfR2.Text;
 
 //            //Info om bruger
-//            txtStivkrampe.Text;
-//            chkPencilin.Checked;
-//            chkTilBilled.Checked;
-//            txtAllergier.Text;
-//            txtNoter.Text;
+            string strStivk = txtStivkrampe.Text;
+            string strPencilin = chkPencilin.Checked.ToString();
+            string strTilBilled = chkTilBilled.Checked.ToString();
+            string strAllergier = txtAllergier.Text;
+            string strNoter = txtNoter.Text;
+
+
+            //læg data op
+            SqlConnection ConNy = new SqlConnection( "Data Source=mssql3.unoeuro.com;Initial Catalog=fdfk7_dk_db;Persist Security Info=True;User ID=fdfk7_dk;Password=4Xbc8tun" );
+            try
+            {
+                ConNy.Open();
+//                SqlCommand Cmd_insert = new SqlCommand( "INSERT INTO USR_Brugere (BrugerNavn, Adgangskode, MailAdresse, BrugerGruppe, Rettighedder, Salt)" +
+//                                            " VALUES('" + strNavn + "', '" + strKode + "', '" + strMail + "', '" + strGruppe + "', '" + strRet + "', '" + salt + "')", ConNy );
+//                Cmd_insert.ExecuteNonQuery();
+            } finally
+            {
+                ConNy.Close();
+            }
         }
 
         public void IndSendUpdate( object sender, EventArgs args )
