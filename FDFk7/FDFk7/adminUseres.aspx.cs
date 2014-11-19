@@ -113,12 +113,14 @@ namespace FDFk7
             string ID = ((Button)sender).ID.Substring( 4, 1 );
             string hvad = ((Button)sender).ID.Substring( 5 );
 
-            string IDLederNavn = "Row" + ID + "Cell0";
-            string IDGruppeNavn = "Row" + ID + "Cell1";
-            string IDLederTlf = "Row" + ID + "Cell2";
-            string IDBrugerMail = "Row" + ID + "Cell3";
-            string IDBrugerRettighed = "Row" + ID + "Cell4";
+            string IDBrugerID = "Row" + ID + "Cell0";
+            string IDLederNavn = "Row" + ID + "Cell1";
+            string IDGruppeNavn = "Row" + ID + "Cell2";
+            string IDLederTlf = "Row" + ID + "Cell3";
+            string IDBrugerMail = "Row" + ID + "Cell4";
+            string IDBrugerRettighed = "Row" + ID + "Cell5";
 
+            string BrugerID = "";
             string LederNavn = "";
             string GruppeNavn = "";
             string LederTlf = "";
@@ -133,7 +135,10 @@ namespace FDFk7
                     TableRow tro = (TableRow)c;
                     for( int i = 0 ; i < tro.Cells.Count ; i++ )
                     {
-                        if( tro.Cells[i].ID == IDLederNavn )
+                        if( tro.Cells[i].ID == IDBrugerID )
+                        {
+                            BrugerID = tro.Cells[i].Text;
+                        } else if( tro.Cells[i].ID == IDLederNavn )
                         {
                             LederNavn = tro.Cells[i].Text;
                         } else if( tro.Cells[i].ID == IDGruppeNavn )
