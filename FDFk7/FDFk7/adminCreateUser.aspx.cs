@@ -75,6 +75,26 @@ namespace FDFk7
             }
             string salt = stringBuilder.ToString();
 
+
+            // Fastslår længden af koden
+            int length = strKode.Length;
+            // Deler koden op i 2
+            string firstHalf = strKode.Substring( 0, length / 2 );
+            string secondHalf = strKode.Substring( length / 2, length - (length / 2) );
+
+            // Samler password 
+            string toHash = firstHalf + salt + secondHalf;
+
+            SHA512 sha2 = new SHA512Managed();
+            byte[] hash2 = sha2.ComputeHash( Encoding.ASCII.GetBytes( toHash ) );
+
+            StringBuilder stringBuilder2 = new StringBuilder();
+            foreach( byte b in hash2 )
+            {
+                stringBuilder2.AppendFormat( "{0:x2}", b );
+            }
+            strKode = stringBuilder2.ToString();
+
             //læg data op
             SqlConnection ConNy = new SqlConnection( "Data Source=mssql3.unoeuro.com;Initial Catalog=fdfk7_dk_db;Persist Security Info=True;User ID=fdfk7_dk;Password=4Xbc8tun" );
             ConNy.Open();
